@@ -68,7 +68,7 @@ const Footer = ({ hideFooter }) => {
           <div className="lg:col-end-13 lg:col-span-9">
             <div className="grid md:grid-cols-2 lg:flex lg:justify-end lg:gap-x-12 xl:gap-x-24 gap-y-12 lg:gap-y-0">
               <div className="order-3 lg:order-1">
-                <div className="font-body text-lg font-bold text-white mb-5">
+                <div className="font-display text-lg font-bold text-white mb-5">
                   Get Started
                 </div>
                 <ul className="flex flex-col space-y-3">
@@ -76,7 +76,7 @@ const Footer = ({ hideFooter }) => {
                     <AniLink
                       fade
                       to=""
-                      className="text-primary-50/90 hover:text-white no-underline whitespace-nowrap"
+                      className="font-display text-primary-50/90 hover:text-white no-underline whitespace-nowrap"
                     >
                       Accelerator Program
                     </AniLink>
@@ -85,7 +85,7 @@ const Footer = ({ hideFooter }) => {
                     <AniLink
                       fade
                       to=""
-                      className="text-primary-50/90 hover:text-white no-underline whitespace-nowrap"
+                      className="font-display text-primary-50/90 hover:text-white no-underline whitespace-nowrap"
                     >
                       Sole Practitioners
                     </AniLink>
@@ -94,7 +94,7 @@ const Footer = ({ hideFooter }) => {
                     <AniLink
                       fade
                       to=""
-                      className="text-primary-50/90 hover:text-white no-underline whitespace-nowrap"
+                      className="font-display text-primary-50/90 hover:text-white no-underline whitespace-nowrap"
                     >
                       Resources
                     </AniLink>
@@ -103,7 +103,7 @@ const Footer = ({ hideFooter }) => {
               </div>
 
               <div className="order-4 lg:order-2">
-                <div className="font-body text-lg font-bold text-white mb-5">
+                <div className="font-display text-lg font-bold text-white mb-5">
                   The Company
                 </div>
                 <ul className="flex flex-col space-y-3">
@@ -111,7 +111,7 @@ const Footer = ({ hideFooter }) => {
                     <AniLink
                       fade
                       to=""
-                      className="text-primary-50/90 hover:text-white no-underline whitespace-nowrap"
+                      className="font-display text-primary-50/90 hover:text-white no-underline whitespace-nowrap"
                     >
                       Our Why
                     </AniLink>
@@ -120,7 +120,7 @@ const Footer = ({ hideFooter }) => {
                     <AniLink
                       fade
                       to="/our-cpas/"
-                      className="text-primary-50/90 hover:text-white no-underline whitespace-nowrap"
+                      className="font-display text-primary-50/90 hover:text-white no-underline whitespace-nowrap"
                     >
                       Our CPAs
                     </AniLink>
@@ -129,7 +129,7 @@ const Footer = ({ hideFooter }) => {
                     <AniLink
                       fade
                       to=""
-                      className="text-primary-50/90 hover:text-white no-underline whitespace-nowrap"
+                      className="font-display text-primary-50/90 hover:text-white no-underline whitespace-nowrap"
                     >
                       Our Founders
                     </AniLink>
@@ -138,7 +138,7 @@ const Footer = ({ hideFooter }) => {
                     <AniLink
                       fade
                       to=""
-                      className="text-primary-50/90 hover:text-white no-underline whitespace-nowrap"
+                      className="font-display text-primary-50/90 hover:text-white no-underline whitespace-nowrap"
                     >
                       Our Clients
                     </AniLink>
@@ -147,7 +147,7 @@ const Footer = ({ hideFooter }) => {
               </div>
 
               <div className="order-2 lg:order-3">
-                <div className="font-body text-lg font-bold text-white mb-5">
+                <div className="font-display text-lg font-bold text-white mb-5">
                   Success Stories
                 </div>
 
@@ -156,7 +156,7 @@ const Footer = ({ hideFooter }) => {
                     <AniLink
                       fade
                       to=""
-                      className="text-primary-50/90 hover:text-white no-underline whitespace-nowrap"
+                      className="font-display text-primary-50/90 hover:text-white no-underline whitespace-nowrap"
                     >
                       Accelerators
                     </AniLink>
@@ -166,7 +166,7 @@ const Footer = ({ hideFooter }) => {
                       href="#"
                       target="_blank"
                       rel="noreferrer"
-                      className="text-primary-50/90 hover:text-white no-underline whitespace-nowrap"
+                      className="font-display text-primary-50/90 hover:text-white no-underline whitespace-nowrap"
                     >
                       Principals
                     </a>
@@ -175,7 +175,7 @@ const Footer = ({ hideFooter }) => {
               </div>
 
               <div className="order-1 lg:order-4">
-                <div className="font-body text-lg font-bold text-white mb-5">
+                <div className="font-display text-lg font-bold text-white mb-5">
                   Get in Touch
                 </div>
 
@@ -183,7 +183,7 @@ const Footer = ({ hideFooter }) => {
                   <li>
                     <a
                       href=""
-                      className="text-primary-50/90 hover:text-white no-underline whitespace-nowrap"
+                      className="font-display text-primary-50/90 hover:text-white no-underline whitespace-nowrap"
                     >
                       Book a Meeting
                     </a>
@@ -191,7 +191,7 @@ const Footer = ({ hideFooter }) => {
                   <li>
                     <a
                       href=""
-                      className="text-primary-50/90 hover:text-white no-underline whitespace-nowrap"
+                      className="font-display text-primary-50/90 hover:text-white no-underline whitespace-nowrap"
                     >
                       Request More Info
                     </a>
@@ -199,7 +199,7 @@ const Footer = ({ hideFooter }) => {
                   <li>
                     <a
                       href=""
-                      className="text-primary-50/90 hover:text-white no-underline whitespace-nowrap"
+                      className="font-display text-primary-50/90 hover:text-white no-underline whitespace-nowrap"
                     >
                       Apply Now
                     </a>
@@ -207,7 +207,7 @@ const Footer = ({ hideFooter }) => {
                   <li>
                     <a
                       href=""
-                      className="text-primary-50/90 hover:text-white no-underline whitespace-nowrap"
+                      className="font-display text-primary-50/90 hover:text-white no-underline whitespace-nowrap"
                     >
                       Contact
                     </a>

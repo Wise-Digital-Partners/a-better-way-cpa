@@ -2,6 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { BgImage } from "gbimage-bridge";
+import Fade from "react-reveal/Fade";
 
 import Layout from "../components/Layout";
 import SearchEngineOptimization from "../components/SEO";
@@ -95,6 +96,7 @@ const Page = ({ data }) => {
               </p>
               <ButtonGhost
                 href="#"
+                iconRight
                 text="Success Stories"
                 className="w-full md:w-auto"
               />
@@ -124,62 +126,69 @@ const Page = ({ data }) => {
             </p>
           </header>
 
-          <div className="relative grid md:grid-cols-2 gap-y-10 md:gap-y-0 md:gap-x-12 lg:gap-x-24 items-start">
+          <div className="relative">
             <div className="hidden md:flex justify-center w-full absolute -top-8 lg:-top-12">
               <img src={data.dottedLine.publicURL} alt="Dotted line" />
             </div>
-            <div className="bg-primary-50 rounded-5xl p-6 lg:p-8 z-10">
-              <h3 className="heading-four font-body text-secondary-800 mb-6">
-                We Give You A Sweet Benefits Package
-              </h3>
-              <ul className="styled-list-plus text-secondary-900">
-                <li>Medical Coverage</li>
-                <li>401K Match</li>
-                <li>Unlimited Time Off</li>
-                <li>Cell Phone</li>
-              </ul>
-              <p className="text-lg mb-0 text-secondary-900">And more!</p>
-            </div>
 
-            <div className="bg-secondary-800 rounded-5xl p-6 lg:p-8 z-10 md:mt-52 md:mb-10">
-              <h3 className="heading-four font-body mb-6">
-                You Choose Your Salary
-              </h3>
-              <p className="text-lg">
-                How much you get paid is up to you. You can take the base salary
-                only or add a draw from your future earnings to help you meet
-                your financial needs.
-              </p>
-            </div>
+            <Fade bottom cascade distance="120px" duration="2000">
+              <div className="grid md:grid-cols-2 gap-y-10 md:gap-y-0 md:gap-x-12 lg:gap-x-24 items-start">
+                <div className="bg-primary-50 rounded-5xl p-6 lg:p-8 z-10">
+                  <h3 className="heading-four font-body text-secondary-800 mb-6">
+                    We Give You A Sweet Benefits Package
+                  </h3>
+                  <ul className="styled-list-plus text-secondary-900">
+                    <li>Medical Coverage</li>
+                    <li>401K Match</li>
+                    <li>Unlimited Time Off</li>
+                    <li>Cell Phone</li>
+                  </ul>
+                  <p className="text-lg mb-0 text-secondary-900">And more!</p>
+                </div>
 
-            <div className="bg-secondary-50 rounded-5xl p-6 lg:p-8 z-10">
-              <h3 className="heading-four font-body text-secondary-900 mb-6">
-                We Pay You For Your Performance
-              </h3>
-              <p className="text-lg text-secondary-900">
-                We split billings 50/50 with Accelerators, in real time, for any
-                client you serve. If you’ve taken the optional draw for your
-                salary, your commission is used to pay that back. If you don’t
-                have a draw, you earn that commission on your next paycheck.
-              </p>
-            </div>
+                <div className="bg-secondary-800 rounded-5xl p-6 lg:p-8 z-10 md:mt-52 md:mb-10">
+                  <h3 className="heading-four font-body mb-6">
+                    You Choose Your Salary
+                  </h3>
+                  <p className="text-lg">
+                    How much you get paid is up to you. You can take the base
+                    salary only or add a draw from your future earnings to help
+                    you meet your financial needs.
+                  </p>
+                </div>
 
-            <div className="bg-secondary-400 rounded-5xl p-6 lg:p-8 z-10 md:mt-40">
-              <h3 className="heading-four font-body mb-6">
-                You Level Up to Principal
-              </h3>
-              <p className="text-lg">
-                Over time, as your book of business grows, your commission
-                payouts will start becoming more substantial. Which will bring
-                you to the level of qualifying to become a Principal in the
-                firm.
-              </p>
-            </div>
+                <div className="bg-secondary-50 rounded-5xl p-6 lg:p-8 z-10">
+                  <h3 className="heading-four font-body text-secondary-900 mb-6">
+                    We Pay You For Your Performance
+                  </h3>
+                  <p className="text-lg text-secondary-900">
+                    We split billings 50/50 with Accelerators, in real time, for
+                    any client you serve. If you’ve taken the optional draw for
+                    your salary, your commission is used to pay that back. If
+                    you don’t have a draw, you earn that commission on your next
+                    paycheck.
+                  </p>
+                </div>
+
+                <div className="bg-secondary-400 rounded-5xl p-6 lg:p-8 z-10 md:mt-40">
+                  <h3 className="heading-four font-body mb-6">
+                    You Level Up to Principal
+                  </h3>
+                  <p className="text-lg">
+                    Over time, as your book of business grows, your commission
+                    payouts will start becoming more substantial. Which will
+                    bring you to the level of qualifying to become a Principal
+                    in the firm.
+                  </p>
+                </div>
+              </div>
+            </Fade>
           </div>
 
           <div className="pt-16">
             <ButtonGhost
-              href="#"
+              href="/request-info/"
+              iconRight
               text="Request More Info"
               className="w-full md:w-auto"
             />
@@ -240,6 +249,7 @@ const Page = ({ data }) => {
               <ButtonGhost
                 href="https://darkhorse.cpa/success-stories/meet-the-first-dark-horse-accelerator/"
                 outboundLink={true}
+                iconRight
                 text="Read the Story"
                 className="w-full md:w-auto"
               />
@@ -266,56 +276,62 @@ const Page = ({ data }) => {
               <h2>How it Works</h2>
             </header>
 
-            <div className="mb-8">
-              <img
-                src={data.step1.publicURL}
-                alt="Step 1"
-                className="mx-auto mb-5"
-              />
-              <h3 className="heading-four text-primary-500">Evaluation</h3>
-              <p className="text-lg mb-0">
-                Step 1 is identifying if you are a good fit for us and that we
-                are a good fit for you. This model is not for everyone, and we
-                get it. Our goal is to get you all the information you need to
-                feel comfortable in that decision.
-              </p>
-              <div className="border-l border-dashed border-gray-300 h-36 w-px mt-6 mx-auto"></div>
-            </div>
+            <Fade bottom distance="120px" duration="2000">
+              <div className="mb-8">
+                <img
+                  src={data.step1.publicURL}
+                  alt="Step 1"
+                  className="mx-auto mb-5"
+                />
+                <h3 className="heading-four text-primary-500">Evaluation</h3>
+                <p className="text-lg mb-0">
+                  Step 1 is identifying if you are a good fit for us and that we
+                  are a good fit for you. This model is not for everyone, and we
+                  get it. Our goal is to get you all the information you need to
+                  feel comfortable in that decision.
+                </p>
+                <div className="border-l border-dashed border-gray-300 h-36 w-px mt-6 mx-auto"></div>
+              </div>
+            </Fade>
 
-            <div className="mb-8">
-              <img
-                src={data.step2.publicURL}
-                alt="Step 2"
-                className="mx-auto mb-5"
-              />
-              <h3 className="heading-four text-primary-500">
-                Training Program
-              </h3>
-              <p className="text-lg mb-0">
-                We do things a little differently, and we want you to be ready.
-                The first 2 weeks are focused on training on our systems,
-                processes, and customer engagement, followed by weekly coaching
-                sessions for your first 3 months.
-              </p>
-              <div className="border-l border-dashed border-gray-300 h-36 w-px mt-6 mx-auto"></div>
-            </div>
+            <Fade bottom distance="120px" duration="2000">
+              <div className="mb-8">
+                <img
+                  src={data.step2.publicURL}
+                  alt="Step 2"
+                  className="mx-auto mb-5"
+                />
+                <h3 className="heading-four text-primary-500">
+                  Training Program
+                </h3>
+                <p className="text-lg mb-0">
+                  We do things a little differently, and we want you to be
+                  ready. The first 2 weeks are focused on training on our
+                  systems, processes, and customer engagement, followed by
+                  weekly coaching sessions for your first 3 months.
+                </p>
+                <div className="border-l border-dashed border-gray-300 h-36 w-px mt-6 mx-auto"></div>
+              </div>
+            </Fade>
 
-            <div className="mb-8">
-              <img
-                src={data.step3.publicURL}
-                alt="Step 3"
-                className="mx-auto mb-5"
-              />
-              <h3 className="heading-four text-primary-500">
-                Graduate to Principal
-              </h3>
-              <p className="text-lg mb-0">
-                Once you start servicing clients, you are building your book-up
-                business to qualify you for Principal. This includes financial,
-                reputational, and awareness benchmarks.
-              </p>
-              <div className="border-l border-dashed border-gray-300 h-36 w-px mt-6 mx-auto"></div>
-            </div>
+            <Fade bottom distance="120px" duration="2000">
+              <div className="mb-8">
+                <img
+                  src={data.step3.publicURL}
+                  alt="Step 3"
+                  className="mx-auto mb-5"
+                />
+                <h3 className="heading-four text-primary-500">
+                  Graduate to Principal
+                </h3>
+                <p className="text-lg mb-0">
+                  Once you start servicing clients, you are building your
+                  book-up business to qualify you for Principal. This includes
+                  financial, reputational, and awareness benchmarks.
+                </p>
+                <div className="border-l border-dashed border-gray-300 h-36 w-px mt-6 mx-auto"></div>
+              </div>
+            </Fade>
 
             <ButtonSolid
               href="#"

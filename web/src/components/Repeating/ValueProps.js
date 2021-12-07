@@ -1,6 +1,7 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
+import Fade from "react-reveal/Fade";
 
 const ValueProps = ({ className }) => {
   const data = useStaticQuery(graphql`
@@ -102,42 +103,44 @@ const ValueProps = ({ className }) => {
             />
           </div>
         </header>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-y-8 md:gap-10">
-          {content.map((content, i) => {
-            return (
-              <div
-                key={i}
-                className={`shadow-3xl rounded-3xl px-5 py-6 border-4 ${
-                  i % 2
-                    ? "border-secondary-400 bg-secondary-50"
-                    : "border-primary-500 bg-primary-50"
-                }`}
-              >
-                <img
-                  src={content.icon}
-                  alt={content.heading}
-                  className="mb-2.5"
-                />
-                <div>
-                  <h3
-                    className={`heading-six ${
-                      i % 2 ? "text-primary-500" : "text-secondary-800"
-                    }`}
-                  >
-                    {content.heading}
-                  </h3>
-                  <p
-                    className={`text-lg mb-0 ${
-                      i % 2 ? "text-secondary-800" : "text-secondary-400"
-                    }`}
-                  >
-                    {content.text}
-                  </p>
+        <Fade bottom cascade distance="120px" duration="2000">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-y-8 md:gap-10">
+            {content.map((content, i) => {
+              return (
+                <div
+                  key={i}
+                  className={`shadow-3xl rounded-3xl px-5 py-6 border-4 ${
+                    i % 2
+                      ? "border-secondary-400 bg-secondary-50"
+                      : "border-primary-500 bg-primary-50"
+                  }`}
+                >
+                  <img
+                    src={content.icon}
+                    alt={content.heading}
+                    className="mb-2.5"
+                  />
+                  <div>
+                    <h3
+                      className={`heading-six ${
+                        i % 2 ? "text-primary-500" : "text-secondary-800"
+                      }`}
+                    >
+                      {content.heading}
+                    </h3>
+                    <p
+                      className={`text-lg mb-0 ${
+                        i % 2 ? "text-secondary-800" : "text-secondary-400"
+                      }`}
+                    >
+                      {content.text}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            );
-          })}
-        </div>
+              );
+            })}
+          </div>
+        </Fade>
       </div>
     </section>
   );

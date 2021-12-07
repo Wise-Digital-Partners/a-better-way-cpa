@@ -3,17 +3,17 @@ import { useStaticQuery, graphql } from "gatsby";
 import { useOnClickOutside } from "../../hooks";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 import { GatsbyImage } from "gatsby-plugin-image";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionItemButton,
+  AccordionItemPanel,
+} from "react-accessible-accordion";
 
 import Burger from "./Burger";
 import OffCanvas from "../OffCanvas/OffCanvas";
 import ButtonSolid from "../Button/ButtonSolid";
 import ButtonGhost from "../Button/ButtonGhost";
-// import {
-//   Accordion,
-//   AccordionItem,
-//   AccordionItemButton,
-//   AccordionItemPanel,
-// } from "react-accessible-accordion";
 
 const MainNav = ({
   headerStyle,
@@ -25,9 +25,9 @@ const MainNav = ({
   // determine if offcanvas is open
   const [offcanvasOpen, setOffcanvasOpen] = useState(false);
 
-  // const [subMenuHovering1, setSubMenuHovering1] = useState(false);
-  // const isHoveringSubMenu1 = () => setSubMenuHovering1(true);
-  // const notHoveringSubMenu1 = () => setSubMenuHovering1(false);
+  const [subMenuHovering1, setSubMenuHovering1] = useState(false);
+  const isHoveringSubMenu1 = () => setSubMenuHovering1(true);
+  const notHoveringSubMenu1 = () => setSubMenuHovering1(false);
 
   // const [subMenuHovering2, setSubMenuHovering2] = useState(false);
   // const isHoveringSubMenu2 = () => setSubMenuHovering2(true);
@@ -52,6 +52,9 @@ const MainNav = ({
         childImageSharp {
           gatsbyImageData(layout: CONSTRAINED, width: 197, placeholder: NONE)
         }
+      }
+      logoMark: file(relativePath: { eq: "Global/Nav/logo-mark.svg" }) {
+        publicURL
       }
     }
   `);
@@ -145,13 +148,18 @@ const MainNav = ({
               </AniLink>
             </li>
 
-            <li>
+            <li
+              role="presentation"
+              className="relative"
+              onMouseEnter={isHoveringSubMenu1}
+              onMouseLeave={notHoveringSubMenu1}
+            >
               <AniLink
                 fade
                 to="/about/"
-                className={`relative font-bold no-underline ${
-                  scrolled && "text-secondary-50 hover:text-primary-500"
-                } ${
+                className={`relative font-bold no-underline pb-8 ${
+                  subMenuHovering1 && "text-primary-500"
+                } ${scrolled && "text-secondary-50 hover:text-primary-500"} ${
                   headerLinkColor === "white"
                     ? "text-white hover:text-white"
                     : "text-secondary-50 hover:text-primary-500"
@@ -159,6 +167,34 @@ const MainNav = ({
               >
                 The Company
               </AniLink>
+
+              <ul
+                className={`absolute top-0 bg-secondary-900 shadow-7xl rounded-b-3xl flex flex-col space-y-5 w-auto transform -translate-x-8 pt-7 px-7 pb-14 z-10 transition-all duration-500 ease-in-out ${
+                  subMenuHovering1
+                    ? " visible translate-y-14 opacity-100"
+                    : "invisible translate-y-18 opacity-0"
+                }`}
+              >
+                <li className="whitespace-nowrap border-b border-gray-200">
+                  <AniLink
+                    fade
+                    to="/about/"
+                    className="relative block font-body text-secondary-50/60 hover:text-secondary-50 font-bold no-underline pb-3"
+                  >
+                    About Dark Horse
+                  </AniLink>
+                </li>
+
+                <li className="whitespace-nowrap border-b border-gray-200">
+                  <AniLink
+                    fade
+                    to="/our-cpas/"
+                    className="relative block font-body text-secondary-50/60 hover:text-secondary-50 font-bold no-underline pb-3"
+                  >
+                    Our CPAs
+                  </AniLink>
+                </li>
+              </ul>
             </li>
 
             <li>
@@ -198,61 +234,69 @@ const MainNav = ({
                   <li>
                     <AniLink
                       fade
-                      to="/buy-a-house/"
+                      to="/accelerator-program/"
                       onKeyDown={clickHandler}
                       onClick={clickHandler}
-                      className="font-heading text-3xl text-secondary-50 hover:text-primary-500 font-bold no-underline"
+                      className="text-secondary-50 hover:text-primary-500 font-bold no-underline"
                     >
-                      Purchase
+                      Accelerator Program
                     </AniLink>
                   </li>
 
                   <li>
                     <AniLink
                       fade
-                      to="/refinance-home-mortgage/"
+                      to="/sole-practitioner/"
                       onKeyDown={clickHandler}
                       onClick={clickHandler}
-                      className="font-heading text-3xl text-secondary-50 hover:text-primary-500 font-bold no-underline"
+                      className="text-secondary-50 hover:text-primary-500 font-bold no-underline"
                     >
-                      Refinance
+                      Sole Practitioner
                     </AniLink>
                   </li>
 
-                  <li>
-                    <AniLink
-                      fade
-                      to="/compare-mortgage-loans/"
-                      onKeyDown={clickHandler}
-                      onClick={clickHandler}
-                      className="font-heading text-3xl text-secondary-50 hover:text-primary-500 font-bold no-underline"
-                    >
-                      Compare Loans
-                    </AniLink>
-                  </li>
-                  <li>
-                    <AniLink
-                      fade
-                      to="/about/"
-                      onKeyDown={clickHandler}
-                      onClick={clickHandler}
-                      className="font-heading text-3xl text-secondary-50 hover:text-primary-500 font-bold no-underline"
-                    >
-                      About
-                    </AniLink>
-                  </li>
+                  <Accordion
+                    allowZeroExpanded={true}
+                    className="flex flex-col space-y-10"
+                  >
+                    <li>
+                      <AccordionItem uuid={1}>
+                        <AccordionItemButton className="flex items-center justify-center focus:outline-none">
+                          <div className="text-secondary-50 hover:text-primary-500 font-bold no-underline transition-colors duration-300 ease-linear">
+                            The Company
+                          </div>
+                        </AccordionItemButton>
 
-                  <li>
-                    <AniLink
-                      fade
-                      to="/reviews/"
-                      onKeyDown={clickHandler}
-                      onClick={clickHandler}
-                      className="font-heading text-3xl text-secondary-50 hover:text-primary-500 font-bold no-underline"
-                    >
-                      Reviews
-                    </AniLink>
-                  </li>
+                        <AccordionItemPanel className="pt-6 max-w-4xl">
+                          <ul className="flex flex-col space-y-4">
+                            <li>
+                              <AniLink
+                                fade
+                                to="/about/"
+                                onKeyDown={clickHandler}
+                                onClick={clickHandler}
+                                className="text-secondary-50 hover:text-primary-500 text-sm no-underline"
+                              >
+                                About Dark Horse
+                              </AniLink>
+                            </li>
+
+                            <li>
+                              <AniLink
+                                fade
+                                to="/our-cpas/"
+                                onKeyDown={clickHandler}
+                                onClick={clickHandler}
+                                className="text-secondary-50 hover:text-primary-500 text-sm no-underline"
+                              >
+                                Our CPAs
+                              </AniLink>
+                            </li>
+                          </ul>
+                        </AccordionItemPanel>
+                      </AccordionItem>
+                    </li>
+                  </Accordion>
 
                   <li>
                     <AniLink
@@ -260,60 +304,18 @@ const MainNav = ({
                       to="/blog/"
                       onKeyDown={clickHandler}
                       onClick={clickHandler}
-                      className="font-heading text-3xl text-secondary-50 hover:text-primary-500 font-bold no-underline"
+                      className="text-secondary-50 hover:text-primary-500 font-bold no-underline"
                     >
-                      Blog
+                      Resources
                     </AniLink>
                   </li>
                 </ul>
 
-                <div className="flex items-center justify-center space-x-6 mb-20">
-                  <a
-                    href="https://www.facebook.com/E-3-Mortgage-Corp-1155677131112451/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary-500"
-                  >
-                    <i className="fab fa-facebook-f text-xl"></i>
-                  </a>
-                  <a
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary-500"
-                  >
-                    <i className="fab fa-yelp text-2xl"></i>
-                  </a>
-                  <a
-                    href="https://www.instagram.com/e_3_mortgage/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary-500"
-                  >
-                    <i className="fab fa-instagram text-2xl"></i>
-                  </a>
-                  <a
-                    href="https://twitter.com/E_3_Mortgage"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary-500"
-                  >
-                    <i className="fab fa-twitter text-2xl"></i>
-                  </a>
-                </div>
-
-                <div className="grid gap-y-4 max-w-sm mx-auto">
-                  <ButtonSolid
-                    href="/request-rates/"
-                    text="Request Rates"
-                    className="w-full"
-                  />
-                  <ButtonGhost
-                    modal="modal-contact"
-                    text="Contact Us"
-                    className="w-full"
-                  />
-                </div>
+                <img
+                  src={data.logoMark.publicURL}
+                  alt="Dark Horse logo mark"
+                  className="mx-auto"
+                />
               </div>
             </OffCanvas>
           </div>

@@ -3,6 +3,7 @@ import { graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { BgImage } from "gbimage-bridge";
 import BackgroundImage from "../components/Background/Background";
+import Fade from "react-reveal/Fade";
 
 import Layout from "../components/Layout";
 import SearchEngineOptimization from "../components/SEO";
@@ -55,7 +56,22 @@ const Page = ({ data }) => {
         <div className="container">
           <div className="grid md:grid-cols-2 gap-y-6 md:gap-x-10 lg:gap-x-10 items-center">
             <div className="order-2 md:order-1">
-              <h2>Pick your poison.</h2>
+              <h2 className="md:mb-10">Pick your poison.</h2>
+              <div className="grid gap-y-4 mb-6">
+                <div className="flex items-center space-x-4">
+                  <div className="w-8 h-8 bg-white/20 rounded border-2 border-gray-50"></div>
+                  <p className="text-lg mb-0">
+                    Work for a bureaucratic, soul-sucking, traditional CPA firm.
+                  </p>
+                </div>
+
+                <div className="flex items-center space-x-4">
+                  <div className="w-8 h-8 bg-white/20 rounded border-2 border-gray-50"></div>
+                  <p className="text-lg mb-0">
+                    Find out how difficult it is to go out on your own.
+                  </p>
+                </div>
+              </div>
               <p className="text-lg">
                 These were the choices if you wanted to stay in public
                 accounting—until Dark Horse changed the game. We’ve democratized
@@ -65,6 +81,7 @@ const Page = ({ data }) => {
               </p>
               <ButtonGhost
                 href="#"
+                iconRight
                 text="Success Stories"
                 className="w-full md:w-auto"
               />
@@ -79,18 +96,22 @@ const Page = ({ data }) => {
                     }
                   />
                 </div>
-                <div className="absolute left-0 bottom-0 shadow-6xl rounded-3xl">
-                  <GatsbyImage
-                    image={data.arrowLeft.childImageSharp.gatsbyImageData}
-                    className="z-0 max-w-[157px] md:max-w-[261px]"
-                  />
-                </div>
-                <div className="absolute right-0 top-0 shadow-6xl rounded-3xl">
-                  <GatsbyImage
-                    image={data.arrowRight.childImageSharp.gatsbyImageData}
-                    className="z-0 max-w-[157px] md:max-w-[261px]"
-                  />
-                </div>
+                <Fade left duration="2000" distance="40px" fraction={0.2}>
+                  <div className="absolute left-0 bottom-0">
+                    <GatsbyImage
+                      image={data.arrowLeft.childImageSharp.gatsbyImageData}
+                      className="z-0 max-w-[157px] md:max-w-[261px] shadow-6xl rounded-3xl"
+                    />
+                  </div>
+                </Fade>
+                <Fade right duration="2000" distance="40px" fraction={0.7}>
+                  <div className="absolute right-0 top-0">
+                    <GatsbyImage
+                      image={data.arrowRight.childImageSharp.gatsbyImageData}
+                      className="z-0 max-w-[157px] md:max-w-[261px] shadow-6xl rounded-3xl"
+                    />
+                  </div>
+                </Fade>
               </div>
             </div>
           </div>
@@ -184,7 +205,8 @@ const Page = ({ data }) => {
               near-scratch)? This program is for you.
             </p>
             <ButtonGhost
-              href="#"
+              href="/accelerator-program/"
+              iconLeft
               text="Get Started Here"
               className="w-full md:w-auto"
             />
@@ -197,7 +219,8 @@ const Page = ({ data }) => {
               scale your practice within a collaborative community?
             </p>
             <ButtonGhost
-              href="#"
+              href="/sole-practitioner/"
+              iconRight
               text="Step Right Up"
               className="w-full md:w-auto"
             />

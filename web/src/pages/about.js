@@ -2,6 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { BgImage } from "gbimage-bridge";
+import Fade from "react-reveal/Fade";
 
 import Layout from "../components/Layout";
 import SearchEngineOptimization from "../components/SEO";
@@ -70,6 +71,7 @@ const Page = ({ data }) => {
             </p>
             <ButtonGhost
               href="#"
+              iconRight
               altStyle={3}
               text="Learn More about Our Why"
             />
@@ -131,18 +133,23 @@ const Page = ({ data }) => {
                     image={data.blueCrosses.childImageSharp.gatsbyImageData}
                   />
                 </div>
-                <div className="absolute right-0 top-0">
-                  <GatsbyImage
-                    image={data.cpa2.childImageSharp.gatsbyImageData}
-                    className="z-0 md:max-w-[310px] shadow-6xl rounded-3xl"
-                  />
-                </div>
-                <div className="absolute left-0 bottom-0">
-                  <GatsbyImage
-                    image={data.cpa1.childImageSharp.gatsbyImageData}
-                    className="z-0 md:max-w-[310px] shadow-6xl rounded-3xl"
-                  />
-                </div>
+                <Fade right duration="2000" distance="40px" fraction={0.7}>
+                  <div className="absolute right-0 top-0">
+                    <GatsbyImage
+                      image={data.cpa2.childImageSharp.gatsbyImageData}
+                      className="z-0 md:max-w-[310px] shadow-6xl rounded-3xl"
+                    />
+                  </div>
+                </Fade>
+
+                <Fade left duration="2000" distance="40px" fraction={0.2}>
+                  <div className="absolute left-0 bottom-0">
+                    <GatsbyImage
+                      image={data.cpa1.childImageSharp.gatsbyImageData}
+                      className="z-0 md:max-w-[310px] shadow-6xl rounded-3xl"
+                    />
+                  </div>
+                </Fade>
               </div>
             </div>
 
@@ -155,7 +162,7 @@ const Page = ({ data }) => {
                 succeed. We have been fortunate to attract some of the BEST in
                 the industry.
               </p>
-              <ButtonGhost href="/our-cpas/" text="Meet our CPAs" />
+              <ButtonGhost href="/our-cpas/" iconRight text="Meet our CPAs" />
             </div>
           </div>
         </div>

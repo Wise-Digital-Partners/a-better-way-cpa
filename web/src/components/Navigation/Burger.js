@@ -10,8 +10,8 @@ const StyledBurger = styled.button`
         offcanvasOpen ? "rotate(45deg)" : "rotate(0)"};
     }
     &:nth-of-type(2) {
-      transform: ${({ offcanvasOpen }) =>
-        offcanvasOpen ? "translateX(20px)" : "translateX(0)"};
+      /* transform: ${({ offcanvasOpen }) =>
+        offcanvasOpen ? "translateX(20px)" : "translateX(0)"}; */
     }
     &:nth-of-type(3) {
       transform: ${({ offcanvasOpen }) =>
@@ -33,20 +33,20 @@ const Burger = ({ offcanvasOpen, setOffcanvasOpen, headerStyle, scrolled }) => {
       scrolled={scrolled}
     >
       <div
-        className={`line relative w-6 h-px z-10 transition-all duration-300 ease-linear ${
+        className={`line relative w-6 h-0.5 z-10 transition-all duration-300 ease-linear ${
           headerStyle === "overlap" ? "bg-white" : "bg-white"
-        } ${scrolled && "bg-white"} ${offcanvasOpen && "bg-white"}`}
+        } ${scrolled && "bg-white"} ${offcanvasOpen && "bg-white opacity-0"}`}
       />
       <div
-        className={`line relative w-6 h-px z-10 transition-all duration-300 ease-linear ${
+        className={`line relative w-6 h-0.5 z-10 transition-all duration-300 ease-linear ${
           headerStyle === "overlap" ? "bg-white" : "bg-white"
-        } ${scrolled && "bg-white"} ${offcanvasOpen && "opacity-0"}
+        } ${scrolled && "bg-white"} ${offcanvasOpen && ""}
         }`}
       />
       <div
-        className={`line relative w-6 h-px z-10 transition-all duration-300 ease-linear ${
+        className={`line relative w-6 h-0.5 z-10 transition-all duration-300 ease-linear ${
           headerStyle === "overlap" ? "bg-white" : "bg-white"
-        } ${scrolled && "bg-white"} ${offcanvasOpen && "bg-white"}`}
+        } ${scrolled && "bg-white"} ${offcanvasOpen && "bg-white opacity-0"}`}
       />
     </StyledBurger>
   );

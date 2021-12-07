@@ -100,6 +100,7 @@ const Page = ({ data }) => {
               </p>
               <ButtonGhost
                 href="#"
+                iconRight
                 text="Success Stories"
                 className="w-full md:w-auto"
               />
@@ -136,7 +137,7 @@ const Page = ({ data }) => {
             </div>
             <div>
               <h2>Success Stories</h2>
-              <blockquote className="mb-10">
+              <blockquote className="mb-6">
                 <q className="mb-6 block">
                   Having the support of a person who ‘gets it’ is amazing –
                   life-changing! I actually took my first spring break vacation
@@ -153,6 +154,7 @@ const Page = ({ data }) => {
               <ButtonGhost
                 href="https://darkhorse.cpa/success-stories/25-years-of-running-a-successful-cpa-practice/"
                 outboundLink={true}
+                iconRight
                 text="Read the Story"
                 className="w-full md:w-auto"
               />

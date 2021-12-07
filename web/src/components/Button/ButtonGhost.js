@@ -9,7 +9,8 @@ const Button = ({
   onClick,
   type,
   altStyle,
-  icon,
+  iconLeft,
+  iconRight,
   text,
 }) => {
   const Tag = href ? AniLink : "button";
@@ -36,13 +37,82 @@ const Button = ({
       onClick={onClick}
       type={type}
     >
+      {iconLeft && (
+        <svg
+          width="19"
+          height="18"
+          viewBox="0 0 19 18"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="mr-1.5 z-10"
+        >
+          <path
+            d="M3 9L17 9"
+            strokeWidth="4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className={`stroke-current transition-colors duration-300 ease-linear ${
+              altStyle === 2
+                ? ""
+                : altStyle === 3
+                ? "text-white group-hover:primary-500 transition-colors duration-300 ease-linear"
+                : "text-primary-500 group-hover:text-white"
+            }`}
+          />
+          <path
+            d="M9.5 16.5L2 9L9.5 1.5L9.5 16.5Z"
+            strokeWidth="3"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className={`fill-current stroke-current transition-colors duration-300 ease-linear ${
+              altStyle === 2
+                ? ""
+                : altStyle === 3
+                ? ""
+                : "text-primary-500 group-hover:text-white"
+            }`}
+          />
+        </svg>
+      )}
+
       <span className="z-10">{text}</span>
-      {icon && (
-        <i
-          className={`ml-2 text-lg relative left-0 group-hover:left-2 transition-all duration-300 ease-linear z-10 ${
-            altStyle ? "text-white" : "text-gray-900"
-          } ${icon}`}
-        ></i>
+
+      {iconRight && (
+        <svg
+          width="19"
+          height="19"
+          viewBox="0 0 19 19"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="ml-1.5 z-10"
+        >
+          <path
+            d="M16 9.5L2 9.5"
+            strokeWidth="4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className={`stroke-current transition-colors duration-300 ease-linear ${
+              altStyle === 2
+                ? ""
+                : altStyle === 3
+                ? ""
+                : "text-primary-500 group-hover:text-white"
+            }`}
+          />
+          <path
+            d="M9.5 2L17 9.5L9.5 17V2Z"
+            strokeWidth="3"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className={`fill-current stroke-current transition-colors duration-300 ease-linear ${
+              altStyle === 2
+                ? ""
+                : altStyle === 3
+                ? ""
+                : "text-primary-500 group-hover:text-white"
+            }`}
+          />
+        </svg>
       )}
     </Tag>
   );
