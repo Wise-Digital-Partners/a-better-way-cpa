@@ -171,7 +171,7 @@ const MainNav = ({
               <ul
                 className={`absolute top-0 bg-secondary-900 shadow-7xl rounded-b-3xl flex flex-col space-y-5 w-auto transform -translate-x-8 pt-7 px-7 pb-14 z-10 transition-all duration-500 ease-in-out ${
                   subMenuHovering1
-                    ? " visible translate-y-14 opacity-100"
+                    ? " visible translate-y-[54px] opacity-100"
                     : "invisible translate-y-18 opacity-0"
                 }`}
               >
