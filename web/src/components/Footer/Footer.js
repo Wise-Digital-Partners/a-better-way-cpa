@@ -29,7 +29,7 @@ const Footer = ({ hideFooter }) => {
       <div className="container">
         <div className="grid lg:grid-cols-12 lg:justify-between space-y-10 lg:space-y-0 lg:space-x-8 mb-14 lg:mb-20">
           <div className="lg:col-start-1 lg:col-span-3">
-            <AniLink fade to="">
+            <AniLink fade to="#">
               <GatsbyImage
                 image={data.logo.childImageSharp.gatsbyImageData}
                 alt="Dark Horse CPAs Logo"
@@ -75,7 +75,7 @@ const Footer = ({ hideFooter }) => {
                   <li>
                     <AniLink
                       fade
-                      to=""
+                      to="/accelerator-program/"
                       className="font-display text-primary-50/90 hover:text-white no-underline whitespace-nowrap"
                     >
                       Accelerator Program
@@ -84,7 +84,7 @@ const Footer = ({ hideFooter }) => {
                   <li>
                     <AniLink
                       fade
-                      to=""
+                      to="/sole-practitioner/"
                       className="font-display text-primary-50/90 hover:text-white no-underline whitespace-nowrap"
                     >
                       Sole Practitioners
@@ -93,7 +93,7 @@ const Footer = ({ hideFooter }) => {
                   <li>
                     <AniLink
                       fade
-                      to=""
+                      to="/blog/"
                       className="font-display text-primary-50/90 hover:text-white no-underline whitespace-nowrap"
                     >
                       Resources
@@ -110,7 +110,7 @@ const Footer = ({ hideFooter }) => {
                   <li>
                     <AniLink
                       fade
-                      to=""
+                      to="#"
                       className="font-display text-primary-50/90 hover:text-white no-underline whitespace-nowrap"
                     >
                       Our Why
@@ -128,7 +128,7 @@ const Footer = ({ hideFooter }) => {
                   <li>
                     <AniLink
                       fade
-                      to=""
+                      to="#"
                       className="font-display text-primary-50/90 hover:text-white no-underline whitespace-nowrap"
                     >
                       Our Founders
@@ -137,7 +137,7 @@ const Footer = ({ hideFooter }) => {
                   <li>
                     <AniLink
                       fade
-                      to=""
+                      to="#"
                       className="font-display text-primary-50/90 hover:text-white no-underline whitespace-nowrap"
                     >
                       Our Clients
@@ -206,7 +206,7 @@ const Footer = ({ hideFooter }) => {
                   </li>
                   <li>
                     <a
-                      href=""
+                      href="#"
                       className="font-display text-primary-50/90 hover:text-white no-underline whitespace-nowrap"
                     >
                       Contact
@@ -228,7 +228,7 @@ const Footer = ({ hideFooter }) => {
               <li className="text-sm flex items-center mb-3 md:mb-0">
                 <AniLink
                   fade
-                  to=""
+                  to="#"
                   className="text-primary-50/70 hover:text-white no-underline"
                 >
                   Privacy Policy
