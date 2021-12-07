@@ -1,0 +1,122 @@
+module.exports = {
+  mode: "jit",
+  purge: ["./src/**/*.js"],
+  theme: {
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: "1rem",
+      },
+      screens: {
+        DEFAULT: "77rem",
+      },
+    },
+    fontFamily: {
+      heading: ['"Playfair Display", serif'],
+      display: ['"Mulish", sans-serif'],
+      body: ['"Noto Sans", sans-serif'],
+    },
+    extend: {
+      animation: {
+        fadeIn: "fadeIn 0.5s ease-in",
+      },
+      borderRadius: {
+        "4xl": "2rem",
+        "5xl": "2.25rem",
+      },
+      boxShadow: {
+        "3xl": "5px 2px 20px rgba(0, 0, 0, 0.3)",
+        "4xl": "0px 4px 40px rgba(0, 0, 0, 0.16)",
+        "5xl": "0px 2px 4px rgba(0, 0, 0, 0.25)",
+        "6xl": "0px 4px 30px rgba(0, 0, 0, 0.25)",
+        "7xl": "5px 2px 60px rgba(0, 0, 0, 0.45)",
+      },
+      colors: {
+        gray: {
+          900: "#1A1A1A",
+          800: "#333333",
+          700: "#4D4D4D",
+          600: "#666666",
+          500: "#808080",
+          400: "#999999",
+          300: "#B2B2B2",
+          200: "#CCCCCC",
+          100: "#E5E5E5",
+          50: "#F7F7F7",
+        },
+        primary: {
+          900: "",
+          800: "",
+          700: "",
+          600: "",
+          500: "#FD9A4A",
+          400: "",
+          300: "",
+          200: "",
+          100: "",
+          50: "#F7F5F0",
+        },
+        secondary: {
+          900: "#314251",
+          800: "#495E6F",
+          700: "",
+          600: "",
+          500: "",
+          400: "#86ACB2",
+          300: "",
+          200: "",
+          100: "",
+          50: "#E7F1F3",
+        },
+      },
+      fontSize: {
+        "2xs": ["0.625rem", "1rem"],
+        sm: ["0.875rem", "1.25rem"],
+        base: ["1rem", "1.5rem"],
+        lg: ["1.125rem", "1.75rem"],
+        xl: ["1.25rem", "1.688rem"],
+        "2xl": ["1.5rem", "2.125rem"],
+        "3xl": ["1.75rem", "2.125rem"],
+        "4xl": ["2.25rem", "2.999rem"],
+        "5xl": ["2.625rem", "3.499rem"],
+        "6xl": ["2.625rem", "3.499rem"],
+        "7xl": ["3.25rem", "4.333rem"],
+        // "mobile-lg": ["rem", "rem"],
+        // "mobile-xl": ["rem", "rem"],
+        // "mobile-2xl": ["rem", "rem"],
+        // "mobile-3xl": ["rem", "rem"],
+        // "mobile-4xl": ["rem", "rem"],
+        "mobile-5xl": ["2.25rem", "2.999rem"],
+        "mobile-6xl": ["2.375rem", "3.166rem"],
+        "mobile-7xl": ["2.813rem", "3.749rem"],
+      },
+      keyframes: {
+        fadeIn: {
+          "0%": { opacity: 0 },
+          "100%": { opacity: 1 },
+        },
+      },
+      letterSpacing: {
+        wide: "0.02em",
+        wider: "0.05em",
+        widest: "0.07em",
+      },
+      maxWidth: {
+        "3xl": "45rem",
+      },
+      ringWidth: {
+        3: "3px",
+      },
+      screens: {
+        "2xs": "375px",
+        xs: "480px",
+      },
+      spacing: {
+        18: "4.5rem",
+        22: "5.5rem",
+        30: "7.5rem",
+      },
+    },
+  },
+  plugins: [require("@tailwindcss/forms")],
+};

@@ -1,0 +1,33 @@
+.radio-custom {
+  @apply before:absolute before:top-1 before:left-1 before:w-2.5 before:h-2.5 before:rounded-full before:bg-transparent before:transition-colors before:duration-300 before:ease-linear before:z-10
+  after:absolute after:top-0 after:left-0 after:w-[18px] after:h-[18px] after:rounded-full after:border after:border-white after:transition-colors after:duration-300 after:ease-linear;
+  label {
+    @apply relative pl-7 mb-2 cursor-pointer text-sm;
+  }
+}
+input[type="radio"] {
+  @apply absolute opacity-0;
+  &:checked {
+    + .radio-custom {
+      @apply after:bg-white after:border-primary-500 before:bg-primary-500;
+    }
+  }
+}
+
+// .checkbox-custom {
+//   @apply absolute top-0 left-0 w-5 h-5 bg-white border border-solid border-gray-400;
+//   &:after {
+//     content: "";
+//     width: 10px;
+//     height: 10px;
+//     @apply absolute hidden top-0 left-0 mt-1 ml-1 bg-primary;
+//   }
+// }
+// input[type="checkbox"] {
+//   @apply mr-2 absolute opacity-0;
+//   &:checked {
+//     ~ .checkbox-custom:after {
+//       @apply block;
+//     }
+//   }
+// }

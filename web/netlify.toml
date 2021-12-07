@@ -1,0 +1,5 @@
+[[plugins]]
+  package = "@netlify/plugin-gatsby"
+
+[[plugins]]
+  package = "netlify-plugin-inline-critical-css"

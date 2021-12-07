@@ -1,101 +1,108 @@
 import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
 import PropTypes from "prop-types";
-import Helmet from "react-helmet";
-import { graphql, useStaticQuery } from "gatsby";
-import { imageUrlFor } from "../lib/image-url";
-import { buildImageObj } from "../lib/helpers";
+import { Helmet } from "react-helmet";
 
-function SEO({ description, lang, meta, keywords, title, image }) {
-  const { site } = useStaticQuery(detailsQuery) || {};
+const SEO = ({
+  description,
+  lang,
+  meta,
+  keywords,
+  title,
+  openGraphImage,
+  twitterOpenGraphImage,
+}) => {
+  const { site } = useStaticQuery(graphql`
+    query DefaultSEOQuery {
+      site {
+        siteMetadata {
+          author
+          siteUrl
+        }
+      }
+    }
+  `);
 
-  const metaDescription = description || site.description || "";
-  const siteTitle = site.title || "";
-  const siteAuthor = site.author?.name || "";
-  const metaImage = image?.asset
-    ? imageUrlFor(buildImageObj(image)).width(1200).url()
-    : "";
+  const metaDescription = description || site.siteMetadata.description;
+  const socialDefault = `${site.siteMetadata.siteUrl}${openGraphImage}`;
+  const socialTwitter = `${site.siteMetadata.siteUrl}${twitterOpenGraphImage}`;
 
   return (
     <Helmet
-      htmlAttributes={{ lang }}
-      title={title}
-      titleTemplate={title === siteTitle ? "%s" : `%s | ${siteTitle}`}
+      htmlAttributes={{
+        lang,
+      }}
       meta={[
         {
-          name: "description",
+          name: `description`,
           content: metaDescription,
         },
         {
-          property: "og:title",
+          property: `og:title`,
           content: title,
         },
         {
-          property: "og:description",
+          property: `og:image`,
+          content: socialDefault,
+        },
+        {
+          property: `og:description`,
           content: metaDescription,
         },
         {
-          property: "og:type",
-          content: "website",
+          property: `og:type`,
+          content: `website`,
         },
         {
-          property: "og:image",
-          content: metaImage,
+          name: `twitter:card`,
+          content: `summary`,
         },
         {
-          name: "twitter:card",
-          content: "summary",
+          name: `twitter:creator`,
+          content: site.siteMetadata.author,
         },
         {
-          name: "twitter:creator",
-          content: siteAuthor,
-        },
-        {
-          name: "twitter:title",
+          name: `twitter:title`,
           content: title,
         },
         {
-          name: "twitter:description",
+          name: `twitter:description`,
           content: metaDescription,
+        },
+        {
+          name: `twitter:image`,
+          content: socialTwitter,
         },
       ]
         .concat(
-          keywords && keywords.length > 0
+          keywords.length > 0
             ? {
-                name: "keywords",
-                content: keywords.join(", "),
+                name: `keywords`,
+                content: keywords.join(`, `),
               }
             : []
         )
         .concat(meta)}
+      title={title}
+      titleTemplate={`%s`}
     />
   );
-}
+};
 
 SEO.defaultProps = {
-  lang: "en",
-  meta: [],
+  lang: `en`,
   keywords: [],
+  meta: [],
 };
 
 SEO.propTypes = {
   description: PropTypes.string,
+  keywords: PropTypes.arrayOf(PropTypes.string),
   lang: PropTypes.string,
   meta: PropTypes.array,
-  keywords: PropTypes.arrayOf(PropTypes.string),
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
+  twitterOpenGraphImage: PropTypes.string,
+  openGraphImage: PropTypes.string,
 };
 
 export default SEO;
-
-const detailsQuery = graphql`
-  query DefaultSEOQuery {
-    site: sanitySiteSettings(_id: { eq: "siteSettings" }) {
-      title
-      description
-      keywords
-      author {
-        name
-      }
-    }
-  }
-`;

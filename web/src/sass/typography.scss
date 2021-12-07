@@ -1,0 +1,52 @@
+body {
+  @apply font-body text-base text-secondary-50 antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading-one,
+.heading-two,
+.heading-three,
+.heading-four,
+.heading-five,
+.heading-six {
+  @apply text-primary-50;
+}
+
+h1,
+.heading-one {
+  @apply font-heading text-mobile-6xl md:text-6xl font-bold mb-6;
+}
+
+h2,
+.heading-two {
+  @apply font-heading text-mobile-5xl md:text-5xl font-semibold tracking-wide mb-5;
+}
+
+h3,
+.heading-three {
+  @apply font-heading text-4xl font-bold mb-5;
+}
+
+h4,
+.heading-four {
+  @apply text-3xl font-bold mb-4;
+}
+
+h5,
+.heading-five {
+  @apply text-xl font-bold mb-3;
+}
+
+h6,
+.heading-six {
+  @apply text-lg font-bold mb-2.5;
+}
+
+p {
+  @apply text-base mb-6;
+}

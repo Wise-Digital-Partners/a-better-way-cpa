@@ -1,6 +1,5 @@
 import S from "@sanity/desk-tool/structure-builder";
-import { MdSettings } from "react-icons/md";
-import { MdPerson, MdDescription, MdLocalOffer } from "react-icons/md";
+import { MdPerson, MdDescription, MdCategory, MdPeople } from "react-icons/md";
 import IframePreview from "../previews/IframePreview";
 
 // Web preview configuration
@@ -44,37 +43,34 @@ export default () =>
     .title("Content")
     .items([
       S.listItem()
-        .title("Settings")
-        .icon(MdSettings)
-        .child(
-          S.editor()
-            .id("siteSettings")
-            .schemaType("siteSettings")
-            .documentId("siteSettings")
-        ),
-      S.divider(),
-      S.listItem()
-        .title("Blog posts")
+        .title("Blog Posts")
         .icon(MdDescription)
         .schemaType("post")
-        .child(S.documentTypeList("post").title("Blog posts")),
+        .child(S.documentTypeList("post").title("Blog Posts")),
       S.listItem()
-        .title("Authors")
+        .title("Blog Authors")
         .icon(MdPerson)
         .schemaType("author")
-        .child(S.documentTypeList("author").title("Authors")),
+        .child(S.documentTypeList("author").title("Blog Authors")),
       S.listItem()
-        .title("Categories")
-        .icon(MdLocalOffer)
+        .title("Blog Categories")
+        .icon(MdCategory)
         .schemaType("category")
-        .child(S.documentTypeList("category").title("Categories")),
+        .child(S.documentTypeList("category").title("Blog Categories")),
+      S.listItem()
+        .title("Team Members")
+        .icon(MdPeople)
+        .schemaType("teamMember")
+        .child(S.documentTypeList("teamMember").title("Team Members")),
       // `S.documentTypeListItems()` returns an array of all the document types
       // defined in schema.js. We filter out those that we have
       // defined the structure above.
-      ...S.documentTypeListItems().filter(
-        (listItem) =>
-          !["category", "author", "post", "siteSettings"].includes(
-            listItem.getId()
-          )
-      ),
+      // ...S.documentTypeListItems().filter(
+      //   (listItem) =>
+      //     ![
+      //       "category",
+      //       "author",
+      //       "post",
+      //     ].includes(listItem.getId())
+      // ),
     ]);

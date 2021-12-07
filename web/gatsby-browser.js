@@ -1,7 +1,9 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/browser-apis/
- */
+import "./src/sass/styles.scss";
 
-// You can delete this file if you're not using it
+import "./node_modules/@fortawesome/fontawesome-pro/css/all.min.css";
+
+import "@fontsource/playfair-display/700.css";
+import "@fontsource/playfair-display/600.css";
+import "@fontsource/noto-sans/700.css";
+import "@fontsource/noto-sans/400.css";
+import "@fontsource/mulish/400.css";

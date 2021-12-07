@@ -1,5 +1,11 @@
-module.exports = () => ({
+module.exports = {
   plugins: [
+    require("postcss-import"),
+    require("autoprefixer"),
+    require("postcss-nested"),
+    require("cssnano")({
+      preset: `default`,
+    }),
     require("postcss-preset-env")({
       stage: 3,
       features: {
@@ -14,4 +20,4 @@ module.exports = () => ({
       },
     }),
   ],
-});
+};

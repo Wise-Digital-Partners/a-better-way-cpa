@@ -1,4 +1,4 @@
-import { format, isFuture } from "date-fns";
+import { isFuture } from "date-fns";
 
 export function cn(...args) {
   return args.filter(Boolean).join(" ");
@@ -13,25 +13,20 @@ export function filterOutDocsWithoutSlugs({ slug }) {
   return (slug || {}).current;
 }
 
+export function excludeFeaturedPosts({ featured }) {
+  return !featured;
+}
+
+export function includeFeaturedPosts({ featured }) {
+  return featured;
+}
+
 export function filterOutDocsPublishedInTheFuture({ publishedAt }) {
   return !isFuture(new Date(publishedAt));
 }
 
-export function getBlogUrl(publishedAt, slug) {
-  return `/blog/${format(new Date(publishedAt), "yyyy/MM")}/${
-    slug.current || slug
-  }/`;
-}
-
-export function buildImageObj(source = { asset: {} }) {
-  const imageObj = {
-    asset: { _ref: source.asset._ref || source.asset._id },
-  };
-
-  if (source.crop) imageObj.crop = source.crop;
-  if (source.hotspot) imageObj.hotspot = source.hotspot;
-
-  return imageObj;
+export function getBlogUrl(slug) {
+  return `/${slug.current || slug}/`;
 }
 
 export function toPlainText(blocks) {
