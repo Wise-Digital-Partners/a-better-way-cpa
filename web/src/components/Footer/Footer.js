@@ -39,7 +39,7 @@ const Footer = ({ hideFooter }) => {
 
             <div className="flex items-center space-x-6">
               <a
-                href=""
+                href="#"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white hover:text-primary-500"
@@ -47,7 +47,7 @@ const Footer = ({ hideFooter }) => {
                 <i className="fab fa-instagram text-2xl"></i>
               </a>
               <a
-                href=""
+                href="#"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white hover:text-primary-500"
@@ -155,21 +155,20 @@ const Footer = ({ hideFooter }) => {
                   <li>
                     <AniLink
                       fade
-                      to=""
+                      to="#"
                       className="font-display text-primary-50/90 hover:text-white no-underline whitespace-nowrap"
                     >
                       Accelerators
                     </AniLink>
                   </li>
                   <li>
-                    <a
-                      href="#"
-                      target="_blank"
-                      rel="noreferrer"
+                    <AniLink
+                      fade
+                      to="#"
                       className="font-display text-primary-50/90 hover:text-white no-underline whitespace-nowrap"
                     >
                       Principals
-                    </a>
+                    </AniLink>
                   </li>
                 </ul>
               </div>
@@ -182,23 +181,24 @@ const Footer = ({ hideFooter }) => {
                 <ul className="flex flex-col space-y-3">
                   <li>
                     <a
-                      href=""
+                      href="#"
                       className="font-display text-primary-50/90 hover:text-white no-underline whitespace-nowrap"
                     >
                       Book a Meeting
                     </a>
                   </li>
                   <li>
-                    <a
-                      href=""
+                    <AniLink
+                      fade
+                      to="/request-info/"
                       className="font-display text-primary-50/90 hover:text-white no-underline whitespace-nowrap"
                     >
                       Request More Info
-                    </a>
+                    </AniLink>
                   </li>
                   <li>
                     <a
-                      href=""
+                      href="/apply/"
                       className="font-display text-primary-50/90 hover:text-white no-underline whitespace-nowrap"
                     >
                       Apply Now

@@ -277,7 +277,7 @@ const DHDifference = ({ className, headingLevel }) => {
       ${tw``}
     }
     .react-tabs__tab-list {
-      ${tw`hidden md:flex space-x-10 relative mb-6 md:mb-16 border-none after:content after:w-full after:h-px after:bg-gray-200 after:absolute after:bottom-0 after:left-0`}
+      ${tw`flex space-x-10 relative mb-6 md:mb-16 border-none after:content after:w-full after:h-px after:bg-gray-200 after:absolute after:bottom-0 after:left-0`}
     }
     .react-tabs__tab {
       ${tw`text-primary-50/40 font-bold border-none pt-0 px-0 pb-5 transition-colors duration-300 ease-linear after:content after:w-0 after:h-2 after:bg-primary-500 after:absolute after:bottom-0 after:left-0 after:transition-all after:duration-300 after:ease-linear`}
@@ -285,9 +285,9 @@ const DHDifference = ({ className, headingLevel }) => {
     .react-tabs__tab--selected {
       ${tw`text-primary-500 after:w-full bg-transparent`}
     }
-    .react-tabs__tab-panel:not(.react-tabs__tab-panel--selected) {
+    /* .react-tabs__tab-panel:not(.react-tabs__tab-panel--selected) {
       ${tw`block md:hidden`}
-    }
+    } */
   `;
 
   return (

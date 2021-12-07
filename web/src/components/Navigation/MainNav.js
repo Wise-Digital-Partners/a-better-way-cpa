@@ -323,7 +323,11 @@ const MainNav = ({
 
         <div className="hidden lg:flex items-center justify-end space-x-4">
           <ButtonGhost href="/apply/" text="Apply Now" className="min-w-0" />
-          <ButtonSolid href="" text="Request Info" className="min-w-0" />
+          <ButtonSolid
+            href="/request-info/"
+            text="Request Info"
+            className="min-w-0"
+          />
         </div>
       </div>
     </nav>
