@@ -85,7 +85,7 @@ export default class Form extends Component {
             </label>
           </div>
 
-          <div className="mb-5">
+          <div className="mb-6">
             <label
               className="font-body text-sm font-medium text-gray-800 block mb-1.5"
               htmlFor="name"
@@ -101,7 +101,7 @@ export default class Form extends Component {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-6 w-full">
-            <div className="mb-5">
+            <div className="mb-6">
               <label
                 className="font-body text-sm font-medium text-gray-800 block mb-1.5"
                 htmlFor="phone"
@@ -115,7 +115,7 @@ export default class Form extends Component {
                 required={true}
               />
             </div>
-            <div className="mb-5">
+            <div className="mb-6">
               <label
                 className="font-body text-sm font-medium text-gray-800 block mb-1.5"
                 htmlFor="email"
@@ -131,7 +131,7 @@ export default class Form extends Component {
             </div>
           </div>
 
-          <div className="mb-5">
+          <div className="mb-6">
             <label
               className="font-body text-sm font-medium text-gray-800 block mb-1"
               htmlFor="what-can-we-help-you-with"
@@ -156,7 +156,7 @@ export default class Form extends Component {
             </select>
           </div>
 
-          {/* <div className="mb-5">
+          {/* <div className="mb-6">
             <fieldset>
               <legend className="font-body text-sm font-medium text-gray-800 block mb-1.5">
                 Are you an owner or a renter?
@@ -187,7 +187,7 @@ export default class Form extends Component {
             </fieldset>
           </div> */}
 
-          <div className="mb-5">
+          <div className="mb-6">
             <label
               className="font-body text-sm font-medium text-gray-800 block mb-1.5"
               htmlFor="message"

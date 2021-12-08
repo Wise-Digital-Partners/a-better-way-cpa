@@ -181,7 +181,9 @@ const Footer = ({ hideFooter }) => {
                 <ul className="flex flex-col space-y-3">
                   <li>
                     <a
-                      href="#"
+                      href="https://meetings.hubspot.com/justin-kurn"
+                      target="_blank"
+                      rel="noreferrer"
                       className="font-display text-primary-50/90 hover:text-white no-underline whitespace-nowrap"
                     >
                       Book a Meeting

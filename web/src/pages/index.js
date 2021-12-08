@@ -40,7 +40,8 @@ const Page = ({ data }) => {
         </p>
         <div className="flex justify-center space-x-4">
           <ButtonSolid
-            href="#"
+            href="https://meetings.hubspot.com/justin-kurn"
+            outboundLink
             text="Book a Discovery Call"
             className="w-full md:w-auto"
           />
@@ -140,7 +141,8 @@ const Page = ({ data }) => {
                 bigger asset on your hands.
               </p>
               <ButtonSolid
-                href="#"
+                href="https://meetings.hubspot.com/justin-kurn"
+                outboundLink
                 text="Book a Discovery Call"
                 className="w-full md:w-auto"
               />

@@ -41,7 +41,8 @@ const Page = ({ data }) => {
                 earnings and helps them live a more balanced life.
               </p>
               <ButtonSolid
-                href="#"
+                href="https://meetings.hubspot.com/justin-kurn"
+                outboundLink
                 text="Book a Discovery Call"
                 className="w-full md:w-auto"
               />

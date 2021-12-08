@@ -90,7 +90,7 @@ export default class Form extends Component {
             </label>
           </div>
 
-          <div className="mb-5">
+          <div className="mb-6">
             <label
               className="font-body text-sm font-semibold text-white block mb-1.5"
               htmlFor="name"
@@ -106,7 +106,7 @@ export default class Form extends Component {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-6 w-full">
-            <div className="mb-5">
+            <div className="mb-6">
               <label
                 className="font-body text-sm font-semibold text-white block mb-1.5"
                 htmlFor="phone"
@@ -120,7 +120,7 @@ export default class Form extends Component {
                 required={true}
               />
             </div>
-            <div className="mb-5">
+            <div className="mb-6">
               <label
                 className="font-body text-sm font-semibold text-white block mb-1.5"
                 htmlFor="email"
@@ -136,7 +136,7 @@ export default class Form extends Component {
             </div>
           </div>
 
-          <div className="mb-5">
+          <div className="mb-6">
             <label
               className="font-body text-sm font-semibold text-white block mb-1.5"
               htmlFor="when-are-you-looking-to-make-a-change"
@@ -155,7 +155,7 @@ export default class Form extends Component {
             </select>
           </div>
 
-          <div className="mb-5">
+          <div className="mb-6">
             <label
               className="font-body text-sm font-semibold text-white block mb-1.5"
               htmlFor="how-many-years-have-you-owned-your-practice"
@@ -171,7 +171,7 @@ export default class Form extends Component {
             />
           </div>
 
-          <div className="mb-5">
+          <div className="mb-6">
             <label
               className="font-body text-sm font-semibold text-white block mb-1.5"
               htmlFor="whats-your-annual-revenue"
@@ -190,7 +190,7 @@ export default class Form extends Component {
             </select>
           </div>
 
-          <div className="mb-5">
+          <div className="mb-6">
             <fieldset>
               <legend className="font-body text-sm font-semibold text-white block mb-1.5">
                 Do you have a current staff?

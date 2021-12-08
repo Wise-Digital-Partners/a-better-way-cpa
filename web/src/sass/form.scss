@@ -14,20 +14,20 @@ input[type="radio"] {
   }
 }
 
-// .checkbox-custom {
-//   @apply absolute top-0 left-0 w-5 h-5 bg-white border border-solid border-gray-400;
-//   &:after {
-//     content: "";
-//     width: 10px;
-//     height: 10px;
-//     @apply absolute hidden top-0 left-0 mt-1 ml-1 bg-primary;
-//   }
-// }
-// input[type="checkbox"] {
-//   @apply mr-2 absolute opacity-0;
-//   &:checked {
-//     ~ .checkbox-custom:after {
-//       @apply block;
-//     }
-//   }
-// }
+.checkbox-custom {
+  @apply absolute top-0 left-0 w-5 h-5 bg-white border border-solid border-gray-400;
+  &:after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    @apply absolute hidden top-0 left-0 mt-1 ml-1 bg-primary-500;
+  }
+}
+input[type="checkbox"] {
+  @apply mr-2 absolute opacity-0;
+  &:checked {
+    ~ .checkbox-custom:after {
+      @apply block;
+    }
+  }
+}

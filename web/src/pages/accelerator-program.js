@@ -45,7 +45,8 @@ const Page = ({ data }) => {
                 start getting the most out of your profession.
               </p>
               <ButtonSolid
-                href="#"
+                href="https://meetings.hubspot.com/justin-kurn"
+                outboundLink
                 text="Book a Discovery Call"
                 className="w-full md:w-auto"
               />
@@ -334,7 +335,8 @@ const Page = ({ data }) => {
             </Fade>
 
             <ButtonSolid
-              href="#"
+              href="https://meetings.hubspot.com/justin-kurn"
+              outboundLink
               text="Book a Discovery Call"
               className="w-full md:w-auto"
             />

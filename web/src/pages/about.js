@@ -35,7 +35,8 @@ const Page = ({ data }) => {
                 and the livelihoods of CPAs.
               </p>
               <ButtonSolid
-                href="#"
+                href="https://meetings.hubspot.com/justin-kurn"
+                outboundLink
                 text="Book a Discovery Call"
                 className="w-full md:w-auto"
               />

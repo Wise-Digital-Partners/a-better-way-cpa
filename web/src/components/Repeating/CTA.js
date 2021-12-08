@@ -27,7 +27,8 @@ const CTA = ({ ctaHeading, headingLevel, ctaText, className }) => {
               className="w-full md:w-auto"
             />
             <ButtonSolid
-              modal="modal-contact"
+              href="https://meetings.hubspot.com/justin-kurn"
+              outboundLink
               text="Book a Meeting"
               altStyle={2}
               className="w-full md:w-auto"
