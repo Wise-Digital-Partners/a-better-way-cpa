@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 import styled from "@emotion/styled";
@@ -69,7 +69,7 @@ const DHDifference = ({ className, headingLevel }) => {
           <p className="text-lg">
             You’ll be covered by the Peer Reviews we do at a firm-level, and you
             won’t have to worry about administering your own corporation,
-            payroll, Professional Liability insurance, etc.
+            payroll, professional liability insurance, etc.
           </p>
 
           <p className="text-lg mb-1.5 text-secondary-50">
@@ -270,24 +270,41 @@ const DHDifference = ({ className, headingLevel }) => {
     },
   ];
 
+  const [tabIndex, setTabIndex] = useState(0);
+  const [setActive, setActiveState] = useState(false);
+  const [setActiveText, setActiveTextState] = useState("");
+
+  const clickHandler = (index) => {
+    setActiveState(!setActive);
+
+    return index === 0
+      ? setActiveTextState("Support")
+      : index === 1
+      ? setActiveTextState("Flexibility")
+      : index === 2
+      ? setActiveTextState("Marketing")
+      : index === 3
+      ? setActiveTextState("Tech")
+      : index === 4
+      ? setActiveTextState("Money")
+      : index === 5
+      ? setActiveTextState("Other")
+      : null;
+  };
+
   const HeadingTag = headingLevel || "h2";
 
   const StyledTabs = styled.div`
-    .react-tabs {
-      ${tw``}
-    }
     .react-tabs__tab-list {
-      ${tw`flex space-x-10 relative mb-6 md:mb-16 border-none after:content after:w-full after:h-px after:bg-gray-200 after:absolute after:bottom-0 after:left-0`}
+      ${tw`bg-secondary-900 md:bg-transparent rounded-b-3xl md:rounded-none absolute md:relative top-14 md:top-0 left-0 w-full flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-10 md:mb-16 px-8 pb-4 md:p-0 border-none md:after:w-full z-10 md:after:h-px md:after:bg-gray-200 md:after:absolute md:after:bottom-0 md:after:left-0`}
+      ${setActive ? tw`flex` : tw`hidden md:flex`}
     }
     .react-tabs__tab {
-      ${tw`text-primary-50/40 font-bold border-none pt-0 px-0 pb-5 transition-colors duration-300 ease-linear after:content after:w-0 after:h-2 after:bg-primary-500 after:absolute after:bottom-0 after:left-0 after:transition-all after:duration-300 after:ease-linear`}
+      ${tw`text-primary-50/40 font-bold border-none pt-0 px-0 pb-0 md:pb-5 transition-colors duration-300 ease-linear md:after:w-0 md:after:h-2 md:after:bg-primary-500 md:after:absolute md:after:bottom-0 md:after:left-0 md:after:transition-all md:after:duration-300 md:after:ease-linear`}
     }
     .react-tabs__tab--selected {
-      ${tw`text-primary-500 after:w-full bg-transparent`}
+      ${tw`hidden md:block text-primary-500 md:after:w-full bg-transparent`}
     }
-    /* .react-tabs__tab-panel:not(.react-tabs__tab-panel--selected) {
-      ${tw`block md:hidden`}
-    } */
   `;
 
   return (
@@ -298,16 +315,37 @@ const DHDifference = ({ className, headingLevel }) => {
         </header>
 
         <StyledTabs>
-          <Tabs forceRenderTabPanel={true}>
-            <TabList>
-              {content.map((content, i) => {
-                return (
-                  <>
-                    <Tab key={i}>{content.tabTitle}</Tab>
-                  </>
-                );
-              })}
-            </TabList>
+          <Tabs
+            selectedIndex={tabIndex}
+            onSelect={(index) => {
+              setTabIndex(index);
+              clickHandler(index);
+            }}
+          >
+            <div className="relative">
+              <button
+                onClick={clickHandler}
+                onKeyDown={clickHandler}
+                className={`flex justify-between md:hidden bg-secondary-900 px-8 py-4 text-primary-50 hover:text-primary-50 font-bold no-underline w-full text-left ${
+                  setActive ? "rounded-t-3xl" : "rounded-3xl"
+                }`}
+              >
+                {setActiveText || "Support"}{" "}
+                <i
+                  className={`far fa-chevron-down text-xl transform ${
+                    setActive ? "rotate-180" : "rotate-0"
+                  }`}
+                ></i>
+              </button>
+
+              <div className={`${setActive}`}>
+                <TabList>
+                  {content.map((content, i) => {
+                    return <Tab key={i}>{content.tabTitle}</Tab>;
+                  })}
+                </TabList>
+              </div>
+            </div>
 
             {content.map((content, i) => {
               return (

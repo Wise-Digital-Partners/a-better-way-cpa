@@ -15,8 +15,12 @@ const Page = () => {
       />
       <section className="pt-10 pb-20 md:pb-30">
         <div className="container">
-          <header className="text-center mb-8">
-            <h1>Application Header</h1>
+          <header className="text-center mb-8 max-w-[720px] mx-auto">
+            <h1>Make A Move</h1>
+            <p>
+              Send us your resume today! Take that first step towards investing
+              in a better way to secure your future.
+            </p>
           </header>
 
           <div className="max-w-[560px] mx-auto">

@@ -39,7 +39,7 @@ const Footer = ({ hideFooter }) => {
 
             <div className="flex items-center space-x-6">
               <a
-                href="#"
+                href="https://www.instagram.com/darkhorsecpa/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white hover:text-primary-500"
@@ -47,7 +47,7 @@ const Footer = ({ hideFooter }) => {
                 <i className="fab fa-instagram text-2xl"></i>
               </a>
               <a
-                href="#"
+                href="https://www.facebook.com/DarkHorseCPA/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white hover:text-primary-500"
@@ -55,7 +55,7 @@ const Footer = ({ hideFooter }) => {
                 <i className="fab fa-facebook-f text-xl"></i>
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/company/darkhorsecpa/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white hover:text-primary-500"
