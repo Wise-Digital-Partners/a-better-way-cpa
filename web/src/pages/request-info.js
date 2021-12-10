@@ -21,6 +21,12 @@ const Page = ({ data }) => {
     setChoicesState("hidden");
   }
 
+  function goBack() {
+    setPrincipalState("hidden");
+    setAcceleratorState("hidden");
+    setChoicesState("block");
+  }
+
   return (
     <Layout>
       <SearchEngineOptimization
@@ -45,7 +51,7 @@ const Page = ({ data }) => {
               <button
                 onClick={showAccelerator}
                 onKeyDown={showAccelerator}
-                className="bg-secondary-400 rounded-xl border-4 border-white pt-6 px-6 pb-10 md:px-10 text-center no-underline"
+                className="bg-secondary-400 rounded-xl border-4 border-white pt-6 px-6 pb-10 md:px-10 text-center no-underline hover:shadow-7xl"
               >
                 <img
                   src={data.rocket.publicURL}
@@ -62,7 +68,7 @@ const Page = ({ data }) => {
               <button
                 onClick={showPrincipal}
                 onKeyDown={showPrincipal}
-                className="bg-secondary-400 rounded-xl border-4 border-white pt-6 px-6 pb-10 md:px-10 text-center no-underline"
+                className="bg-secondary-400 rounded-xl border-4 border-white pt-6 px-6 pb-10 md:px-10 text-center no-underline hover:shadow-7xl"
               >
                 <img
                   src={data.logo.publicURL}
@@ -79,6 +85,15 @@ const Page = ({ data }) => {
           </div>
 
           <div className={`max-w-[560px] mx-auto ${setAccelerator}`}>
+            <button
+              className="group text-white group-hover:text-white flex items-center space-x-2 no-underline mb-3"
+              type="button"
+              onClick={goBack}
+              onKeyDown={goBack}
+            >
+              <i className="far fa-arrow-left"></i>
+              <span className="font-bold">back</span>
+            </button>
             <header className="text-center mb-8 max-w-[720px] mx-auto">
               <p className="heading-three">Accelerator</p>
             </header>
@@ -86,6 +101,15 @@ const Page = ({ data }) => {
           </div>
 
           <div className={`max-w-[560px] mx-auto ${setPrincipal}`}>
+            <button
+              className="group text-white group-hover:text-white flex items-center space-x-2 no-underline mb-3"
+              type="button"
+              onClick={goBack}
+              onKeyDown={goBack}
+            >
+              <i className="far fa-arrow-left"></i>
+              <span className="font-bold">back</span>
+            </button>
             <header className="text-center mb-8 max-w-[720px] mx-auto">
               <p className="heading-three">Principal</p>
             </header>

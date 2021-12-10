@@ -106,21 +106,21 @@ const MainNav = ({
             <GatsbyImage
               image={data.logo.childImageSharp.gatsbyImageData}
               alt="Dark Horse CPAs Logo"
-              className="w-[117px] lg:w-[197px]"
+              className="w-[117px] lg:w-[147px] xl:w-[197px]"
             />
           </AniLink>
         </div>
 
-        <div className="flex items-center justify-end flex-auto">
+        <div className="flex items-center justify-end lg:justify-center flex-auto">
           <ul
             id="navigation-desktop"
-            className="hidden lg:flex lg:flex-row lg:space-x-6 lg:items-center lg:justify-end lg:mr-4"
+            className="hidden lg:flex lg:flex-row lg:space-x-4 xl:space-x-6 lg:items-center lg:justify-end lg:mx-4"
           >
             <li>
               <AniLink
                 fade
                 to="/accelerator-program/"
-                className={`relative font-bold no-underline ${
+                className={`relative text-[15px] font-bold no-underline ${
                   scrolled && "text-secondary-50 hover:text-primary-500"
                 } ${
                   headerLinkColor === "white"
@@ -136,7 +136,7 @@ const MainNav = ({
               <AniLink
                 fade
                 to="/sole-practitioner/"
-                className={`relative font-bold no-underline ${
+                className={`relative text-[15px] font-bold no-underline ${
                   scrolled && "text-secondary-50 hover:text-primary-500"
                 } ${
                   headerLinkColor === "white"
@@ -157,7 +157,7 @@ const MainNav = ({
               <AniLink
                 fade
                 to="/about/"
-                className={`relative font-bold no-underline pb-8 ${
+                className={`relative text-[15px] font-bold no-underline pb-8 ${
                   subMenuHovering1 && "text-primary-500"
                 } ${scrolled && "text-secondary-50 hover:text-primary-500"} ${
                   headerLinkColor === "white"
@@ -201,7 +201,7 @@ const MainNav = ({
               <AniLink
                 fade
                 to="/blog/"
-                className={`relative font-bold no-underline ${
+                className={`relative text-[15px] font-bold no-underline ${
                   scrolled && "text-secondary-50 hover:text-primary-500"
                 } ${
                   headerLinkColor === "white"

@@ -249,16 +249,11 @@ const Page = () => {
             adhered to this Statement, please contact Dark Horse CPAs at: 
           </p>
           <p>
-            <b>Phone Number:</b>
-            <br />
-            (844) 4E3-LOANS (5626)
-          </p>
-          <p>
             <b>Email Address:</b>
             <br />
-            info@e3mortgage.com
+            info@darkhorse.cpa
           </p>
-          <p>Effective as of November 10, 2021 </p>
+          <p>Effective as of December 10, 2021 </p>
         </div>
       </section>
     </Layout>

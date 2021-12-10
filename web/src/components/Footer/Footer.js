@@ -67,7 +67,7 @@ const Footer = ({ hideFooter }) => {
 
           <div className="lg:col-end-13 lg:col-span-9">
             <div className="grid md:grid-cols-2 lg:flex lg:justify-end lg:gap-x-12 xl:gap-x-24 gap-y-12 lg:gap-y-0">
-              <div className="order-3 lg:order-1">
+              <div>
                 <div className="font-display text-lg font-bold text-white mb-5">
                   Get Started
                 </div>
@@ -102,7 +102,7 @@ const Footer = ({ hideFooter }) => {
                 </ul>
               </div>
 
-              <div className="order-4 lg:order-2">
+              <div>
                 <div className="font-display text-lg font-bold text-white mb-5">
                   The Company
                 </div>
@@ -110,10 +110,10 @@ const Footer = ({ hideFooter }) => {
                   <li>
                     <AniLink
                       fade
-                      to="#"
+                      to="/about/"
                       className="font-display text-primary-50/90 hover:text-white no-underline whitespace-nowrap"
                     >
-                      Our Why
+                      About Dark Horse
                     </AniLink>
                   </li>
                   <li>
@@ -131,49 +131,13 @@ const Footer = ({ hideFooter }) => {
                       to="#"
                       className="font-display text-primary-50/90 hover:text-white no-underline whitespace-nowrap"
                     >
-                      Our Founders
-                    </AniLink>
-                  </li>
-                  <li>
-                    <AniLink
-                      fade
-                      to="#"
-                      className="font-display text-primary-50/90 hover:text-white no-underline whitespace-nowrap"
-                    >
-                      Our Clients
+                      Success Stories
                     </AniLink>
                   </li>
                 </ul>
               </div>
 
-              <div className="order-2 lg:order-3">
-                <div className="font-display text-lg font-bold text-white mb-5">
-                  Success Stories
-                </div>
-
-                <ul className="flex flex-col space-y-3">
-                  <li>
-                    <AniLink
-                      fade
-                      to="#"
-                      className="font-display text-primary-50/90 hover:text-white no-underline whitespace-nowrap"
-                    >
-                      Accelerators
-                    </AniLink>
-                  </li>
-                  <li>
-                    <AniLink
-                      fade
-                      to="#"
-                      className="font-display text-primary-50/90 hover:text-white no-underline whitespace-nowrap"
-                    >
-                      Principals
-                    </AniLink>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="order-1 lg:order-4">
+              <div>
                 <div className="font-display text-lg font-bold text-white mb-5">
                   Get in Touch
                 </div>
@@ -207,12 +171,12 @@ const Footer = ({ hideFooter }) => {
                     </a>
                   </li>
                   <li>
-                    <a
-                      href="#"
+                    <button
+                      data-modal-open="modal-contact"
                       className="font-display text-primary-50/90 hover:text-white no-underline whitespace-nowrap"
                     >
                       Contact
-                    </a>
+                    </button>
                   </li>
                 </ul>
               </div>
@@ -222,7 +186,7 @@ const Footer = ({ hideFooter }) => {
 
         <div className="flex flex-wrap md:flex-nowrap flex-col md:flex-row justify-items-center md:justify-between md:items-center text-center md:text-left">
           <div className="md:flex md:items-center">
-            <ul className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 xl:space-x-4 justify-center md:justify-start">
+            <ul className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-4 justify-center md:justify-start">
               <li className="text-sm text-primary-50/70">
                 © {getYear()} Dark Horse CPAs
               </li>

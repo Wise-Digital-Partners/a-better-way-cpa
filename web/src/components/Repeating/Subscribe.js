@@ -36,7 +36,7 @@ const ValueProps = ({ className }) => {
           <div className="relative -mx-4 md:mx-0">
             <GatsbyImage
               image={data.subscribe.childImageSharp.gatsbyImageData}
-              className="md:rounded-3xl z-0"
+              className="md:rounded-3xl z-0 w-full"
             />
             <button className="absolute flex justify-center items-center inset-0 w-full">
               <svg

@@ -25,7 +25,7 @@ const Button = ({
       className={`group relative overflow-hidden bg-transparent border-2 border-solid min-w-[180px] h-[52px] px-6 rounded-5xl inline-flex items-center justify-center text-center font-body font-black no-underline whitespace-nowrap before:w-0 hover:before:w-full before:h-full before:absolute before:left-0 before:transition-all before:duration-500 before:ease-linear
       ${
         altStyle === 2
-          ? "border-secondary-800 text-secondary-800 bg-white/40 hover:text-white before:bg-secondary-800"
+          ? "border-secondary-800 text-secondary-800 hover:text-white before:bg-secondary-800"
           : altStyle === 3
           ? "border-white text-white bg-secondary-900/50 hover:text-primary-500 before:bg-white"
           : "border-primary-500 text-primary-500 bg-secondary-900/50 hover:text-white before:bg-primary-500"

@@ -131,10 +131,10 @@ const Page = ({ data }) => {
               <div className="max-w-[538px] min-h-[508px] relative">
                 <div className="absolute inset-0 flex justify-center items-center">
                   <GatsbyImage
-                    image={data.blueCrosses.childImageSharp.gatsbyImageData}
+                    image={data.orangeCrosses.childImageSharp.gatsbyImageData}
                   />
                 </div>
-                <Fade right duration="2000" distance="40px" fraction={0.7}>
+                <Fade left duration="2000" distance="40px" fraction={0.7}>
                   <div className="absolute right-0 top-0">
                     <GatsbyImage
                       image={data.cpa2.childImageSharp.gatsbyImageData}
@@ -143,7 +143,7 @@ const Page = ({ data }) => {
                   </div>
                 </Fade>
 
-                <Fade left duration="2000" distance="40px" fraction={0.2}>
+                <Fade right duration="2000" distance="40px" fraction={0.2}>
                   <div className="absolute left-0 bottom-0">
                     <GatsbyImage
                       image={data.cpa1.childImageSharp.gatsbyImageData}
@@ -254,7 +254,9 @@ export const query = graphql`
         gatsbyImageData(layout: CONSTRAINED, width: 311)
       }
     }
-    blueCrosses: file(relativePath: { eq: "4.0 About DH/3.2 Background.png" }) {
+    orangeCrosses: file(
+      relativePath: { eq: "4.0 About DH/3.2 Background.png" }
+    ) {
       childImageSharp {
         gatsbyImageData(layout: CONSTRAINED, width: 345)
       }

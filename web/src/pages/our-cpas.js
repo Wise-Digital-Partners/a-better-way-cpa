@@ -84,7 +84,7 @@ const ArchivePage = (props) => {
                     <div className="font-body text-lg font-bold text-primary-50 mb-0">
                       {node.name}
                     </div>
-                    <div className="font-body md:text-lg text-secondary-50 mb-0">
+                    <div className="font-body text-sm text-secondary-50 mb-0">
                       {node.title} {node.location && `| ${node.location}`}
                     </div>
                   </div>

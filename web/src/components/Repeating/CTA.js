@@ -11,7 +11,7 @@ const CTA = ({ ctaHeading, headingLevel, ctaText, className }) => {
       <div className="container">
         <div className="relative flex flex-col md:flex-row items-end md:space-x-10 lg:space-x-20">
           <div className="md:max-w-[700px]">
-            <HeadingTag className="text-mobile-7xl md:text-7xl">
+            <HeadingTag className="text-mobile-7xl md:text-7xl text-secondary-800">
               {ctaHeading || "Want a better way to CPA?"}
             </HeadingTag>
             <p className="text-secondary-800 text-xl mb-10 md:mb-0">

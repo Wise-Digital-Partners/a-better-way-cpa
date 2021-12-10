@@ -97,7 +97,13 @@ const Page = ({ data }) => {
                     }
                   />
                 </div>
-                <Fade left duration="2000" distance="40px" fraction={0.2}>
+                <Fade
+                  right
+                  duration="2000"
+                  distance="40px"
+                  delay={250}
+                  fraction={0.2}
+                >
                   <div className="absolute left-0 bottom-0">
                     <GatsbyImage
                       image={data.arrowLeft.childImageSharp.gatsbyImageData}
@@ -105,7 +111,13 @@ const Page = ({ data }) => {
                     />
                   </div>
                 </Fade>
-                <Fade right duration="2000" distance="40px" fraction={0.7}>
+                <Fade
+                  left
+                  duration="2000"
+                  distance="40px"
+                  delay={250}
+                  fraction={0.7}
+                >
                   <div className="absolute right-0 top-0">
                     <GatsbyImage
                       image={data.arrowRight.childImageSharp.gatsbyImageData}

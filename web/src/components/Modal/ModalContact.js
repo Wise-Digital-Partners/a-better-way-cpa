@@ -54,34 +54,20 @@ const Modal = () => {
           data-modal-close
         >
           <div
-            className="content-wrapper bg-white w-full h-screen overflow-auto max-w-[720px] ml-auto"
+            className="content-wrapper bg-secondary-800 w-full h-screen overflow-auto max-w-[720px] ml-auto"
             role="dialog"
             aria-modal="true"
           >
-            <div className="group flex justify-between items-center pt-12 pb-4 md:py-4 px-6 border-b border-gray-400/20">
-              <div className="flex space-x-6 md:space-x-8">
-                <a
-                  href="tel:844-433-5626"
-                  className="font-body font-bold text-primary-500 hover:text-primary-500 no-underline"
-                >
-                  <i className="fas fa-phone-alt mr-2"></i>
-                  <span>(844) 4E3-LOANS (5626)</span>
-                </a>
-              </div>
-
+            <div className="group flex justify-end items-center pt-12 md:pt-4 px-6">
               <i
-                className="close fal fa-times text-xl text-black hover:text-primary-500 cursor-pointer transition-all duration-300 ease-linear"
+                className="close fal fa-times text-xl text-secondary-50 hover:text-primary-500 cursor-pointer transition-all duration-300 ease-linear"
                 data-modal-close
               ></i>
             </div>
 
             <div className="pt-8 px-6 md:px-18 pb-24">
               <header className="mb-8">
-                <p className="heading-three mb-3">How To Reach Us</p>
-                <p>
-                  Have questions about loan programs? Need help getting started?
-                  Let’s connect!
-                </p>
+                <p className="heading-three mb-3">Contact Us</p>
               </header>
 
               <Contact />

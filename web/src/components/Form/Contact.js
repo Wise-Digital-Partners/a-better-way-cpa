@@ -26,7 +26,12 @@ const StyledForm = styled.div`
   [type="week"],
   select,
   textarea {
-    ${tw`text-sm w-full bg-white px-4 py-2.5 border border-solid border-gray-200 rounded-sm focus:border-transparent focus:outline-none focus:ring-3 focus:ring-secondary-400 transition-colors duration-300 ease-linear`}
+    ${tw`text-lg w-full px-4 py-2.5 border border-solid border-primary-50 bg-[#5B6E7D] rounded-sm focus:border-transparent focus:outline-none focus:ring-3 focus:ring-secondary-400 transition-colors duration-300 ease-linear`}
+  }
+  select {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 16 16'%3E%3Cpath stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='1' d='m6 8 4 4 4-4'/%3E%3C/svg%3E");
+    background-position: right 1rem center;
+    background-size: 2rem;
   }
 `;
 
@@ -87,7 +92,7 @@ export default class Form extends Component {
 
           <div className="mb-6">
             <label
-              className="font-body text-sm font-medium text-gray-800 block mb-1.5"
+              className="font-body text-sm font-semibold text-white block mb-1.5"
               htmlFor="name"
             >
               Name
@@ -103,7 +108,7 @@ export default class Form extends Component {
           <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-6 w-full">
             <div className="mb-6">
               <label
-                className="font-body text-sm font-medium text-gray-800 block mb-1.5"
+                className="font-body text-sm font-semibold text-white block mb-1.5"
                 htmlFor="phone"
               >
                 Phone Number
@@ -117,7 +122,7 @@ export default class Form extends Component {
             </div>
             <div className="mb-6">
               <label
-                className="font-body text-sm font-medium text-gray-800 block mb-1.5"
+                className="font-body text-sm font-semibold text-white block mb-1.5"
                 htmlFor="email"
               >
                 Email Address
@@ -133,7 +138,7 @@ export default class Form extends Component {
 
           <div className="mb-6">
             <label
-              className="font-body text-sm font-medium text-gray-800 block mb-1"
+              className="font-body text-sm font-semibold text-white block mb-1.5"
               htmlFor="what-can-we-help-you-with"
             >
               What Can We Help You With?
@@ -144,52 +149,15 @@ export default class Form extends Component {
               required={true}
             >
               <option value="">Select one...</option>
-              <option value="I want to purchase a home">
-                I want to purchase a home
-              </option>
-              <option value="I want to refinance my home">
-                I want to refinance my home
-              </option>
-              <option value="I have another question">
-                I have another question
-              </option>
+              <option value="Option 1">Option 1</option>
+              <option value="Option 2">Option 2</option>
+              <option value="Option 3">Option 3</option>
             </select>
           </div>
 
-          {/* <div className="mb-6">
-            <fieldset>
-              <legend className="font-body text-sm font-medium text-gray-800 block mb-1.5">
-                Are you an owner or a renter?
-              </legend>
-              <div className="flex flex-col space-y-2 mt-2">
-                <label className="relative pl-7 mb-2 cursor-pointer text-sm">
-                  <input
-                    type="radio"
-                    name="are-you-an-owner-or-a-renter"
-                    value="Landlord or Investors"
-                    onChange={this.handleChange}
-                  />
-                  Landlord or Investors
-                  <span className="radio-custom"></span>
-                </label>
-                <label className="relative pl-7 mb-2 cursor-pointer text-sm">
-                  <input
-                    type="radio"
-                    name="are-you-an-owner-or-a-renter"
-                    onChange={this.handleChange}
-                    value="Residents
-"
-                  />
-                  Residents
-                  <span className="radio-custom"></span>
-                </label>
-              </div>
-            </fieldset>
-          </div> */}
-
           <div className="mb-6">
             <label
-              className="font-body text-sm font-medium text-gray-800 block mb-1.5"
+              className="font-body text-sm font-semibold text-white block mb-1.5"
               htmlFor="message"
             >
               Message (optional)

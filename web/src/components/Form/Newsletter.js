@@ -81,14 +81,14 @@ export default class Form extends Component {
                 onChange={this.handleChange}
                 placeholder="Enter your email address"
                 required={true}
-                className="w-full px-6 h-[56px] rounded-3xl border-gray-300 text-gray-400"
+                className="w-full px-6 h-[56px] rounded-5xl border-gray-300 text-gray-400"
               />
             </div>
 
             <div className="absolute -right-1 top-0">
               <ButtonSolid
                 type="submit"
-                className="min-w-[176px] h-[56px] before:rounded-3xl"
+                className="min-w-[176px] h-[56px] before:rounded-5xl"
                 text="Subscribe"
               />
             </div>
