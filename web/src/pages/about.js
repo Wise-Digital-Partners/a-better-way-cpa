@@ -155,7 +155,7 @@ const Page = ({ data }) => {
             </div>
 
             <div>
-              <h2>Meet our CPAs</h2>
+              <h2>Meet Our CPAs</h2>
               <p>
                 We are in the business of attracting the Dark Horse CPAs in the
                 industry. They are dynamic, motivated, entrepreneurial, and are

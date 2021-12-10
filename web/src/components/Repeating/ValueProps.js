@@ -62,7 +62,7 @@ const ValueProps = ({ className }) => {
     {
       icon: data.icon2.publicURL,
       heading: "Freedom & Flexibility",
-      text: "Work where, when, and how you want with your clients. It’s independent, remote work on your terms",
+      text: "Work where, when, and how you want with your clients. It’s independent, remote work on your terms.",
     },
     {
       icon: data.icon3.publicURL,

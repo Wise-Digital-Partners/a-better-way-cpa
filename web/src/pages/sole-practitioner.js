@@ -61,7 +61,7 @@ const Page = ({ data }) => {
         <div className="container px-10">
           <div className="bg-secondary-400 py-12 px-4 md:px-16 max-w-[883px] mx-auto">
             <h2 className="text-center md:text-left mb-10">
-              The Dark Horse Platform
+              Our Dark Horse platform.
             </h2>
             <p className="font-display text-xl md:text-2xl mb-0">
               The Dark Horse Platform includes all the technology,
@@ -89,7 +89,7 @@ const Page = ({ data }) => {
               />
             </div>
             <div>
-              <h1 className="mb-0">Transition Breakdown</h1>
+              <h1 className="mb-0">Transition breakdown.</h1>
               <p className="text-lg">
                 Everyone's business and client base are unique. Our transition
                 plan is customized to each incoming Principal. In general, it
@@ -137,7 +137,7 @@ const Page = ({ data }) => {
               </button>
             </div>
             <div>
-              <h2>Success Stories</h2>
+              <h2>Success stories.</h2>
               <blockquote className="mb-6">
                 <q className="mb-6 block">
                   Having the support of a person who ‘gets it’ is amazing –

@@ -27,7 +27,7 @@ const ValueProps = ({ className }) => {
     <section className={`pb-20 md:pb-30 ${className}`}>
       <div className="container">
         <header className="mb-7 text-center">
-          <h2>See What Makes Us Tick.</h2>
+          <h2>See what makes us tick.</h2>
         </header>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-y-10 md:gap-x-10 lg:gap-x-20">
           <AniLink fade to="/about/" className="group relative no-underline">
@@ -53,7 +53,7 @@ const ValueProps = ({ className }) => {
               />
             </div>
             <div className="md:absolute md:bottom-7 text-center inset-x-0">
-              <p className="heading-four mb-1.5">Our Founders</p>
+              <p className="heading-four mb-1.5">Our CPAs</p>
               <p className="mb-0 text-secondary-50 text-lg">
                 Our nationwide team is growing.
               </p>

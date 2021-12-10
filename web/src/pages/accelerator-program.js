@@ -65,7 +65,7 @@ const Page = ({ data }) => {
         <div className="container px-10">
           <div className="bg-secondary-400 py-12 px-4 md:px-16 max-w-[883px] mx-auto">
             <h2 className="text-center md:text-left mb-10">
-              What Is An Accelerator?
+              What is an Accelerator?
             </h2>
             <p className="font-display text-xl md:text-2xl mb-0">
               Accelerators are new hires at Dark Horse who do not have an
@@ -87,7 +87,7 @@ const Page = ({ data }) => {
         <div className="container">
           <div className="grid md:grid-cols-2">
             <div className="md:col-start-2">
-              <h2>The Goal of the Program</h2>
+              <h2>The goal of the program.</h2>
               <p className="text-lg">
                 Our goal is to turn you into a Principal of the firm by
                 providing you with the structure, opportunities, and support
@@ -117,7 +117,7 @@ const Page = ({ data }) => {
 
         <div className="container">
           <header className="mb-16 md:mb-20 max-w-[837px]">
-            <h2>Your Pay & Benefits</h2>
+            <h2>Your pay & benefits.</h2>
             <p className="text-lg">
               The compensation structure for our Accelerators is different
               compared to anything else you may have experienced in accounting.
@@ -228,7 +228,7 @@ const Page = ({ data }) => {
               </button>
             </div>
             <div>
-              <h2>Success Stories</h2>
+              <h2>Success stories.</h2>
               <blockquote className="mb-6">
                 <q className="mb-6 block">
                   The growth was fast and furious.” Five months after joining
@@ -274,7 +274,7 @@ const Page = ({ data }) => {
         <div className="container">
           <div className="max-w-[649px] mx-auto text-center pt-10 md:pt-16">
             <header className="mb-12 md:mb-14">
-              <h2>How it Works</h2>
+              <h2>How it all works.</h2>
             </header>
 
             <Fade bottom distance="120px" duration="2000">

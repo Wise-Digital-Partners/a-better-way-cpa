@@ -22,7 +22,7 @@ const ValueProps = ({ className }) => {
       <div className="container">
         <div className="grid md:grid-cols-2 gap-y-14 md:gap-x-10 lg:gap-x-20 items-center">
           <div>
-            <h2>Subscribe</h2>
+            <h2>Subscribe here.</h2>
             <p className="mb-10">
               Whether a Dark Horse CPA or just a CPA, there’s a better way to
               work. Learn more in the form of free weekly videos covering topics

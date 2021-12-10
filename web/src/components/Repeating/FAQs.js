@@ -114,7 +114,7 @@ const FAQs = ({ className }) => {
     <section className={`pb-20 md:pb-30 ${className}`}>
       <div className="container">
         <header className="mb-10 md:mb-14">
-          <h2>Tough Questions, Answered</h2>
+          <h2>Tough questions answered.</h2>
         </header>
 
         <Accordion allowZeroExpanded={true}>
