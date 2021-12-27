@@ -17,6 +17,78 @@ import ButtonGhost from "../components/Button/ButtonGhost";
 import ModalVideo from "../components/Modal/ModalVideo";
 
 const Page = ({ data }) => {
+  const faqs = [
+    {
+      question:
+        "I have never had to interact directly with clients, especially not on the initial phone call/consult. Is that going to be an issue?",
+      answer: (
+        <>
+          <p className="text-secondary-800 mb-0">
+            Not at all. We understand that many CPAs have not had a ton of
+            experience on the client engagement side. That is why we developed
+            our Customer Engagement Training. We set up 1-on-1 coaching sessions
+            and review calls/meetings with you during your first couple of
+            months to make sure you feel as comfortable as possible interacting
+            with our incoming prospects.
+          </p>
+        </>
+      ),
+    },
+    {
+      question:
+        "What type of industry experience do I need to qualify for the Accelerator Program?",
+      answer: (
+        <>
+          <p className="text-secondary-800 mb-0">
+            We generally look for individuals who have been working in public
+            accounting for at least 6 years with an emphasis on Tax.
+          </p>
+        </>
+      ),
+    },
+    {
+      question:
+        "Do I need to have a client base or a book of business to join the Accelerator Program?",
+      answer: (
+        <>
+          <p className="text-secondary-800">
+            No! This is a "start from scratch" type of position. No one is
+            required to bring on any outside business (but you absolutely can if
+            you have past relationships that love working with you).
+          </p>
+        </>
+      ),
+    },
+    {
+      question:
+        "How long does it normally take for an Accelerator to become a Principal?",
+      answer: (
+        <>
+          <p className="text-secondary-800 mb-0">
+            This ranges based on the individual, but we estimate it should take
+            6-9 Months on average to graduate to Principal. We strive to keep
+            the time under 1 year.
+          </p>
+        </>
+      ),
+    },
+    {
+      question:
+        "If I decide to take an advance on my commissions, and it doesn't work out, do I owe the company that money?",
+      answer: (
+        <>
+          <p className="text-secondary-800 mb-0">
+            No! This is our investment in you, and we have been fortunate enough
+            that we have not experienced that situation. We believe you will
+            look at Dark Horse as your long-term career move, and we want to do
+            everything we can to make that happen. But if something doesn't work
+            out, you do not owe the company anything.
+          </p>
+        </>
+      ),
+    },
+  ];
+
   return (
     <Layout>
       <SearchEngineOptimization
@@ -176,10 +248,11 @@ const Page = ({ data }) => {
                     You Level Up to Principal
                   </h3>
                   <p className="text-lg">
-                    Over time, as your book of business grows, your commission
-                    payouts will start becoming more substantial. Which will
-                    bring you to the level of qualifying to become a Principal
-                    in the firm.
+                    Over time, as your book of business grows, your
+                    compensation/payouts will start becoming more substantial
+                    and completely tied to your book of business, which will
+                    bring you to the financial trigger to qualify as a Principal
+                    of the firm.
                   </p>
                 </div>
               </div>
@@ -344,7 +417,7 @@ const Page = ({ data }) => {
         </div>
       </section>
 
-      <FAQs />
+      <FAQs uniqueFaqs={faqs} />
       <About />
       <RecentBlogPosts />
       <Subscribe />

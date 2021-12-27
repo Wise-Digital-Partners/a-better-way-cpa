@@ -29,7 +29,7 @@ const Page = ({ data }) => {
         <div className="container">
           <div className="grid md:grid-cols-2 gap-y-6 md:gap-x-10 lg:gap-x-10 items-center">
             <div className="order-2 md:order-1">
-              <h1>Sole Practitioners and Micro Firms</h1>
+              <h1>Micro Firms and Solo Practitioners</h1>
               <p className="text-lg">
                 Overworked and underpaid solo CPA practitioners are increasingly
                 deciding to merge their practice into Dark Horse CPAs. As a Dark

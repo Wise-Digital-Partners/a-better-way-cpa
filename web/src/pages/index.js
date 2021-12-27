@@ -211,9 +211,7 @@ const Page = ({ data }) => {
 
         <div className="flex flex-col lg:flex-row space-y-12 lg:space-y-0 justify-between">
           <div className="text-center">
-            <h4 className="max-w-[390px] mx-auto">
-              Principal Accelerator Program
-            </h4>
+            <h4 className="max-w-[390px] mx-auto">Start From Scratch</h4>
             <p className="text-lg max-w-[342px] mx-auto">
               Are you looking to grow a book of business from scratch (or
               near-scratch)? This program is for you.
@@ -227,7 +225,7 @@ const Page = ({ data }) => {
           </div>
 
           <div className="text-center">
-            <h4 className="max-w-[390px] mx-auto">Dark Horse Principal</h4>
+            <h4 className="max-w-[390px] mx-auto">Scale Your Book</h4>
             <p className="text-lg max-w-[342px] mx-auto">
               Are you a solo practitioner or micro-firm looking to elevate and
               scale your practice within a collaborative community?

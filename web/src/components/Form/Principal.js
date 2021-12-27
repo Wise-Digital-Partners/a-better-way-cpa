@@ -149,9 +149,11 @@ export default class Form extends Component {
               required={true}
             >
               <option value="">Select one...</option>
-              <option value="Option 1">Option 1</option>
-              <option value="Option 2">Option 2</option>
-              <option value="Option 3">Option 3</option>
+              <option value="ASAP">ASAP</option>
+              <option value="I’m flexible">I’m flexible</option>
+              <option value="As soon as things slow down after tax season">
+                As soon as things slow down after tax season
+              </option>
             </select>
           </div>
 
@@ -184,9 +186,11 @@ export default class Form extends Component {
               required={true}
             >
               <option value="">Select one...</option>
-              <option value="Option 1">Option 1</option>
-              <option value="Option 2">Option 2</option>
-              <option value="Option 3">Option 3</option>
+              <option value=">$500k">{">"}$500k</option>
+              <option value="$150k-$500k">$150k-$500k</option>
+              <option value="<$150k (Junior Principal Tier)">
+                {"<"}$150k (Junior Principal Tier)
+              </option>
             </select>
           </div>
 
