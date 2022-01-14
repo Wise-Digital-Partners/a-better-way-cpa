@@ -58,12 +58,12 @@ export default class Form extends Component {
     })
       .then(
         () =>
-          (document.getElementById("accelerator-form-ajax-response").innerHTML =
+          (document.getElementById("principal-form-ajax-response").innerHTML =
             "Thank you for for submission! We will get in touch with you shortly."),
         form.remove(),
         (window.dataLayer = window.dataLayer || []),
         window.dataLayer.push({
-          event: "acceleratorFormSubmission",
+          event: "principalFormSubmission",
         })
       )
       .catch((error) => alert(error));
@@ -72,9 +72,9 @@ export default class Form extends Component {
   render() {
     return (
       <StyledForm>
-        <div id="accelerator-form-ajax-response"></div>
+        <div id="principal-form-ajax-response"></div>
         <form
-          name="Accelerator"
+          name="Principal"
           method="post"
           action=""
           data-netlify="true"
@@ -82,7 +82,7 @@ export default class Form extends Component {
           onSubmit={this.handleSubmit}
         >
           {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-          <input type="hidden" name="form-name" value="Accelerator" />
+          <input type="hidden" name="form-name" value="Principal" />
           <div hidden>
             <label>
               Don’t fill this out:{" "}
