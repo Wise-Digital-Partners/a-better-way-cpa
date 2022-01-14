@@ -39,7 +39,7 @@ function BlogPostPreview(props) {
             <PortableText blocks={props._rawExcerpt} />
           </div>
         )} */}
-          {/* <div>{format(new Date(props.publishedAt), "MMMM Mo, yyyy")}</div> */}
+          {/* <div>{format(new Date(props.publishedAt), "MMMM d, yyyy")}</div> */}
         </div>
       </div>
     </AniLink>

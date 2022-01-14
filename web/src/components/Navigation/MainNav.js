@@ -179,7 +179,7 @@ const MainNav = ({
                   <AniLink
                     fade
                     to="/about/"
-                    className="relative block font-body text-secondary-50/60 hover:text-secondary-50 font-bold no-underline pb-3"
+                    className="relative block font-body text-secondary-50 hover:text-primary-500 font-bold no-underline pb-3"
                   >
                     About Dark Horse
                   </AniLink>
@@ -189,9 +189,19 @@ const MainNav = ({
                   <AniLink
                     fade
                     to="/our-cpas/"
-                    className="relative block font-body text-secondary-50/60 hover:text-secondary-50 font-bold no-underline pb-3"
+                    className="relative block font-body text-secondary-50 hover:text-primary-500 font-bold no-underline pb-3"
                   >
                     Our CPAs
+                  </AniLink>
+                </li>
+
+                <li className="whitespace-nowrap border-b border-gray-200">
+                  <AniLink
+                    fade
+                    to="/success-stories/"
+                    className="relative block font-body text-secondary-50 hover:text-primary-500 font-bold no-underline pb-3"
+                  >
+                    Success Stories
                   </AniLink>
                 </li>
               </ul>

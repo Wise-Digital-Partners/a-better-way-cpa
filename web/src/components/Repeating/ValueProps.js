@@ -2,6 +2,46 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 import Fade from "react-reveal/Fade";
+import styled from "@emotion/styled";
+
+const StyledContent = styled.div`
+  @media (min-width: 768px) {
+    .flip-card-inner {
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+    }
+
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-card-front,
+    .flip-card-back {
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+
+    .flip-card-back {
+      transform: rotateY(180deg);
+      &.even {
+        background: linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0.2),
+            rgba(255, 255, 255, 0.2)
+          ),
+          #86acb2;
+      }
+      &.odd {
+        background: linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0.2),
+            rgba(255, 255, 255, 0.2)
+          ),
+          #fd9a4a;
+      }
+    }
+  }
+`;
 
 const ValueProps = ({ className }) => {
   const data = useStaticQuery(graphql`
@@ -58,31 +98,108 @@ const ValueProps = ({ className }) => {
       icon: data.icon1.publicURL,
       heading: "Support On All Sides",
       text: "From on-demand fractional and full-time staffing to our big-brained CPA community, get all the help you need.",
+      flipContent: (
+        <>
+          <div className="text-xl text-primary-500 md:text-white font-medium mb-2">
+            You’ll benefit from:
+          </div>
+          <ul className="styled-list-plus-alt">
+            <li>Collaborative direction on major initiatives</li>
+            <li>Training creation and execution</li>
+            <li>Work Papers</li>
+            <li>Technology management</li>
+            <li>Marketing management, and setup.</li>
+          </ul>
+        </>
+      ),
     },
     {
       icon: data.icon2.publicURL,
       heading: "Freedom & Flexibility",
       text: "Work where, when, and how you want with your clients. It’s independent, remote work on your terms.",
+      flipContent: (
+        <>
+          <div className="text-xl text-secondary-400 md:text-white font-medium mb-2">
+            You’ll benefit from:
+          </div>
+          <ul className="styled-list-plus-alt">
+            <li>100% Trust In Managing your own schedule</li>
+            <li>Build your Book with clients YOU want</li>
+            <li>100% Remote</li>
+            <li>Take time off when you need</li>
+          </ul>
+        </>
+      ),
     },
     {
       icon: data.icon3.publicURL,
       heading: "Marketing & Branding",
       text: "Opportunities for exposure abound on our blog, vlog, podcast, and social media outlets. Leverage our brand for yours.",
+      flipContent: (
+        <>
+          <div className="text-xl text-primary-500 md:text-white font-medium mb-2">
+            What you’ll get:
+          </div>
+          <ul className="styled-list-plus-alt">
+            <li>Dedicated marketing resources</li>
+            <li>Best practices</li>
+            <li>
+              Consistent and effective ad spend monitored and managed by our
+              marketing team
+            </li>
+          </ul>
+        </>
+      ),
     },
     {
       icon: data.icon4.publicURL,
       heading: "Optimal Tech Stack",
       text: "Our ever-evolving tech stack allows you to work at peak efficiency. No more time wasted, save time for what matters most.",
+      flipContent: (
+        <>
+          <p className="md:text-lg text-secondary-400 md:text-white mb-0">
+            We're a dedicated team focused on implementing the best technology
+            that evolves based on needs and wants. And we have a willingness to
+            pivot fast when necessary.
+          </p>
+        </>
+      ),
     },
     {
       icon: data.icon5.publicURL,
       heading: "Financial Incentives",
       text: "Enjoy ongoing revenue streams, revenue sharing opportunities, an initial stock option grant, and leads galore.",
+      flipContent: (
+        <>
+          <div className="text-xl text-primary-500 md:text-white font-medium mb-2">
+            You’ll benefit from:
+          </div>
+          <ul className="styled-list-plus-alt">
+            <li>Industry partnerships</li>
+            <li>Referral incentives</li>
+            <li>Company ownership</li>
+            <li>Strong earnings on performance.</li>
+          </ul>
+        </>
+      ),
     },
     {
       icon: data.icon6.publicURL,
       heading: "Other Benefits Abound",
       text: "We have only scratched the surface. And when it’s time to sell, get paid out at 1.25X your Annual Recurring Revenue.",
+      flipContent: (
+        <>
+          <div className="text-xl text-secondary-400 md:text-white font-medium mb-2">
+            You’ll also get:
+          </div>
+          <ul className="styled-list-plus-alt">
+            <li>Cool Dark Horse swag</li>
+            <li>Real estate opportunities</li>
+            <li>Balance plans</li>
+            <li>and more!</li>
+          </ul>
+        </>
+      ),
     },
   ];
 
@@ -104,42 +221,65 @@ const ValueProps = ({ className }) => {
           </div>
         </header>
         <Fade bottom cascade distance="120px" duration="2000">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-y-8 md:gap-10">
-            {content.map((content, i) => {
-              return (
-                <div
-                  key={i}
-                  className={`shadow-3xl rounded-3xl px-5 py-6 border-4 ${
-                    i % 2
-                      ? "border-secondary-400 bg-secondary-50"
-                      : "border-primary-500 bg-primary-50"
-                  }`}
-                >
-                  <img
-                    src={content.icon}
-                    alt={content.heading}
-                    className="mb-2.5"
-                  />
-                  <div>
-                    <h3
-                      className={`heading-six ${
-                        i % 2 ? "text-primary-500" : "text-secondary-800"
+          <StyledContent>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-y-8 md:gap-10">
+              {content.map((content, i) => {
+                return (
+                  <div key={i} className="flip-card">
+                    <div
+                      className={`flip-card-inner relative px-6 md:px-0 pt-5 pb-8 md:py-0 rounded-3xl md:rounded-none shadow-3xl md:shadow-none border-4 md:border-0 ${
+                        i % 2
+                          ? "border-secondary-400 bg-secondary-50 md:bg-transparent"
+                          : "border-primary-500 bg-primary-50 md:bg-transparent"
                       }`}
                     >
-                      {content.heading}
-                    </h3>
-                    <p
-                      className={`text-lg mb-0 ${
-                        i % 2 ? "text-secondary-800" : "text-secondary-400"
-                      }`}
-                    >
-                      {content.text}
-                    </p>
+                      <div
+                        className={`flip-card-front md:w-full md:h-full pb-6 md:px-6 md:py-5 md:rounded-3xl md:shadow-3xl md:border-4 ${
+                          i % 2
+                            ? "md:border-secondary-400 md:bg-secondary-50"
+                            : "md:border-primary-500 md:bg-primary-50"
+                        }`}
+                      >
+                        <img
+                          src={content.icon}
+                          alt={content.heading}
+                          className="mb-2.5"
+                        />
+                        <div>
+                          <h3
+                            className={`heading-six ${
+                              i % 2 ? "text-primary-500" : "text-secondary-800"
+                            }`}
+                          >
+                            {content.heading}
+                          </h3>
+                          <p
+                            className={`text-lg mb-0 ${
+                              i % 2
+                                ? "text-secondary-800"
+                                : "text-secondary-400"
+                            }`}
+                          >
+                            {content.text}
+                          </p>
+                        </div>
+                      </div>
+
+                      <div
+                        className={`flip-card-back md:flex md:items-center md:absolute top-0 md:w-full md:h-full md:px-6 md:py-5 md:rounded-3xl md:shadow-3xl md:border-4 ${
+                          i % 2
+                            ? "md:border-secondary-50 even"
+                            : "md:border-primary-50 odd"
+                        }`}
+                      >
+                        <div>{content.flipContent}</div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              );
-            })}
-          </div>
+                );
+              })}
+            </div>
+          </StyledContent>
         </Fade>
       </div>
     </section>

@@ -14,7 +14,7 @@ import {
   getBlogUrl,
 } from "../../lib/helpers";
 
-const RecentBlogPosts = ({ props, className }) => {
+const RecentBlogPosts = ({ node, className }) => {
   const truncate = (str) => {
     return str.length > 120 ? str.substring(0, 120) + "..." : str;
   };
@@ -50,7 +50,7 @@ const RecentBlogPosts = ({ props, className }) => {
     }
   `);
 
-  const errors = props;
+  const errors = node;
 
   if (errors) {
     return <GraphQLErrorList errors={errors} />;
@@ -77,7 +77,7 @@ const RecentBlogPosts = ({ props, className }) => {
           <h2>The Better Way Blog.</h2>
         </header>
 
-        {featuredPostNodes && featuredPostNodes.length > 0 && (
+        {featuredPostNodes && featuredPostNodes.length > 0 ? (
           <div className="grid md:grid-cols-2 md:gap-x-8 gap-y-6">
             <div>
               {featuredPostNodes.slice(0, 1).map((node) => (
@@ -155,6 +155,52 @@ const RecentBlogPosts = ({ props, className }) => {
                 </div>
               ))}
             </div>
+          </div>
+        ) : (
+          <div className="grid md:grid-cols-3 gap-x-10 gap-y-14 md:gap-y-16">
+            {postNodes.slice(0, 3).map((node) => (
+              <div key={node.id}>
+                <AniLink
+                  fade
+                  to={getBlogUrl(node.slug.current)}
+                  className="no-underline"
+                >
+                  <div className="group">
+                    {node.featuredImage && node.featuredImage.asset && (
+                      <div className="overflow-hidden mb-6">
+                        <GatsbyImage
+                          image={node.featuredImage.asset.gatsbyImageData}
+                          // className="w-full transform scale-100 md:group-hover:scale-105 filter blur-none transition-all duration-500 ease-linear"
+                        />
+                      </div>
+                    )}
+                    <div>
+                      {node.categories && (
+                        <ul className="flex">
+                          {node.categories.map((category, i) => (
+                            <li
+                              className="font-body text-gray-300 font-bold tracking-wide text-sm uppercase mb-2"
+                              key={i}
+                            >
+                              {i > 0 ? `, ${category.title}` : category.title}
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                      <p className="font-body text-xl font-bold text-secondary-50 mb-0">
+                        {node.title}
+                      </p>
+                      {/* {node._rawExcerpt && (
+          <div>
+            <PortableText blocks={node._rawExcerpt} />
+          </div>
+        )} */}
+                      {/* <div>{format(new Date(node.publishedAt), "MMMM d, yyyy")}</div> */}
+                    </div>
+                  </div>
+                </AniLink>
+              </div>
+            ))}
           </div>
         )}
       </div>

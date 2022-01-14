@@ -34,17 +34,17 @@ h3,
 
 h4,
 .heading-four {
-  @apply text-3xl font-bold mb-4;
+  @apply font-body text-3xl font-bold mb-4;
 }
 
 h5,
 .heading-five {
-  @apply text-xl font-bold mb-3;
+  @apply font-body text-xl font-bold mb-3;
 }
 
 h6,
 .heading-six {
-  @apply text-lg font-bold mb-2.5;
+  @apply font-body text-lg font-bold mb-2.5;
 }
 
 p {

@@ -1,9 +1,6 @@
 import React from "react";
 import MicroModal from "micromodal";
 import styled from "@emotion/styled";
-// import tw from "twin.macro";
-
-import SliderTeamMembers from "../Slider/SliderTeamMembers";
 
 const StyledModal = styled.div`
   .modal {
@@ -30,7 +27,7 @@ const StyledModal = styled.div`
   }
 `;
 
-const Modal = ({ slideIndex, slides }) => {
+const Modal = () => {
   if (typeof window !== `undefined`) {
     MicroModal.init({
       openTrigger: "data-modal-open",
@@ -47,22 +44,20 @@ const Modal = ({ slideIndex, slides }) => {
       <StyledModal>
         <div
           className="modal relative hidden z-50"
-          id="modal-team-members"
+          id="modal-pick-poison-1"
           aria-hidden="false"
         >
           <div
-            className="overlay fixed flex justify-center top-0 right-0 left-0 bottom-0 bg-black bg-opacity-75 outline-none"
+            className="overlay fixed flex justify-center items-center h-full top-0 right-0 left-0 bottom-0 bg-secondary-800/60 outline-none"
             tabIndex="-1"
             data-modal-close
           >
-            <div
-              className="content-wrapper overflow-auto bg-white w-full h-screen pt-24 pb-40 md:py-20 px-4 md:px-6"
-              role="dialog"
-              aria-modal="true"
-            >
-              <SliderTeamMembers slideIndex={slideIndex} slides={slides} />
+            <div className="content-wrapper" role="dialog" aria-modal="true">
+              <div className="max-w-[623px] mx-auto bg-primary-50/90 rounded-3xl shadow-7xl text-secondary-800 text-xl text-center py-10 px-6 md:px-8">
+                Sounds awful, but you do you!
+              </div>
               <i
-                className="fal fa-times absolute top-0 right-0 mr-8 mt-8 text-secondary-900 hover:text-primary-500 text-2xl cursor-pointer transition-colors duration-300 ease-linear"
+                className="fal fa-times absolute -top-8 -right-6 text-primary-50 hover:text-primary-500 text-4xl cursor-pointer transition-colors duration-300 ease-linear"
                 data-modal-close
               ></i>
             </div>

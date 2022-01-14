@@ -19,6 +19,18 @@ button {
   }
 }
 
+.styled-list-plus-alt {
+  @apply space-y-2;
+  li {
+    @apply flex items-center text-sm text-secondary-800 font-semibold;
+    &:before {
+      content: "\f067";
+      font-family: "Font Awesome 5 Pro";
+      @apply font-normal text-lg leading-none text-secondary-800 mr-3.5;
+    }
+  }
+}
+
 .rotating {
   -webkit-animation: rotating 20s linear infinite;
   -moz-animation: rotating 20s linear infinite;

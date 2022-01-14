@@ -15,6 +15,8 @@ import About from "../components/Repeating/About";
 import CallToAction from "../components/Repeating/CTA";
 import ButtonSolid from "../components/Button/ButtonSolid";
 import ButtonGhost from "../components/Button/ButtonGhost";
+import ModalPickPoison1 from "../components/Modal/ModalPickPoison1";
+import ModalPickPoison2 from "../components/Modal/ModalPickPoison2";
 
 const Page = ({ data }) => {
   return (
@@ -60,14 +62,20 @@ const Page = ({ data }) => {
               <h2 className="md:mb-10">Pick your poison.</h2>
               <div className="grid gap-y-4 mb-6">
                 <div className="flex items-center space-x-4">
-                  <div className="w-8 h-8 bg-white/20 rounded border-2 border-gray-50"></div>
+                  <button
+                    data-modal-open="modal-pick-poison-1"
+                    className="w-8 h-8 bg-white/20 rounded border-2 border-gray-50"
+                  ></button>
                   <p className="text-lg mb-0">
                     Work for a bureaucratic, soul-sucking, traditional CPA firm.
                   </p>
                 </div>
 
                 <div className="flex items-center space-x-4">
-                  <div className="w-8 h-8 bg-white/20 rounded border-2 border-gray-50"></div>
+                  <button
+                    data-modal-open="modal-pick-poison-2"
+                    className="w-8 h-8 bg-white/20 rounded border-2 border-gray-50"
+                  ></button>
                   <p className="text-lg mb-0">
                     Find out how difficult it is to go out on your own.
                   </p>
@@ -250,6 +258,8 @@ const Page = ({ data }) => {
       <RecentBlogPosts />
       <Subscribe />
       <CallToAction />
+      <ModalPickPoison1 />
+      <ModalPickPoison2 />
     </Layout>
   );
 };
@@ -266,7 +276,9 @@ export const query = graphql`
     ) {
       publicURL
     }
-    heroDesktop: file(relativePath: { eq: "1.0 Homepage/1.0 Hero.jpg" }) {
+    heroDesktop: file(
+      relativePath: { eq: "1.0 Homepage/Full Width Hero.jpg" }
+    ) {
       childImageSharp {
         gatsbyImageData(layout: CONSTRAINED, width: 1440)
       }
@@ -281,7 +293,7 @@ export const query = graphql`
         gatsbyImageData(layout: CONSTRAINED, width: 261)
       }
     }
-    intro: file(relativePath: { eq: "1.0 Homepage/intro.jpg" }) {
+    intro: file(relativePath: { eq: "1.0 Homepage/3.0 Antidote-swag.jpg" }) {
       childImageSharp {
         gatsbyImageData(layout: CONSTRAINED, width: 560)
       }

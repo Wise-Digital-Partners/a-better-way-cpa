@@ -98,9 +98,9 @@ const Page = ({ data }) => {
         // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
       />
 
-      <section className="pt-8 md:pt-20 pb-20 md:pb-30">
+      <section className="pt-8 md:pt-10 pb-20 md:pb-30">
         <div className="container">
-          <div className="grid md:grid-cols-2 gap-y-8 md:gap-x-10 lg:gap-x-10 items-center">
+          <div className="grid md:grid-cols-2 gap-y-8 md:gap-x-10 items-center">
             <div className="order-2 md:order-1">
               <h1 className="mb-0">Accelerator</h1>
               <p className="text-xl font-medium">ac·cel·er·a·tor</p>
@@ -123,9 +123,64 @@ const Page = ({ data }) => {
                 className="w-full md:w-auto"
               />
             </div>
-            <div className="order-1 md:order-2">
+            <div className="order-1 md:order-2 md:ml-auto">
               <GatsbyImage image={data.hero.childImageSharp.gatsbyImageData} />
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="pb-20 md:pb-30">
+        <div className="container">
+          <header className="max-w-[624px] mx-auto text-center mb-10 md:mb-12">
+            <h2>Pain Points</h2>
+            <p className="text-lg">
+              If you are like many people working in Public Accounting, the
+              following Pain Points may have crossed your mind...
+            </p>
+          </header>
+          <div className="grid md:grid-cols-3 gap-y-8 md:gap-x-6 lg:gap-x-10 items-center">
+            <Fade right cascade mirror distance="100px" duration="1000">
+              <div>
+                <div className="relative bg-secondary-50/30 rounded-xl p-4 lg:p-6 text-secondary-50 lg:text-lg mb-6 after:hidden md:after:block after:absolute after:w-0 after:h-0 after:top-1/2 after:-translate-y-1/2 after:-right-4 after:border-transparent after:border-[16px] after:border-l-secondary-50/30 after:border-r-0">
+                  “What does growth look like?”
+                </div>
+                <div className="relative bg-secondary-50/30 rounded-xl p-4 lg:p-6 text-secondary-50 lg:text-lg mb-6 after:hidden md:after:block after:absolute after:w-0 after:h-0 after:top-1/2 after:-translate-y-1/2 after:-right-4 after:border-transparent after:border-[16px] after:border-l-secondary-50/30 after:border-r-0">
+                  “What goes into my compensation or bonus structure?”
+                </div>
+                <div className="relative bg-secondary-50/30 rounded-xl p-4 lg:p-6 text-secondary-50 lg:text-lg mb-6 after:hidden md:after:block after:absolute after:w-0 after:h-0 after:top-1/2 after:-translate-y-1/2 after:-right-4 after:border-transparent after:border-[16px] after:border-l-secondary-50/30 after:border-r-0">
+                  “Seems like promotions are based on unknown factors and not
+                  the work I do...”
+                </div>
+                <div className="relative bg-secondary-50/30 rounded-xl p-4 lg:p-6 text-secondary-50 lg:text-lg after:hidden md:after:block after:absolute after:w-0 after:h-0 after:top-1/2 after:-translate-y-1/2 after:-right-4 after:border-transparent after:border-[16px] after:border-l-secondary-50/30 after:border-r-0">
+                  Is my current firm the type of firm that I want to buy into?
+                </div>
+              </div>
+            </Fade>
+
+            <div className="mx-auto">
+              <GatsbyImage
+                image={data.painPoints.childImageSharp.gatsbyImageData}
+              />
+            </div>
+            <Fade right cascade distance="100px" duration="1000">
+              <div>
+                <div className="relative bg-secondary-50/30 rounded-xl p-4 lg:p-6 text-secondary-50 lg:text-lg mb-6 after:hidden md:after:block after:absolute after:w-0 after:h-0 after:top-1/2 after:-translate-y-1/2 after:-left-4 after:border-transparent after:border-[16px] after:border-r-secondary-50/30 after:border-l-0">
+                  “I have always wanted to go out on my own, but there are too
+                  many unkowns/risks involved”
+                </div>
+                <div className="relative bg-secondary-50/30 rounded-xl p-4 lg:p-6 text-secondary-50 lg:text-lg mb-6 after:hidden md:after:block after:absolute after:w-0 after:h-0 after:top-1/2 after:-translate-y-1/2 after:-left-4 after:border-transparent after:border-[16px] after:border-r-secondary-50/30 after:border-l-0">
+                  “What are my metrics for success?”
+                </div>
+                <div className="relative bg-secondary-50/30 rounded-xl p-4 lg:p-6 text-secondary-50 lg:text-lg mb-6 after:hidden md:after:block after:absolute after:w-0 after:h-0 after:top-1/2 after:-translate-y-1/2 after:-left-4 after:border-transparent after:border-[16px] after:border-r-secondary-50/30 after:border-l-0">
+                  “This is a lot of work with not a lot of upside...”
+                </div>
+                <div className="relative bg-secondary-50/30 rounded-xl p-4 lg:p-6 text-secondary-50 lg:text-lg after:hidden md:after:block after:absolute after:w-0 after:h-0 after:top-1/2 after:-translate-y-1/2 after:-left-4 after:border-transparent after:border-[16px] after:border-r-secondary-50/30 after:border-l-0">
+                  How long will it take this firm to change and keep up with the
+                  times?
+                </div>
+              </div>
+            </Fade>
           </div>
         </div>
       </section>
@@ -248,11 +303,11 @@ const Page = ({ data }) => {
                     You Level Up to Principal
                   </h3>
                   <p className="text-lg">
-                    Over time, as your book of business grows, your
-                    compensation/payouts will start becoming more substantial
-                    and completely tied to your book of business, which will
-                    bring you to the financial trigger to qualify as a Principal
-                    of the firm.
+                    You Level Up to Principal Over time, as your book of
+                    business grows, your compensation/payouts will start
+                    becoming more substantial and completely tied to your book
+                    of business. Which will bring you to the financial trigger
+                    to qualify as a Principal of the firm.
                   </p>
                 </div>
               </div>
@@ -321,8 +376,7 @@ const Page = ({ data }) => {
                 </footer>
               </blockquote>
               <ButtonGhost
-                href="https://darkhorse.cpa/success-stories/meet-the-first-dark-horse-accelerator/"
-                outboundLink={true}
+                href="/john-warner/"
                 iconRight
                 text="Read the Story"
                 className="w-full md:w-auto"
@@ -396,6 +450,27 @@ const Page = ({ data }) => {
                   className="mx-auto mb-5"
                 />
                 <h3 className="heading-four text-primary-500">
+                  Build Your Book
+                </h3>
+                <p className="text-lg mb-0">
+                  You begin taking on inbound inquiries, managing clients
+                  end-to-end with a financial target of $150,000 in annual
+                  recurring revenue. Once they have signed, we support you in
+                  client communication, quoting/engagement, and workflow
+                  management.
+                </p>
+                <div className="border-l border-dashed border-gray-300 h-36 w-px mt-6 mx-auto"></div>
+              </div>
+            </Fade>
+
+            <Fade bottom distance="120px" duration="2000">
+              <div className="mb-8">
+                <img
+                  src={data.step4.publicURL}
+                  alt="Step 4"
+                  className="mx-auto mb-5"
+                />
+                <h3 className="heading-four text-primary-500">
                   Graduate to Principal
                 </h3>
                 <p className="text-lg mb-0">
@@ -453,12 +528,14 @@ export const query = graphql`
     }
     hero: file(relativePath: { eq: "2.0 Accellerator program/1.0 Hero.png" }) {
       childImageSharp {
-        gatsbyImageData(layout: CONSTRAINED, width: 550)
+        gatsbyImageData(layout: CONSTRAINED, width: 548)
       }
     }
-    intro: file(relativePath: { eq: "1.0 Homepage/intro.jpg" }) {
+    painPoints: file(
+      relativePath: { eq: "2.0 Accellerator program/2.0 PainPoints.png" }
+    ) {
       childImageSharp {
-        gatsbyImageData(layout: CONSTRAINED, width: 560)
+        gatsbyImageData(layout: CONSTRAINED, width: 440)
       }
     }
     grayCrossesBackground: file(
@@ -492,6 +569,11 @@ export const query = graphql`
     }
     step3: file(
       relativePath: { eq: "2.0 Accellerator program/3.0 Step 03.svg" }
+    ) {
+      publicURL
+    }
+    step4: file(
+      relativePath: { eq: "2.0 Accellerator program/3.0 Step 04.svg" }
     ) {
       publicURL
     }
