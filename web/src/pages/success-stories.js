@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
-import Fade from "react-reveal/Fade";
+// import Fade from "react-reveal/Fade";
 
 import Layout from "../components/Layout";
 import SearchEngineOptimization from "../components/SEO";

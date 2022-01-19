@@ -57,14 +57,20 @@ export default class Form extends Component {
       }),
     })
       .then(
-        () =>
-          (document.getElementById("principal-form-ajax-response").innerHTML =
-            "Thank you for for submission! We will get in touch with you shortly."),
-        form.remove(),
-        (window.dataLayer = window.dataLayer || []),
+        () => (window.dataLayer = window.dataLayer || []),
         window.dataLayer.push({
-          event: "principalFormSubmission",
-        })
+          event: "requestInfoPrincipalFormSubmission",
+        }),
+        document.querySelector(
+          'input[name="would-you-like-to-schedule-a-meeting-with-a-dark-horse-team-member"]:checked'
+        ).value === "Yes" &&
+          window.open("https://meetings.hubspot.com/justin-kurn", "_blank"),
+
+        (document.getElementById(
+          "request-info-principal-form-ajax-response"
+        ).innerHTML =
+          "Thank you for for submission! We will get in touch with you shortly."),
+        form.remove()
       )
       .catch((error) => alert(error));
   };
@@ -72,9 +78,9 @@ export default class Form extends Component {
   render() {
     return (
       <StyledForm>
-        <div id="principal-form-ajax-response"></div>
+        <div id="request-info-principal-form-ajax-response"></div>
         <form
-          name="Principal"
+          name="Request Info - Principal"
           method="post"
           action=""
           data-netlify="true"
@@ -82,7 +88,11 @@ export default class Form extends Component {
           onSubmit={this.handleSubmit}
         >
           {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-          <input type="hidden" name="form-name" value="Principal" />
+          <input
+            type="hidden"
+            name="form-name"
+            value="Request Info - Principal"
+          />
           <div hidden>
             <label>
               Don’t fill this out:{" "}
@@ -90,19 +100,36 @@ export default class Form extends Component {
             </label>
           </div>
 
-          <div className="mb-6">
-            <label
-              className="font-body text-sm font-semibold text-white block mb-1.5"
-              htmlFor="name"
-            >
-              Name
-            </label>
-            <input
-              type="text"
-              name="name"
-              onChange={this.handleChange}
-              required={true}
-            />
+          <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-6 w-full">
+            <div className="mb-6">
+              <label
+                className="font-body text-sm font-semibold text-white block mb-1.5"
+                htmlFor="first-name"
+              >
+                First Name
+              </label>
+              <input
+                type="text"
+                name="first-name"
+                onChange={this.handleChange}
+                required={true}
+              />
+            </div>
+
+            <div className="mb-6">
+              <label
+                className="font-body text-sm font-semibold text-white block mb-1.5"
+                htmlFor="last-name"
+              >
+                Last Name
+              </label>
+              <input
+                type="text"
+                name="last-name"
+                onChange={this.handleChange}
+                required={true}
+              />
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-6 w-full">
@@ -139,33 +166,14 @@ export default class Form extends Component {
           <div className="mb-6">
             <label
               className="font-body text-sm font-semibold text-white block mb-1.5"
-              htmlFor="when-are-you-looking-to-make-a-change"
-            >
-              When are you looking to make a change?
-            </label>
-            <select
-              name="when-are-you-looking-to-make-a-change"
-              onBlur={this.handleChange}
-              required={true}
-            >
-              <option value="">Select one...</option>
-              <option value="ASAP">ASAP</option>
-              <option value="I’m flexible">I’m flexible</option>
-              <option value="As soon as things slow down after tax season">
-                As soon as things slow down after tax season
-              </option>
-            </select>
-          </div>
-
-          <div className="mb-6">
-            <label
-              className="font-body text-sm font-semibold text-white block mb-1.5"
               htmlFor="how-many-years-have-you-owned-your-practice"
             >
               How many years have you owned your practice?
             </label>
             <input
               type="number"
+              min={0}
+              max={99}
               name="how-many-years-have-you-owned-your-practice"
               onChange={this.handleChange}
               required={true}
@@ -174,36 +182,16 @@ export default class Form extends Component {
           </div>
 
           <div className="mb-6">
-            <label
-              className="font-body text-sm font-semibold text-white block mb-1.5"
-              htmlFor="whats-your-annual-revenue"
-            >
-              What’s your annual revenue?
-            </label>
-            <select
-              name="whats-your-annual-revenue"
-              onBlur={this.handleChange}
-              required={true}
-            >
-              <option value="">Select one...</option>
-              <option value=">$500k">{">"}$500k</option>
-              <option value="$150k-$500k">$150k-$500k</option>
-              <option value="<$150k (Junior Principal Tier)">
-                {"<"}$150k (Junior Principal Tier)
-              </option>
-            </select>
-          </div>
-
-          <div className="mb-6">
             <fieldset>
               <legend className="font-body text-sm font-semibold text-white block mb-1.5">
-                Do you have a current staff?
+                Would you like to schedule a meeting with a Dark Horse team
+                member?
               </legend>
               <div className="flex space-x-5 mt-1.5">
                 <label className="relative pl-7 mb-2 cursor-pointer text-sm">
                   <input
                     type="radio"
-                    name="do-you-have-a-current-staff"
+                    name="would-you-like-to-schedule-a-meeting-with-a-dark-horse-team-member"
                     value="Yes"
                     onChange={this.handleChange}
                   />
@@ -213,7 +201,7 @@ export default class Form extends Component {
                 <label className="relative pl-7 mb-2 cursor-pointer text-sm">
                   <input
                     type="radio"
-                    name="do-you-have-a-current-staff"
+                    name="would-you-like-to-schedule-a-meeting-with-a-dark-horse-team-member"
                     onChange={this.handleChange}
                     value="No
 "
@@ -225,6 +213,21 @@ export default class Form extends Component {
             </fieldset>
           </div>
 
+          <div className="mb-6">
+            <label
+              className="font-body text-sm font-semibold text-white block mb-1.5"
+              htmlFor="message"
+            >
+              Anything specific you would like to know?
+            </label>
+            <textarea
+              className="textarea"
+              name="anything-specific-you-would-like-to-know"
+              onChange={this.handleChange}
+              rows="4"
+              required={false}
+            />
+          </div>
           <div className="mt-8">
             <ButtonSolid type="submit" text="Submit" />
           </div>

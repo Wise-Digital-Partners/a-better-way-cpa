@@ -139,35 +139,16 @@ export default class Form extends Component {
           <div className="mb-6">
             <label
               className="font-body text-sm font-semibold text-white block mb-1.5"
-              htmlFor="what-can-we-help-you-with"
-            >
-              What Can We Help You With?
-            </label>
-            <select
-              name="what-can-we-help-you-with"
-              onBlur={this.handleChange}
-              required={true}
-            >
-              <option value="">Select one...</option>
-              <option value="Option 1">Option 1</option>
-              <option value="Option 2">Option 2</option>
-              <option value="Option 3">Option 3</option>
-            </select>
-          </div>
-
-          <div className="mb-6">
-            <label
-              className="font-body text-sm font-semibold text-white block mb-1.5"
               htmlFor="message"
             >
-              Message (optional)
+              Message
             </label>
             <textarea
               className="textarea"
               name="message"
               onChange={this.handleChange}
               rows="4"
-              required={false}
+              required={true}
             />
           </div>
 

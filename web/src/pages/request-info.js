@@ -3,8 +3,8 @@ import { graphql } from "gatsby";
 
 import Layout from "../components/Layout";
 import SearchEngineOptimization from "../components/SEO";
-import Accelerator from "../components/Form/Accelerator";
-import Principal from "../components/Form/Principal";
+import Accelerator from "../components/Form/AcceleratorRequestInfo";
+import Principal from "../components/Form/PrincipalRequestInfo";
 
 const Page = ({ data }) => {
   const [setChoices, setChoicesState] = useState("block");

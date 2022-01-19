@@ -147,16 +147,16 @@ module.exports = {
     //     instagram_id: `17841402300827155`,
     //   },
     // },
-    // {
-    //   resolve: "gatsby-plugin-google-tagmanager",
-    //   options: {
-    //     id: "",
-    //     includeInDevelopment: true,
-    //     // defaultDataLayer: { platform: "gatsby" },
-    //     // gtmAuth: "YOUR_GOOGLE_TAGMANAGER_ENVIRONMENT_AUTH_STRING",
-    //     // gtmPreview: "YOUR_GOOGLE_TAGMANAGER_ENVIRONMENT_PREVIEW_NAME",
-    //     // dataLayerName: "YOUR_DATA_LAYER_NAME",
-    //   },
-    // },
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "GTM-M5DS9R8",
+        includeInDevelopment: true,
+        // defaultDataLayer: { platform: "gatsby" },
+        // gtmAuth: "YOUR_GOOGLE_TAGMANAGER_ENVIRONMENT_AUTH_STRING",
+        // gtmPreview: "YOUR_GOOGLE_TAGMANAGER_ENVIRONMENT_PREVIEW_NAME",
+        // dataLayerName: "YOUR_DATA_LAYER_NAME",
+      },
+    },
   ],
 };
