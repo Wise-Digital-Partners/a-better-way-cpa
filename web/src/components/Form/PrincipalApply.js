@@ -33,7 +33,9 @@ const StyledForm = styled.div`
 export default class Form extends Component {
   constructor(props) {
     super(props);
-    this.state = { otherServices: false };
+    this.state = {
+      otherServices: false,
+    };
   }
 
   handleChange = (e) => {
@@ -57,13 +59,26 @@ export default class Form extends Component {
 
   otherServicesToggle = () => {
     this.setState({ otherServices: !this.state.otherServices });
-    document.querySelector('input[name="other-service"]').required =
+    document.getElementById("other-service").required =
       this.state.otherServices;
   };
 
   handleSubmit = (e) => {
     e.preventDefault();
+
+    // this.setState((state) => {
+    //   let array = state["what-is-the-primary-service-your-firm-offers"] || [];
+    //   array = array.map((item) =>
+    //     item === "Other" ? this.state["other-service"] : item
+    //   );
+
+    //   this.setState({
+    //     ["what-is-the-primary-service-your-firm-offers"]: array,
+    //   });
+    // });
+
     const form = e.target;
+    // console.log(this.state);
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -110,7 +125,7 @@ export default class Form extends Component {
             </label>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-6 w-full">
+          {/* <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-6 w-full">
             <div className="mb-6">
               <label
                 className="font-body text-sm font-semibold text-white block mb-1.5"
@@ -238,16 +253,12 @@ export default class Form extends Component {
               className="bg-blend-color-dodge"
             >
               <option value="">Select one...</option>
-              <option value="$0 - $50k (Accelerator Tier)">
-                $0 - $50k (Accelerator Tier)
-              </option>
-              <option value="$51k - $149k (Junior Principal Tier)">
-                $51k - $149k (Junior Principal Tier)
-              </option>
+              <option value="$0 - $50k">$0 - $50k</option>
+              <option value="$51k - $149k">$51k - $149k</option>
               <option value="$150k – 399k">$150k – 399k</option>
               <option value="$400k+">$400k+</option>
             </select>
-          </div>
+          </div> */}
 
           <div className="mb-6">
             <fieldset>
@@ -306,6 +317,7 @@ export default class Form extends Component {
               name="other-service"
               onChange={this.handleChange}
               required={this.state.otherServices}
+              id="other-service"
               className={`${this.state.otherServices ? "block" : "hidden"}`}
             />
           </div>

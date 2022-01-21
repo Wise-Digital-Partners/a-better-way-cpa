@@ -166,19 +166,21 @@ export default class Form extends Component {
           <div className="mb-6">
             <label
               className="font-body text-sm font-semibold text-white block mb-1.5"
-              htmlFor="how-many-years-of-public-accounting"
+              htmlFor="how-many-years-have-you-been-working-in-public-accounting"
             >
-              How many years of public accounting?
+              How many years have you been working in public accounting?
             </label>
-            <input
-              type="number"
-              min={0}
-              max={99}
-              name="how-many-years-of-public-accounting"
-              onChange={this.handleChange}
+            <select
+              name="how-many-years-have-you-been-working-in-public-accounting"
+              onBlur={this.handleChange}
               required={true}
-              className="max-w-[104px]"
-            />
+              className="bg-blend-color-dodge"
+            >
+              <option value="">Select one...</option>
+              <option value="< 5">{"< "}5</option>
+              <option value="6-10">6-10</option>
+              <option value="> 10">{"> "}10 </option>
+            </select>
           </div>
 
           <div className="mb-6">

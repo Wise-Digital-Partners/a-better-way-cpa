@@ -208,7 +208,7 @@ export default class Form extends Component {
               className="font-body text-sm font-semibold text-white block mb-1.5"
               htmlFor="how-many-years-have-you-been-working-in-public-accounting"
             >
-              How many years have you been working in Public Accounting?
+              How many years have you been working in public accounting?
             </label>
             <select
               name="how-many-years-have-you-been-working-in-public-accounting"
@@ -239,8 +239,8 @@ export default class Form extends Component {
               <option value="">Select one...</option>
               <option value="ASAP">ASAP</option>
               <option value="I’m flexible">I’m flexible</option>
-              <option value="As soon as things slow down after tax season">
-                As soon as things slow down after tax season
+              <option value="As soon as things slow down after tax season…..">
+                As soon as things slow down after tax season…..
               </option>
             </select>
           </div>
