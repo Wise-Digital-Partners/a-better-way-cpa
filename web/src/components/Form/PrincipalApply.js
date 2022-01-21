@@ -65,20 +65,7 @@ export default class Form extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-
-    // this.setState((state) => {
-    //   let array = state["what-is-the-primary-service-your-firm-offers"] || [];
-    //   array = array.map((item) =>
-    //     item === "Other" ? this.state["other-service"] : item
-    //   );
-
-    //   this.setState({
-    //     ["what-is-the-primary-service-your-firm-offers"]: array,
-    //   });
-    // });
-
     const form = e.target;
-    // console.log(this.state);
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -125,7 +112,7 @@ export default class Form extends Component {
             </label>
           </div>
 
-          {/* <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-6 w-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-6 w-full">
             <div className="mb-6">
               <label
                 className="font-body text-sm font-semibold text-white block mb-1.5"
@@ -258,7 +245,7 @@ export default class Form extends Component {
               <option value="$150k – 399k">$150k – 399k</option>
               <option value="$400k+">$400k+</option>
             </select>
-          </div> */}
+          </div>
 
           <div className="mb-6">
             <fieldset>
