@@ -242,7 +242,7 @@ export default class Form extends Component {
               <option value="">Select one...</option>
               <option value="$0 - $50k">$0 - $50k</option>
               <option value="$51k - $149k">$51k - $149k</option>
-              <option value="$150k – 399k">$150k – 399k</option>
+              <option value="$150k - $399k">$150k - $399k</option>
               <option value="$400k+">$400k+</option>
             </select>
           </div>
