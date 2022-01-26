@@ -231,8 +231,8 @@ export default class Form extends Component {
               <option value="">Select one...</option>
               <option value="ASAP">ASAP</option>
               <option value="I’m flexible">I’m flexible</option>
-              <option value="As soon as things slow down after tax season…..">
-                As soon as things slow down after tax season…..
+              <option value="As soon as things slow down after tax season...">
+                As soon as things slow down after tax season...
               </option>
             </select>
           </div>
