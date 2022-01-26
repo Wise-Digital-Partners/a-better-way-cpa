@@ -82,19 +82,36 @@ export default class Form extends Component {
             </label>
           </div>
 
-          <div className="mb-6">
-            <label
-              className="font-body text-sm font-semibold text-white block mb-1.5"
-              htmlFor="name"
-            >
-              Name
-            </label>
-            <input
-              type="text"
-              name="name"
-              onChange={this.handleChange}
-              required={true}
-            />
+          <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-6 w-full">
+            <div className="mb-6">
+              <label
+                className="font-body text-sm font-semibold text-white block mb-1.5"
+                htmlFor="first-name"
+              >
+                First Name
+              </label>
+              <input
+                type="text"
+                name="first-name"
+                onChange={this.handleChange}
+                required={true}
+              />
+            </div>
+
+            <div className="mb-6">
+              <label
+                className="font-body text-sm font-semibold text-white block mb-1.5"
+                htmlFor="last-name"
+              >
+                Last Name
+              </label>
+              <input
+                type="text"
+                name="last-name"
+                onChange={this.handleChange}
+                required={true}
+              />
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-6 w-full">
