@@ -55,7 +55,7 @@ export default class Form extends Component {
         }),
         document.querySelector(
           'input[name="would-you-like-to-schedule-a-meeting-with-a-dark-horse-team-member"]:checked'
-        ).value === "Yes" &&
+        ).value === "true" &&
           window.open("https://meetings.hubspot.com/justin-kurn", "_blank"),
 
         (document.getElementById(
@@ -186,7 +186,7 @@ export default class Form extends Component {
                   <input
                     type="radio"
                     name="would-you-like-to-schedule-a-meeting-with-a-dark-horse-team-member"
-                    value="Yes"
+                    value="true"
                     onChange={this.handleChange}
                   />
                   Yes
@@ -197,8 +197,7 @@ export default class Form extends Component {
                     type="radio"
                     name="would-you-like-to-schedule-a-meeting-with-a-dark-horse-team-member"
                     onChange={this.handleChange}
-                    value="No
-"
+                    value="false"
                   />
                   No
                   <span className="radio-custom"></span>
