@@ -11,19 +11,11 @@ function encode(data) {
 }
 
 const StyledForm = styled.div`
-  [multiple],
-  [type="date"],
-  [type="datetime-local"],
   [type="email"],
-  [type="month"],
   [type="number"],
-  [type="password"],
-  [type="search"],
   [type="tel"],
   [type="text"],
-  [type="time"],
-  [type="url"],
-  [type="week"],
+  [type="file"],
   select,
   textarea {
     ${tw`w-full px-4 py-2.5 border border-solid border-primary-50 bg-[#5B6E7D] rounded-sm focus:border-transparent focus:outline-none focus:ring-3 focus:ring-secondary-400 transition-colors duration-300 ease-linear`}
@@ -34,7 +26,7 @@ export default class Form extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      otherServices: false,
+      // otherServices: false,
     };
   }
 
@@ -57,11 +49,11 @@ export default class Form extends Component {
     }
   };
 
-  otherServicesToggle = () => {
-    this.setState({ otherServices: !this.state.otherServices });
-    document.getElementById("other-service").required =
-      this.state.otherServices;
-  };
+  // otherServicesToggle = () => {
+  //   this.setState({ otherServices: !this.state.otherServices });
+  //   document.getElementById("other-service").required =
+  //     this.state.otherServices;
+  // };
 
   handleSubmit = (e) => {
     e.preventDefault();
@@ -288,7 +280,7 @@ export default class Form extends Component {
                     type="checkbox"
                     name="what-is-the-primary-service-your-firm-offers"
                     onChange={this.handleChange}
-                    onClick={this.otherServicesToggle}
+                    // onClick={this.otherServicesToggle}
                     value="Other"
                   />
                   Other
@@ -298,7 +290,7 @@ export default class Form extends Component {
             </fieldset>
           </div>
 
-          <div className="mb-6">
+          {/* <div className="mb-6">
             <input
               type="text"
               name="other-service"
@@ -307,7 +299,7 @@ export default class Form extends Component {
               id="other-service"
               className={`${this.state.otherServices ? "block" : "hidden"}`}
             />
-          </div>
+          </div> */}
 
           <div className="mt-8">
             <ButtonSolid type="submit" text="Apply" />

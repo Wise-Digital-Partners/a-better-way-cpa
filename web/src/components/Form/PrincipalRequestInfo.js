@@ -11,19 +11,11 @@ function encode(data) {
 }
 
 const StyledForm = styled.div`
-  [multiple],
-  [type="date"],
-  [type="datetime-local"],
   [type="email"],
-  [type="month"],
   [type="number"],
-  [type="password"],
-  [type="search"],
   [type="tel"],
   [type="text"],
-  [type="time"],
-  [type="url"],
-  [type="week"],
+  [type="file"],
   select,
   textarea {
     ${tw`text-lg w-full px-4 py-2.5 border border-solid border-primary-50 bg-[#5B6E7D] rounded-sm focus:border-transparent focus:outline-none focus:ring-3 focus:ring-secondary-400 transition-colors duration-300 ease-linear`}
