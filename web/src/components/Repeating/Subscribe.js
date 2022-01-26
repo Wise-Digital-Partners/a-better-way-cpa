@@ -8,7 +8,7 @@ const ValueProps = ({ className }) => {
   const data = useStaticQuery(graphql`
     {
       subscribe: file(
-        relativePath: { eq: "0.0 Repeated Modules/Subscribe/Podcasting.jpg" }
+        relativePath: { eq: "0.0 Repeated Modules/Subscribe/subscribe.jpg" }
       ) {
         childImageSharp {
           gatsbyImageData(layout: CONSTRAINED, width: 560)
@@ -38,7 +38,7 @@ const ValueProps = ({ className }) => {
               image={data.subscribe.childImageSharp.gatsbyImageData}
               className="md:rounded-3xl z-0 w-full"
             />
-            <button className="absolute flex justify-center items-center inset-0 w-full">
+            {/* <button className="absolute flex justify-center items-center inset-0 w-full">
               <svg
                 width="75"
                 height="75"
@@ -49,7 +49,7 @@ const ValueProps = ({ className }) => {
                 <circle cx="37.5" cy="37.5" r="37.5" fill="#FD9A4A" />
                 <path d="M29 53V22L53 37.7541L29 53Z" fill="#314251" />
               </svg>
-            </button>
+            </button> */}
           </div>
         </div>
       </div>
