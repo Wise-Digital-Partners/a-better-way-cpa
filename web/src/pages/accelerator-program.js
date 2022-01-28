@@ -303,7 +303,7 @@ const Page = ({ data }) => {
                     You Level Up to Principal
                   </h3>
                   <p className="text-lg">
-                    You Level Up to Principal Over time, as your book of
+                    You Level-Up to Principal over time, as your book of
                     business grows, your compensation/payouts will start
                     becoming more substantial and completely tied to your book
                     of business. Which will bring you to the financial trigger
