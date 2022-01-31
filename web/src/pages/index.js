@@ -89,7 +89,7 @@ const Page = ({ data }) => {
                 about it from our CPAs.
               </p>
               <ButtonGhost
-                href="#"
+                href="/success-stories/"
                 iconRight
                 text="Success Stories"
                 className="w-full md:w-auto"

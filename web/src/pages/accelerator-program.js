@@ -223,7 +223,7 @@ const Page = ({ data }) => {
                 participation in the firm.
               </p>
               <ButtonGhost
-                href="#"
+                href="/success-stories/"
                 iconRight
                 text="Success Stories"
                 className="w-full md:w-auto"

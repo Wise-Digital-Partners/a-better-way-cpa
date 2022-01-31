@@ -70,12 +70,12 @@ const Page = ({ data }) => {
               No decision made or action taken should be done so at the expense
               of any of these stakeholders.
             </p>
-            <ButtonGhost
+            {/* <ButtonGhost
               href="#"
               iconRight
               altStyle={3}
               text="Learn More about Our Why"
-            />
+            /> */}
           </div>
         </div>
       </BgImage>
