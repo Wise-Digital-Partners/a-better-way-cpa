@@ -33,9 +33,9 @@ const Page = ({ data }) => {
         textMaxWidth="max-w-3xl mx-auto"
         padding="py-22 md:py-48"
       >
-        <p className="font-heading text-mobile-7xl md:text-7xl font-semibold text-white mb-6">
+        <h1 className="font-heading text-mobile-7xl md:text-7xl font-semibold text-white mb-6">
           The CPA firm built for CPAs<span className="text-primary-500">.</span>
-        </p>
+        </h1>
         <p className="text-xl tracking-wide mb-8">
           Dark Horse empowers you to build and scale your own book of business
           within a collaborative community. It’s truly a better way to CPA.
