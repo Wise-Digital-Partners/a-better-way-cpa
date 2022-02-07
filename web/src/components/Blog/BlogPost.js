@@ -125,7 +125,7 @@ function BlogPost(props) {
           </div>
 
           {featuredImage && featuredImage.asset && (
-            <div className="mb-12 md:mb-20">
+            <div className="mb-12 md:mb-20 max-w-[960px] mx-auto">
               <GatsbyImage image={props.featuredImage.asset.gatsbyImageData} />
             </div>
           )}
