@@ -16,8 +16,8 @@ const Page = ({ data }) => {
       <SearchEngineOptimization
         title="About | A Better Way CPA | Dark Horse"
         description="Dark Horse is a community of CPAs seeking to grow and scale a book of business, invest in client relationships, and design a lifestyle that fits their journey."
-        // openGraphImage={data.openGraphImage.publicURL}
-        // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
+        openGraphImage={data.openGraphImage.publicURL}
+        twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
       />
 
       <section className="overflow-hidden pt-10 md:pt-18 pb-20 md:pb-48">
@@ -205,12 +205,12 @@ const Page = ({ data }) => {
 export const query = graphql`
   {
     openGraphImage: file(
-      relativePath: { eq: "open-graph/facebook/Homepage.jpg" }
+      relativePath: { eq: "open-graph/facebook/About.jpg" }
     ) {
       publicURL
     }
     twitterOpenGraphImage: file(
-      relativePath: { eq: "open-graph/twitter/Homepage.jpg" }
+      relativePath: { eq: "open-graph/twitter/About.jpg" }
     ) {
       publicURL
     }

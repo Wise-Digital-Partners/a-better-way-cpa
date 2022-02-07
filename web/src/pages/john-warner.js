@@ -26,8 +26,8 @@ const Page = ({ data }) => {
       <SearchEngineOptimization
         title="John Warner | Success Stories | A Better Way CPA"
         description="Meet John Warner, a Principal at Dark Horse CPAs. He's living his dream, helping small businesses and individuals improve their tax and financial position."
-        // openGraphImage={data.openGraphImage.publicURL}
-        // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
+        openGraphImage={data.openGraphImage.publicURL}
+        twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
       />
       <section className="md:pt-18 pb-10 md:pb-30">
         <div className="container">
@@ -282,6 +282,16 @@ const Page = ({ data }) => {
 
 export const query = graphql`
   {
+    openGraphImage: file(
+      relativePath: { eq: "open-graph/facebook/Homepage.jpg" }
+    ) {
+      publicURL
+    }
+    twitterOpenGraphImage: file(
+      relativePath: { eq: "open-graph/twitter/Homepage.jpg" }
+    ) {
+      publicURL
+    }
     john: file(
       relativePath: { eq: "2.0 Accellerator program/john-warner.jpg" }
     ) {

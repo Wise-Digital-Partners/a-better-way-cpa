@@ -14,12 +14,12 @@ import {
 export const query = graphql`
   {
     openGraphImage: file(
-      relativePath: { eq: "open-graph/facebook/Homepage-Reviews.jpg" }
+      relativePath: { eq: "open-graph/facebook/Homepage.jpg" }
     ) {
       publicURL
     }
     twitterOpenGraphImage: file(
-      relativePath: { eq: "open-graph/twitter/Homepage-Reviews.jpg" }
+      relativePath: { eq: "open-graph/twitter/Homepage.jpg" }
     ) {
       publicURL
     }
@@ -72,8 +72,8 @@ const ArchivePage = (props) => {
       <SearchEngineOptimization
         title=""
         description=""
-        // openGraphImage={data.openGraphImage.publicURL}
-        // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
+        openGraphImage={data.openGraphImage.publicURL}
+        twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
       />
 
       <section className="pt-16 md:pt-20 pb-20 md:pb-32">

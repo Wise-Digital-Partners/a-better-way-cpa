@@ -94,8 +94,8 @@ const Page = ({ data }) => {
       <SearchEngineOptimization
         title="Dark Horse Accelerator Program | A Better Way CPA"
         description="Attention CPAs—accelerate your path to Principal with Dark Horse. Manage your own clients, own your own book, and start getting the most out of your profession."
-        // openGraphImage={data.openGraphImage.publicURL}
-        // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
+        openGraphImage={data.openGraphImage.publicURL}
+        twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
       />
 
       <section className="pt-8 md:pt-10 pb-20 md:pb-30">
@@ -517,12 +517,12 @@ const Page = ({ data }) => {
 export const query = graphql`
   {
     openGraphImage: file(
-      relativePath: { eq: "open-graph/facebook/Homepage.jpg" }
+      relativePath: { eq: "open-graph/facebook/Accellerator.jpg" }
     ) {
       publicURL
     }
     twitterOpenGraphImage: file(
-      relativePath: { eq: "open-graph/twitter/Homepage.jpg" }
+      relativePath: { eq: "open-graph/twitter/Accellerator.jpg" }
     ) {
       publicURL
     }

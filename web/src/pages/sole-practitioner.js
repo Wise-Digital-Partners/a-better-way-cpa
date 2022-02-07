@@ -100,8 +100,8 @@ const Page = ({ data }) => {
       <SearchEngineOptimization
         title="Sole Practitioner | A Better Way CPA | Dark Horse"
         description="Stop being overworked and underpaid. Join the collaborative Dark Horse CPA team to scale your book of business, increase your fees, and work more efficiently."
-        // openGraphImage={data.openGraphImage.publicURL}
-        // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
+        openGraphImage={data.openGraphImage.publicURL}
+        twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
       />
 
       <section className="pt-6 md:pt-10 pb-20 md:pb-16">
@@ -533,12 +533,12 @@ const Page = ({ data }) => {
 export const query = graphql`
   {
     openGraphImage: file(
-      relativePath: { eq: "open-graph/facebook/Homepage.jpg" }
+      relativePath: { eq: "open-graph/facebook/Sole Practitioner.jpg" }
     ) {
       publicURL
     }
     twitterOpenGraphImage: file(
-      relativePath: { eq: "open-graph/twitter/Homepage.jpg" }
+      relativePath: { eq: "open-graph/twitter/Sole Practitioner.jpg" }
     ) {
       publicURL
     }

@@ -26,8 +26,8 @@ const Page = ({ data }) => {
       <SearchEngineOptimization
         title="Suzi Drennen | Success Stories | A Better Way CPA"
         description="Meet Suzi Drennen, a Principal at Dark Horse CPAs. Her favorite part of the job is working directly with clients and building long-term relationships."
-        // openGraphImage={data.openGraphImage.publicURL}
-        // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
+        openGraphImage={data.openGraphImage.publicURL}
+        twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
       />
       <section className="md:pt-18 pb-10 md:pb-30">
         <div className="container">
@@ -271,6 +271,16 @@ const Page = ({ data }) => {
 
 export const query = graphql`
   {
+    openGraphImage: file(
+      relativePath: { eq: "open-graph/facebook/Homepage.jpg" }
+    ) {
+      publicURL
+    }
+    twitterOpenGraphImage: file(
+      relativePath: { eq: "open-graph/twitter/Homepage.jpg" }
+    ) {
+      publicURL
+    }
     suzi: file(relativePath: { eq: "3.0 Sole Practitioner/suzi.jpg" }) {
       childImageSharp {
         gatsbyImageData(layout: CONSTRAINED, width: 560)

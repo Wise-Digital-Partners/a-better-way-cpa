@@ -24,8 +24,8 @@ const Page = ({ data }) => {
       <SearchEngineOptimization
         title="A Better Way CPA | Dark Horse CPA"
         description="Get empowered to build and scale your own book of business within the collaborative community at Dark Horse, the CPA firm built for CPAs."
-        // openGraphImage={data.openGraphImage.publicURL}
-        // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
+        openGraphImage={data.openGraphImage.publicURL}
+        twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
       />
       <Hero
         backgroundImages={data.heroDesktop.childImageSharp.gatsbyImageData}

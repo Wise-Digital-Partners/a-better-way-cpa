@@ -14,8 +14,8 @@ const Page = ({ data }) => {
       <SearchEngineOptimization
         title="Success Stories | A Better Way CPA | Dark Horse CPA"
         description="Hear it from the 'horse's mouth.' Our success stories show the Dark Horse model has helped CPAs not only boost their earnings but live a more balanced life."
-        // openGraphImage={data.openGraphImage.publicURL}
-        // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
+        openGraphImage={data.openGraphImage.publicURL}
+        twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
       />
 
       <section className="pt-10 md:pt-20 pb-20 md:pb-30">

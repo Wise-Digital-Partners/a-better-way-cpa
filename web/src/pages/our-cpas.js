@@ -11,12 +11,12 @@ import CallToAction from "../components/Repeating/CTA";
 export const query = graphql`
   {
     openGraphImage: file(
-      relativePath: { eq: "open-graph/facebook/Homepage-Reviews.jpg" }
+      relativePath: { eq: "open-graph/facebook/Our CPAs.jpg" }
     ) {
       publicURL
     }
     twitterOpenGraphImage: file(
-      relativePath: { eq: "open-graph/twitter/Homepage-Reviews.jpg" }
+      relativePath: { eq: "open-graph/twitter/Our CPAs.jpg" }
     ) {
       publicURL
     }
@@ -55,8 +55,8 @@ const ArchivePage = (props) => {
       <SearchEngineOptimization
         title="Our Dark Horse CPAs | A Better Way CPA"
         description="Discover and join the ranks of those who have found a better way to CPA. Become the newest member of the Dark Horse dream team."
-        // openGraphImage={data.openGraphImage.publicURL}
-        // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
+        openGraphImage={data.openGraphImage.publicURL}
+        twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
       />
 
       <section className="pt-10 md:pt-12 pb-20 md:pb-32">

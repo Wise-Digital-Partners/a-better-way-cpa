@@ -31,8 +31,8 @@ const Page = ({ data }) => {
       <SearchEngineOptimization
         title="Apply Now | A Better Way | Dark Horse CPA"
         description="There's a better way to CPA, and it starts by becoming a Dark Horse. Apply now to become a member of our dream team."
-        // openGraphImage={data.openGraphImage.publicURL}
-        // twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
+        openGraphImage={data.openGraphImage.publicURL}
+        twitterOpenGraphImage={data.twitterOpenGraphImage.publicURL}
       />
 
       <section className="pt-14 md:pt-18 pb-20 md:pb-30">
