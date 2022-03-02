@@ -248,9 +248,7 @@ const Page = ({ data }) => {
             <p className="text-lg">
               The compensation structure for our Accelerators is different
               compared to anything else you may have experienced in accounting.
-              Here it is in a nutshell—all benefits + base salary + (optional)
-              draw against future earnings + 50/50 split on all billings = Your
-              Comp Plan.
+              Here it is in a nutshell—all benefits + base salary + 50/50 split on all billings = Your Comp Plan.
             </p>
           </header>
 
