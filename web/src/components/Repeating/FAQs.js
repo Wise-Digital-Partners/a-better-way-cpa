@@ -76,9 +76,7 @@ const FAQs = ({ className, uniqueFaqs }) => {
                 <b>Option 2:</b> You can stay on the software you use (even if
                 Dark Horse as a company is not using it). However, the cost of
                 that software would be billed to your P&L as an expense you use
-                to operate your business. For a deeper understanding of how that
-                works, please book a meeting with us, and we will be happy to
-                elaborate.
+                to operate your business. For a deeper understanding of how that works, book a meeting with us, and we will be happy to elaborate.
                 <a
                   href="https://meetings.hubspot.com/justin-kurn"
                   target="_blank"
