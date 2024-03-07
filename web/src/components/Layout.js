@@ -6,6 +6,7 @@ import Header from "./Navigation/Header";
 import Footer from "./Footer/Footer";
 
 import ModalContact from "./Modal/ModalContact";
+import { MemberModal } from "../pages/our-cpas";
 
 const Layout = ({
   children,
@@ -31,6 +32,7 @@ const Layout = ({
       </main>
       <Footer hideFooter={hideFooter} />
       <ModalContact />
+      <MemberModal isOpen={false} hasCloseBtn={true} />
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { Fragment, useEffect, useRef, useState } from "react";
 import { graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 
@@ -9,6 +9,10 @@ import { mapEdgesToNodes } from "../lib/helpers";
 import CallToAction from "../components/Repeating/CTA";
 import { imageUrlFor } from "../lib/image-url";
 import { Listbox, Transition } from "@headlessui/react";
+import phoneIcon from "../images/TeamPopup/phone-icon.svg";
+import mailIcon from "../images/TeamPopup/mail-icon.svg";
+import linkedinIcon from "../images/TeamPopup/linkedin-icon.svg";
+import closeIcon from "../images/TeamPopup/close-icon.svg";
 
 export const query = graphql`
   {
@@ -31,6 +35,8 @@ const ArchivePage = (props) => {
   const [serviceTypeNodes, setServiceTypeNodes] = useState([]);
   const [taxSpecialtyNodes, setTaxSpecialtyNodes] = useState([]);
   const [industryNodes, setIndustryNodes] = useState([]);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedMemberId, setSelectedMemberId] = useState("");
   const [bookkeepingSpecialtyNodes, setBookkeepingSpecialtyNodes] = useState(
     []
   );
@@ -45,8 +51,10 @@ const ArchivePage = (props) => {
         emailAddress,
         biography,
         linkedinProfile,
+        _id,
         cpa,
         teamMemberOrder,
+        directPhoneNumber,
         "bookkeepingSpecialties": bookkeepingSpecialties[]->{title},
         "fractionalCFOSpecialties": fractionalCFOSpecialties[]->{title},
         "taxSpecialties": taxSpecialties[]->{title},
@@ -437,40 +445,103 @@ const ArchivePage = (props) => {
 
   const principalTeamMembers = filteredArray
     .filter((items) => items.category?.title === "Principals")
-    .map((item, i) => <TeamMemberCard key={i} item={item} />);
+    .map((item, i) => (
+      <TeamMemberCard
+        key={i}
+        item={item}
+        setIsModalOpen={setIsModalOpen}
+        setSelectedMemberId={setSelectedMemberId}
+      />
+    ));
 
   const accelerators = filteredArray
     .filter((items) => items.category?.title === "Accelerators")
-    .map((item, i) => <TeamMemberCard key={i} item={item} />);
+    .map((item, i) => (
+      <TeamMemberCard
+        key={i}
+        item={item}
+        setIsModalOpen={setIsModalOpen}
+        setSelectedMemberId={setSelectedMemberId}
+      />
+    ));
 
   const leadershipTeamMembers = filteredArray
     .filter((items) => items.category?.title === "Leadership Team")
-    .map((item, i) => <TeamMemberCard key={i} item={item} />);
+    .map((item, i) => (
+      <TeamMemberCard
+        key={i}
+        item={item}
+        setIsModalOpen={setIsModalOpen}
+        setSelectedMemberId={setSelectedMemberId}
+      />
+    ));
 
   const privateWealthTeamMembers = filteredArray
     .filter((items) => items.category?.title === "Private Wealth Team")
     .sort((items) => (items.name === "Matt Poole" ? -1 : 1))
-    .map((item, i) => <TeamMemberCard key={i} item={item} />);
+    .map((item, i) => (
+      <TeamMemberCard
+        key={i}
+        item={item}
+        setIsModalOpen={setIsModalOpen}
+        setSelectedMemberId={setSelectedMemberId}
+      />
+    ));
 
   const managers = filteredArray
     .filter((items) => items.category?.title === "Managers")
-    .map((item, i) => <TeamMemberCard key={i} item={item} />);
+    .map((item, i) => (
+      <TeamMemberCard
+        key={i}
+        item={item}
+        setIsModalOpen={setIsModalOpen}
+        setSelectedMemberId={setSelectedMemberId}
+      />
+    ));
 
   const seniorAccountants = filteredArray
     .filter((items) => items.category?.title === "Senior Accountants")
-    .map((item, i) => <TeamMemberCard key={i} item={item} />);
+    .map((item, i) => (
+      <TeamMemberCard
+        key={i}
+        item={item}
+        setIsModalOpen={setIsModalOpen}
+        setSelectedMemberId={setSelectedMemberId}
+      />
+    ));
 
   const accountants = filteredArray
     .filter((items) => items.category?.title === "Accountants")
-    .map((item, i) => <TeamMemberCard key={i} item={item} />);
+    .map((item, i) => (
+      <TeamMemberCard
+        key={i}
+        item={item}
+        setIsModalOpen={setIsModalOpen}
+        setSelectedMemberId={setSelectedMemberId}
+      />
+    ));
 
   const operationsMembers = filteredArray
     .filter((items) => items.category?.title === "Operations")
-    .map((item, i) => <TeamMemberCard key={i} item={item} />);
+    .map((item, i) => (
+      <TeamMemberCard
+        key={i}
+        item={item}
+        setIsModalOpen={setIsModalOpen}
+        setSelectedMemberId={setSelectedMemberId}
+      />
+    ));
 
   const supportTeamMembers = filteredArray
     .filter((items) => items.category?.title === "Supporting Staff")
-    .map((item, i) => <TeamMemberCard key={i} item={item} />);
+    .map((item, i) => (
+      <TeamMemberCard
+        key={i}
+        item={item}
+        setIsModalOpen={setIsModalOpen}
+        setSelectedMemberId={setSelectedMemberId}
+      />
+    ));
 
   return (
     <Layout headerHasBorder={true}>
@@ -522,8 +593,8 @@ const ArchivePage = (props) => {
                         <Listbox.Option
                           key={i}
                           className={({ active }) =>
-                            `relative cursor-default select-none px-4 py-1.5 font-semibold text-gray-900 ${
-                              active && "bg-primary-50"
+                            `relative cursor-default select-none px-4 py-1.5 font-semibold text-white ${
+                              active && "bg-primary-500 !text-gray-900"
                             }`
                           }
                           value={service}
@@ -577,11 +648,11 @@ const ArchivePage = (props) => {
                       <Listbox.Option
                         key={i}
                         className={({ active }) =>
-                          `relative cursor-default select-none px-4 py-1.5 font-semibold text-gray-900 ${
-                            active && "bg-primary-50"
+                          `relative cursor-default select-none px-4 py-1.5 font-semibold text-white ${
+                            active && "bg-primary-500 !text-gray-900"
                           } ${
                             service.unavailable &&
-                            "bg-primary-800 font-semibold !text-white"
+                            "bg-white font-semibold !text-[#495D6E]"
                           } ${JSON.stringify(service)}`
                         }
                         value={service}
@@ -634,8 +705,8 @@ const ArchivePage = (props) => {
                       <Listbox.Option
                         key={i}
                         className={({ active }) =>
-                          `relative cursor-default select-none px-4 py-1.5 font-semibold text-gray-900 ${
-                            active && "bg-primary-50"
+                          `relative cursor-default select-none px-4 py-1.5 font-semibold text-white ${
+                            active && "bg-primary-500 !text-gray-900"
                           }`
                         }
                         value={service}
@@ -741,7 +812,157 @@ const ArchivePage = (props) => {
           )}
         </div>
       </section>
+      <MemberModal
+        isModalOpen={isModalOpen}
+        setIsModalOpen={setIsModalOpen}
+        hasCloseBtn={true}
+        onClose={null}
+        filteredArray={filteredArray}
+        selectedMemberId={selectedMemberId}
+      ></MemberModal>
     </Layout>
+  );
+};
+
+export const MemberModal = ({
+  isModalOpen,
+  setIsModalOpen,
+  hasCloseBtn,
+  onClose,
+  children,
+  filteredArray,
+  selectedMemberId,
+}) => {
+  //const [isModalOpen, setModalOpen] = useState(isOpen);
+  const modalRef = useRef(null);
+  const bioRef = useRef(null);
+  const [member, setMember] = useState(null);
+
+  useEffect(() => {
+    const member =
+      filteredArray &&
+      filteredArray.find((item) => item._id == selectedMemberId);
+    member && setMember(member);
+    console.log(member);
+  }, [selectedMemberId]);
+
+  useEffect(() => {
+    const modalElement = modalRef.current;
+    if (modalElement) {
+      if (isModalOpen) {
+        modalElement.showModal();
+        document.body.style.overflow = "hidden";
+      } else {
+        modalElement.close();
+        document.body.style.overflow = "unset";
+      }
+    }
+  }, [isModalOpen]);
+
+  const handleCloseModal = () => {
+    if (onClose) {
+      onClose();
+    }
+    setIsModalOpen(false);
+  };
+
+  const handleKeyDown = (event) => {
+    if (event.key === "Escape") {
+      handleCloseModal();
+    }
+  };
+
+  return (
+    <dialog
+      ref={modalRef}
+      className="relative p-2 border-0 backdrop:bg-black/60 w-full bg-transparent"
+      onKeyDown={handleKeyDown}
+    >
+      <div className="bg-[#314251] w-full 2xl:max-w-[1500px] mx-auto pb-[65px]">
+        <div className="flex items-end justify-end mb-[65px]">
+          {hasCloseBtn && (
+            <button
+              className="modal-close-btn text-white mr-9 mt-9"
+              onClick={handleCloseModal}
+            >
+              <img
+                src={closeIcon}
+                alt="close icon"
+                className="opacity-70 group-hover:opacity-100 transition-all duration-300 ease-linear"
+              />
+            </button>
+          )}
+        </div>
+        <div className="mb-[65px]">
+          {member && (
+            <div className="w-full grid grid-cols-1 lg:grid-cols-[345px_auto] mx-auto text-black px-[120px] gap-x-12">
+              <div className="text-white no-underline flex flex-col gap-y-6">
+                <img
+                  src={member.headshotUrl}
+                  className="z-0 w-full scale-100 transform rounded-4xl blur-none filter transition-all duration-500 ease-linear md:group-hover:scale-105"
+                />
+                <div className="flex flex-col gap-y-3">
+                  {member.directPhoneNumber && (
+                    <a
+                      href={`tel:${member.directPhoneNumber}`}
+                      className="no-underline flex gap-x-4"
+                    >
+                      <img
+                        src={phoneIcon}
+                        alt="phone icon"
+                        className="opacity-70 group-hover:opacity-100 transition-all duration-300 ease-linear"
+                      />
+                      <div>{member.directPhoneNumber}</div>
+                    </a>
+                  )}
+                  {member.emailAddress && (
+                    <a
+                      href={`mailto:${member.emailAddress}`}
+                      className="no-underline flex gap-x-4"
+                    >
+                      <img
+                        src={mailIcon}
+                        alt="mail icon"
+                        className="opacity-70 group-hover:opacity-100 transition-all duration-300 ease-linear"
+                      />
+                      <div>{member.emailAddress}</div>
+                    </a>
+                  )}
+                  {member.linkedinProfile && (
+                    <a
+                      href={`${member.linkedinProfile}`}
+                      className="no-underline flex gap-x-4"
+                      target="_blank"
+                    >
+                      <img
+                        src={linkedinIcon}
+                        alt="linkedin icon"
+                        className="opacity-70 group-hover:opacity-100 transition-all duration-300 ease-linear"
+                      />
+                      <div>LinkedIn</div>
+                    </a>
+                  )}
+                </div>
+              </div>
+              <div className="text-white">
+                <div className="text-heading font-bold text-[48px] leading-[58px]">
+                  {member.name}
+                </div>
+                <div className="font-body text-sm leading-[18px] opacity-40 uppercase mt-3">
+                  {member.title} {member.cpa && ", CPA"}
+                </div>
+                <div
+                  className="font-body leading-[24px] text-[#E7F1F3] mt-8 whitespace-pre-wrap"
+                  // ref={bioRef}
+                >
+                  {member.biography && member.biography[0].children[0].text}
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    </dialog>
   );
 };
 
@@ -749,7 +970,7 @@ const TeamMemberGroup = ({ title, items }) => {
   return (
     <>
       <header className="mb-8">
-        <div className="heading-three">title</div>
+        <div className="heading-three">{title}</div>
       </header>
       <div className="mb-16 grid grid-cols-2 gap-x-4 gap-y-6 md:mb-20 md:grid-cols-3 md:gap-x-6 md:gap-y-12 lg:grid-cols-4">
         {items}
@@ -757,9 +978,14 @@ const TeamMemberGroup = ({ title, items }) => {
     </>
   );
 };
-const TeamMemberCard = ({ item }) => {
+const TeamMemberCard = ({ item, setIsModalOpen, setSelectedMemberId }) => {
+  const handleClick = () => {
+    setIsModalOpen(true);
+    setSelectedMemberId(item._id);
+    console.log(item._id);
+  };
   return (
-    <div>
+    <div className="cursor-pointer" onClick={handleClick}>
       <div className="group font-normal no-underline">
         <div className="mb-3.5 overflow-hidden rounded-4xl">
           <img
@@ -767,11 +993,11 @@ const TeamMemberCard = ({ item }) => {
             className="z-0 w-full scale-100 transform rounded-4xl blur-none filter transition-all duration-500 ease-linear md:group-hover:scale-105"
           />
         </div>
-        <div className="mb-1 text-lg font-bold text-black md:text-xl">
+        <div className="mb-1 text-lg font-bold text-white md:text-xl">
           {item.name}
           {item.cpa && ", CPA"}
         </div>
-        <div className="mb-0 text-sm text-gray-500">{item.title}</div>
+        <div className="mb-0 text-sm text-gray-50">{item.title}</div>
       </div>
     </div>
   );
