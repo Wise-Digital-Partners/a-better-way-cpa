@@ -549,7 +549,7 @@ const ArchivePage = (props) => {
         title="Our Dark Horse CPAs | A Better Way CPA"
         description="Discover and join the ranks of those who have found a better way to CPA. Become the newest member of the Dark Horse dream team."
       />
-      <section className="mb-20 pt-8 md:mb-32 md:pt-14">
+      <section className="pb-20 pt-8 md:pb-32 md:pt-14">
         <div className="container">
           <header className="mb-10 max-w-3xl md:mb-14">
             <h1>Meet the Team</h1>
