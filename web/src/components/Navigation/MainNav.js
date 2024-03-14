@@ -128,7 +128,7 @@ const MainNav = ({
                     : "text-secondary-50 hover:text-primary-500"
                 } ${headerDarkMode && "lg:!text-white"}`}
               >
-                Accelerator Program
+                Start a Practice
               </AniLink>
             </li>
 
@@ -144,7 +144,7 @@ const MainNav = ({
                     : "text-secondary-50 hover:text-primary-500"
                 } ${headerDarkMode && "lg:!text-white"}`}
               >
-                Sole Practitioner
+                Merge a Practice
               </AniLink>
             </li>
 
@@ -165,7 +165,7 @@ const MainNav = ({
                     : "text-secondary-50 hover:text-primary-500"
                 } ${headerDarkMode && "lg:!text-white"}`}
               >
-                The Company
+                About DHCPAs
               </AniLink>
 
               <ul
@@ -249,7 +249,7 @@ const MainNav = ({
                       onClick={clickHandler}
                       className="text-secondary-50 hover:text-primary-500 font-bold no-underline"
                     >
-                      Accelerator Program
+                      Start a Practice
                     </AniLink>
                   </li>
 
@@ -261,7 +261,7 @@ const MainNav = ({
                       onClick={clickHandler}
                       className="text-secondary-50 hover:text-primary-500 font-bold no-underline"
                     >
-                      Sole Practitioner
+                      Merge a Practice
                     </AniLink>
                   </li>
 
@@ -273,7 +273,7 @@ const MainNav = ({
                       <AccordionItem uuid={1}>
                         <AccordionItemButton className="flex items-center justify-center focus:outline-none">
                           <div className="text-secondary-50 hover:text-primary-500 font-bold no-underline transition-colors duration-300 ease-linear">
-                            The Company
+                            About DHCPAs
                           </div>
                         </AccordionItemButton>
 
