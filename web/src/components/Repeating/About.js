@@ -43,7 +43,7 @@ const ValueProps = ({ className }) => {
                 <div className="md:absolute md:bottom-7 text-center inset-x-0">
                   <p className="heading-four mb-1.5">Our Founders</p>
                   <p className="mb-0 text-secondary-50 text-lg">
-                    Max and Chase spill the beans.
+                    Meet Chase and Max.
                   </p>
                 </div>
               </div>

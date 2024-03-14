@@ -96,19 +96,18 @@ const ValueProps = ({ className }) => {
   const content = [
     {
       icon: data.icon1.publicURL,
-      heading: "Support On All Sides",
-      text: "From on-demand fractional and full-time staffing to our big-brained CPA community, get all the help you need.",
+      heading: "Support In All Areas",
+      text: "There is almost no limit to what Dark Horse leadership and your peers will support you on anywhere along the journey from scratch to sale.",
       flipContent: (
         <>
           <div className="text-xl text-primary-500 md:text-white font-medium mb-2">
             You’ll benefit from:
           </div>
           <ul className="styled-list-plus-alt">
-            <li>Collaborative direction on major initiatives</li>
-            <li>Training creation and execution</li>
-            <li>Work Papers</li>
-            <li>Technology management</li>
-            <li>Marketing management, and setup.</li>
+            <li>Coaching in sales, operations, team development, etc.</li>
+            <li>Robust learning management system</li>
+            <li>Recruitment & hiring</li>
+            <li>Succession planning assistance</li>
           </ul>
         </>
       ),
@@ -153,50 +152,52 @@ const ValueProps = ({ className }) => {
     },
     {
       icon: data.icon4.publicURL,
-      heading: "Optimal Tech Stack",
-      text: "Our ever-evolving tech stack allows you to work at peak efficiency. No more time wasted, save time for what matters most.",
+      heading: "Robust Tech Stack",
+      text: "We have a team of technologists whose sole mission is to ensure our tech serves our accountants in the present and future.",
       flipContent: (
         <>
-          <p className="md:text-lg text-secondary-400 md:text-white mb-0">
-            We're a dedicated team focused on implementing the best technology
-            that evolves based on needs and wants. And we have a willingness to
-            pivot fast when necessary.
-          </p>
+          <div className="text-xl text-secondary-400 md:text-white font-medium mb-2">
+            You’ll benefit from:
+          </div>
+          <ul className="styled-list-plus-alt">
+            <li>Best-in-class apps connected seamlessly</li>
+            <li>SOC-2 security compliance</li>
+            <li>Hyper-responsive IT team</li>
+            <li>Customized automations for your practice</li>
+          </ul>
         </>
       ),
     },
     {
       icon: data.icon5.publicURL,
-      heading: "Financial Incentives",
-      text: "Enjoy ongoing revenue streams, revenue sharing opportunities, an initial stock option grant, and leads galore.",
+      heading: "Beyond Fees for Services",
+      text: "Create passive & low-effort revenue streams. Earn equity annually. ",
       flipContent: (
         <>
           <div className="text-xl text-primary-500 md:text-white font-medium mb-2">
             You’ll benefit from:
           </div>
           <ul className="styled-list-plus-alt">
-            <li>Industry partnerships</li>
-            <li>Referral incentives</li>
-            <li>Company ownership</li>
-            <li>Strong earnings on performance.</li>
+            <li>Internal & external revenue sharing agreements</li>
+            <li>Annual liquidity window to sell company shares</li>
+            <li>Multiple service lines to keep clients sticky</li>
           </ul>
         </>
       ),
     },
     {
       icon: data.icon6.publicURL,
-      heading: "Other Benefits Abound",
-      text: "We have only scratched the surface. And when it’s time to sell, get paid out at 1.25X your Annual Recurring Revenue.",
+      heading: "Community",
+      text: "Our CPAs are constantly up-leveling each other, collaborating, and sharing expertise while building long-lasting, mutually beneficial relationships.",
       flipContent: (
         <>
           <div className="text-xl text-secondary-400 md:text-white font-medium mb-2">
-            You’ll also get:
+            You’ll participate in:
           </div>
           <ul className="styled-list-plus-alt">
-            <li>Cool Dark Horse swag</li>
-            <li>Real estate opportunities</li>
-            <li>Balance plans</li>
-            <li>and more!</li>
+            <li>The collective knowledge & experience within The firm</li>
+            <li>Continually improving tech, processes & best practices</li>
+            <li>Unparalleled remote-first culture</li>
           </ul>
         </>
       ),
@@ -225,9 +226,9 @@ const ValueProps = ({ className }) => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-y-8 md:gap-10">
               {content.map((content, i) => {
                 return (
-                  <div key={i} className="flip-card">
+                  <div key={i} className="flip-card h-full">
                     <div
-                      className={`flip-card-inner relative px-6 md:px-0 pt-5 pb-8 md:py-0 rounded-3xl md:rounded-none shadow-3xl md:shadow-none border-4 md:border-0 ${
+                      className={`flip-card-inner relative px-6 md:px-0 h-full pt-5 pb-8 md:py-0 rounded-3xl md:rounded-none shadow-3xl md:shadow-none border-4 md:border-0 ${
                         i % 2
                           ? "border-secondary-400 bg-secondary-50 md:bg-transparent"
                           : "border-primary-500 bg-primary-50 md:bg-transparent"

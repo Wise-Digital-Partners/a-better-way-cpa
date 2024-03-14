@@ -37,8 +37,8 @@ const Page = ({ data }) => {
           The CPA firm built for CPAs<span className="text-primary-500">.</span>
         </h1>
         <p className="text-xl tracking-wide mb-8">
-          Dark Horse empowers you to build and scale your own book of business
-          within a collaborative community. It’s truly a better way to CPA.
+          Dark Horse empowers you to build and scale your own practice within a
+          collaborative community. It's truly a better way to CPA.
         </p>
         <div className="flex justify-center space-x-4">
           <ButtonSolid
@@ -67,7 +67,8 @@ const Page = ({ data }) => {
                     className="w-8 h-8 bg-white/20 rounded border-2 border-gray-50"
                   ></button>
                   <p className="text-lg mb-0">
-                    Work for a bureaucratic, soul-sucking, traditional CPA firm.
+                    Become a Partner in a bureaucratic, political, and/or
+                    antiquated CPA firm.
                   </p>
                 </div>
 
@@ -77,16 +78,17 @@ const Page = ({ data }) => {
                     className="w-8 h-8 bg-white/20 rounded border-2 border-gray-50"
                   ></button>
                   <p className="text-lg mb-0">
-                    Find out how difficult it is to go out on your own.
+                    Sacrifice your time, money, and relationships to build your
+                    own firm.
                   </p>
                 </div>
               </div>
               <p className="text-lg">
-                These were the choices if you wanted to stay in public
-                accounting—until Dark Horse changed the game. We’ve democratized
-                the resources, tools and technology needed to build and service
-                your own book of business. But don’t take our word for it. Read
-                about it from our CPAs.
+                These were your only options if you wanted to build and run your
+                own practice - until Dark Horse changed the game. We've
+                democratized the entire stack of what you need to either build a
+                practice from scratch or scale an existing book of business. But
+                don't take our word for it. Read about it from our CPAs.
               </p>
               <ButtonGhost
                 href="/success-stories/"
@@ -149,16 +151,17 @@ const Page = ({ data }) => {
               />
             </div>
             <div>
-              <h2>The antidote for what ails you.</h2>
+              <h2>Stop spending your time building the wheel.</h2>
               <p className="text-lg">
-                Why create a firm from scratch when we’ve already done the tough
-                stuff for you? After all, the only asset you can sell as a CPA
-                is your book of business. So why dilute your efforts by trying
-                to wear all of the ill-fitting hats of a business owner? You’ll
-                scale your book faster with us. You'll spend time doing more of
-                what stimulates you. And, most importantly, you'll add value to
-                your clients. And when it comes time to sell, you’ll have a much
-                bigger asset on your hands.
+                We built Dark Horse so you don't have to spend your time, money,
+                and energy building and maintaining all of the infrastructure,
+                technology, marketing, branding, compliance, and everything else
+                you need to have in place to be able to create a profitable
+                practice that drives substantial value for clients. At Dark
+                Horse, you'll spend your time serving your clients and team
+                members. And all while growing your practice in a collaborative
+                community of like-minded professionals who are invested in each
+                other's success.
               </p>
               <ButtonSolid
                 href="https://meetings.hubspot.com/justin-kurn"
@@ -181,12 +184,14 @@ const Page = ({ data }) => {
               What we are (not).
             </h2>
             <p className="font-heading font-semibold text-2xl md:text-[26px] leading-[40px] mb-0">
-              This isn’t a franchise model, and it’s not just a back-office
-              service offering. This is a full-service CPA firm that you become
-              a part-owner in and run your own P&L for. It’s everything that’s
-              great about the collective resources and knowledge of a CPA firm
-              without the politics, resistance to change, and opaque overhead
-              allocations to partners.
+              We are NOT a franchise, and we are much more than a back-office
+              service offering. We are a modern CPA firm with a differentiated
+              brand and value proposition. Our Principals are owners of the
+              firm, and they run their own P&L, so they can see their paychecks
+              in real-time. They even have liquidity when it comes to their
+              equity vs. the unfunded chain letter of the traditional
+              partnership. Dark Horse exists to serve accountants so that they
+              can serve clients and build a better life.
             </p>
           </div>
         </div>
@@ -293,7 +298,7 @@ export const query = graphql`
         gatsbyImageData(layout: CONSTRAINED, width: 261)
       }
     }
-    intro: file(relativePath: { eq: "1.0 Homepage/3.0 Antidote-swag.jpg" }) {
+    intro: file(relativePath: { eq: "1.0 Homepage/3.0 intro.jpg" }) {
       childImageSharp {
         gatsbyImageData(layout: CONSTRAINED, width: 560)
       }
