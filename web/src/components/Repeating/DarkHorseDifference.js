@@ -199,11 +199,11 @@ const DHDifference = ({ className, headingLevel }) => {
     },
     {
       tabTitle: "Money",
-      heading: "Financial Incentives",
+      heading: "Beyond Fees for Services",
       description: (
         <>
           <p className="text-lg mb-1.5 text-secondary-50">
-            <b>Unique revenue streams</b>
+            <b>Internal & external revenue sharing agreements</b>
           </p>
           <p className="text-lg">
             You can earn ongoing revenue streams by referring clients to another
@@ -214,7 +214,7 @@ const DHDifference = ({ className, headingLevel }) => {
           </p>
 
           <p className="text-lg mb-1.5 text-secondary-50">
-            <b>Obtain ownership in a fast-growing firm</b>
+            <b>Annual liquidity window to sell company shares</b>
           </p>
           <p className="text-lg">
             You’ll get an initial stock option grant and will earn additional
@@ -222,7 +222,7 @@ const DHDifference = ({ className, headingLevel }) => {
           </p>
 
           <p className="text-lg mb-1.5 text-secondary-50">
-            <b>Take a draw while growing your book of business</b>
+            <b>Multiple service lines to keep clients sticky</b>
           </p>
           <p className="text-lg">
             If you need to steady out your income outside of tax season, we

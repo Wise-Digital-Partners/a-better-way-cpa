@@ -40,8 +40,12 @@ const Page = ({ data }) => {
       answer: (
         <>
           <p className="text-secondary-800 mb-0">
-            We generally look for individuals who have been working in public
-            accounting for at least 6 years with an emphasis on Tax.
+            For those with a tax focus, generally, you need seven or more tax
+            seasons in public accounting under your belt. For those with a
+            CAS/Fractional CFO focus, you will generally need seven or more
+            years of experience in public accounting, with the majority of
+            experience providing client accounting services OR substantial
+            experience as a controller or CFO outside of public accounting.
           </p>
         </>
       ),
@@ -74,15 +78,15 @@ const Page = ({ data }) => {
     },
     {
       question:
-        "If I decide to take an advance on my commissions, and it doesn't work out, do I owe the company that money?",
+        "If I don't graduate from the Accelerator Program, do I owe Dark Horse for money invested in me?",
       answer: (
         <>
           <p className="text-secondary-800 mb-0">
-            No! This is our investment in you, and we have been fortunate enough
-            that we have not experienced that situation. We believe you will
-            look at Dark Horse as your long-term career move, and we want to do
-            everything we can to make that happen. But if something doesn't work
-            out, you do not owe the company anything.
+            Nope. We know we won't graduate 100% of those who enter the
+            Accelerator Program to Principal. Our business model allows us to
+            sustain these losses within reasonable parameters, and we don't want
+            to have an adversarial relationship with any accountant we serve,
+            nor do we want to create a barrier to becoming an Accelerator.
           </p>
         </>
       ),
@@ -112,9 +116,18 @@ const Page = ({ data }) => {
                 more quickly.
               </p>
               <p className="text-lg mb-10">
-                At Dark Horse, our goal is to accelerate your path to Principal.
-                Then you can manage your own clients, own your own book, and
-                start getting the most out of your profession.
+                The mission of our Principal Accelerator Program is exactly what
+                the name implies…accelerating your{" "}
+                <a
+                  className="no-underline text-primary-500"
+                  href="https://www.prweb.com/releases/dark-horse-cpas-announces-promotion-of-two-accelerators-to-principals-845100589.html"
+                >
+                  path to Principal
+                </a>
+                . You'll have all of the resources and coaching you need to
+                quickly build a six-figure practice and the confidence to know
+                that many have come before you and experienced much better than
+                expected success.
               </p>
               <ButtonSolid
                 href="https://meetings.hubspot.com/justin-kurn"
@@ -133,27 +146,30 @@ const Page = ({ data }) => {
       <section className="pb-20 md:pb-30">
         <div className="container">
           <header className="max-w-[624px] mx-auto text-center mb-10 md:mb-12">
-            <h2>Pain Points</h2>
+            <h2>So many questions, so few answers</h2>
             <p className="text-lg">
-              If you are like many people working in Public Accounting, the
-              following Pain Points may have crossed your mind...
+              Most firms lack clarity on how to become a partner and what
+              becoming one means. Most CPAs lack clarity on what's involved in
+              creating a successful firm of their own.
             </p>
           </header>
           <div className="grid md:grid-cols-3 gap-y-8 md:gap-x-6 lg:gap-x-10 items-center">
             <Fade right cascade mirror distance="100px" duration="1000">
               <div>
                 <div className="relative bg-secondary-50/30 rounded-xl p-4 lg:p-6 text-secondary-50 lg:text-lg mb-6 after:hidden md:after:block after:absolute after:w-0 after:h-0 after:top-1/2 after:-translate-y-1/2 after:-right-4 after:border-transparent after:border-[16px] after:border-l-secondary-50/30 after:border-r-0">
-                  “What does growth look like?”
+                  "When will a partnership position open up? What is required to
+                  be considered?"
                 </div>
                 <div className="relative bg-secondary-50/30 rounded-xl p-4 lg:p-6 text-secondary-50 lg:text-lg mb-6 after:hidden md:after:block after:absolute after:w-0 after:h-0 after:top-1/2 after:-translate-y-1/2 after:-right-4 after:border-transparent after:border-[16px] after:border-l-secondary-50/30 after:border-r-0">
-                  “What goes into my compensation or bonus structure?”
+                  "Do I really want to be a partner in this firm? Are they
+                  future-ready?"
                 </div>
                 <div className="relative bg-secondary-50/30 rounded-xl p-4 lg:p-6 text-secondary-50 lg:text-lg mb-6 after:hidden md:after:block after:absolute after:w-0 after:h-0 after:top-1/2 after:-translate-y-1/2 after:-right-4 after:border-transparent after:border-[16px] after:border-l-secondary-50/30 after:border-r-0">
-                  “Seems like promotions are based on unknown factors and not
-                  the work I do...”
+                  "How much money will I make if/when I become partner? Is it
+                  within my control?"
                 </div>
                 <div className="relative bg-secondary-50/30 rounded-xl p-4 lg:p-6 text-secondary-50 lg:text-lg after:hidden md:after:block after:absolute after:w-0 after:h-0 after:top-1/2 after:-translate-y-1/2 after:-right-4 after:border-transparent after:border-[16px] after:border-l-secondary-50/30 after:border-r-0">
-                  Is my current firm the type of firm that I want to buy into?
+                  "Am I going to be expected to continue to work crazy hours?"
                 </div>
               </div>
             </Fade>
@@ -166,18 +182,20 @@ const Page = ({ data }) => {
             <Fade right cascade distance="100px" duration="1000">
               <div>
                 <div className="relative bg-secondary-50/30 rounded-xl p-4 lg:p-6 text-secondary-50 lg:text-lg mb-6 after:hidden md:after:block after:absolute after:w-0 after:h-0 after:top-1/2 after:-translate-y-1/2 after:-left-4 after:border-transparent after:border-[16px] after:border-r-secondary-50/30 after:border-l-0">
-                  “I have always wanted to go out on my own, but there are too
-                  many unkowns/risks involved”
+                  "How long will it take me to build a book of business and pay
+                  off startup expenses and my missed salary?"
                 </div>
                 <div className="relative bg-secondary-50/30 rounded-xl p-4 lg:p-6 text-secondary-50 lg:text-lg mb-6 after:hidden md:after:block after:absolute after:w-0 after:h-0 after:top-1/2 after:-translate-y-1/2 after:-left-4 after:border-transparent after:border-[16px] after:border-r-secondary-50/30 after:border-l-0">
-                  “What are my metrics for success?”
+                  "How do I create a brand that will attract clients and
+                  talent?"
                 </div>
                 <div className="relative bg-secondary-50/30 rounded-xl p-4 lg:p-6 text-secondary-50 lg:text-lg mb-6 after:hidden md:after:block after:absolute after:w-0 after:h-0 after:top-1/2 after:-translate-y-1/2 after:-left-4 after:border-transparent after:border-[16px] after:border-r-secondary-50/30 after:border-l-0">
-                  “This is a lot of work with not a lot of upside...”
+                  "How do I go about building and maintaining a secure, scalable
+                  tech stack?"
                 </div>
                 <div className="relative bg-secondary-50/30 rounded-xl p-4 lg:p-6 text-secondary-50 lg:text-lg after:hidden md:after:block after:absolute after:w-0 after:h-0 after:top-1/2 after:-translate-y-1/2 after:-left-4 after:border-transparent after:border-[16px] after:border-r-secondary-50/30 after:border-l-0">
-                  How long will it take this firm to change and keep up with the
-                  times?
+                  "How do I find people and build the processes and systems that
+                  will allow me to do high-value work for clients?"
                 </div>
               </div>
             </Fade>
@@ -192,16 +210,17 @@ const Page = ({ data }) => {
         <div className="container px-10">
           <div className="bg-secondary-400 py-12 px-4 md:px-16 max-w-[883px] mx-auto">
             <h2 className="text-center md:text-left mb-10">
-              What is an Accelerator?
+              Who is an Accelerator?
             </h2>
             <p className="font-display text-xl md:text-2xl mb-0">
-              Accelerators are new hires at Dark Horse who do not have an
-              existing book of business and are building up their clients from
-              scratch. Often these are Senior Managers, Senior Tax Managers, and
-              Principals/Partners at their previous firms (who can’t bring over
-              business or chose not to). We call them Accelerators because of
-              how we “accelerate” them through our process to become a Principal
-              of Dark Horse CPAs.
+              Accelerators are CPAs who have joined Dark Horse to build a
+              practice from scratch (or nearly scratch). Oftentimes, they come
+              from another CPA firm where they were previously a manager, senior
+              manager, director, or partner. They are not content with the
+              status quo and seek a better way to CPA. They build six-figure
+              books within months while being coached, mentored, and trained to
+              create profitable and sustainable practices as a Principal of the
+              firm.
             </p>
           </div>
         </div>
@@ -214,13 +233,14 @@ const Page = ({ data }) => {
         <div className="container">
           <div className="grid md:grid-cols-2">
             <div className="md:col-start-2">
-              <h2>The goal of the program.</h2>
+              <h2>Our goal for you.</h2>
               <p className="text-lg">
-                Our goal is to turn you into a Principal of the firm by
-                providing you with the structure, opportunities, and support
-                needed to develop your OWN client base. This is done through
-                direct ownership of your book of business and equity
-                participation in the firm.
+                Our goal is to help you seed an accounting practice that serves
+                you, your clients, and your loved ones. The Accelerator Program
+                is just the beginning of your Dark Horse journey, and we are
+                dedicated to your long-term professional and personal growth. We
+                hope you'll help us build an incredible firm and help your
+                supporting team build a purpose-driven career.
               </p>
               <ButtonGhost
                 href="/success-stories/"
@@ -244,11 +264,13 @@ const Page = ({ data }) => {
 
         <div className="container">
           <header className="mb-16 md:mb-20 max-w-[837px]">
-            <h2>Your pay & benefits.</h2>
+            <h2>Making ends meet..</h2>
             <p className="text-lg">
-              The compensation structure for our Accelerators is different
-              compared to anything else you may have experienced in accounting.
-              Here it is in a nutshell—all benefits + base salary + 50/50 split on all billings = Your Comp Plan.
+              The Accelerator Program pays you while you're building your book
+              of business. No one else does that. There's a buy-in to become a
+              Principal that's internally financed. We take the financial risk
+              across the board because of our track record of success. We're
+              beyond confident those we hire will succeed.
             </p>
           </header>
 
@@ -264,9 +286,9 @@ const Page = ({ data }) => {
                     We Give You A Sweet Benefits Package
                   </h3>
                   <ul className="styled-list-plus text-secondary-900">
-                    <li>Medical Coverage</li>
+                    <li>Health Insurance</li>
                     <li>401K Match</li>
-                    <li>Unlimited Time Off</li>
+                    <li>Company-Paid Staff Accountant</li>
                     <li>Cell Phone</li>
                   </ul>
                   <p className="text-lg mb-0 text-secondary-900">And more!</p>
@@ -277,35 +299,37 @@ const Page = ({ data }) => {
                     You Choose Your Salary
                   </h3>
                   <p className="text-lg">
-                    How much you get paid is up to you. You can take the base
-                    salary only or add a draw from your future earnings to help
-                    you meet your financial needs.
+                    How much you get paid is your decision. You'll balance your
+                    salary needs, your revenue as an Accelerator, and your
+                    buy-in amount upon promotion to Principal to create a comp
+                    package that serves your current and future needs.
                   </p>
                 </div>
 
                 <div className="bg-secondary-50 rounded-5xl p-6 lg:p-8 z-10">
                   <h3 className="heading-four font-body text-secondary-900 mb-6">
-                    We Pay You For Your Performance
+                    Promotion to Principal
                   </h3>
                   <p className="text-lg text-secondary-900">
-                    We split billings 50/50 with Accelerators, in real time, for
-                    any client you serve. If you’ve taken the optional draw for
-                    your salary, your commission is used to pay that back. If
-                    you don’t have a draw, you earn that commission on your next
-                    paycheck.
+                    You begin running your own P&L and retaining 2/3rds of your
+                    net profit. You can take a draw against future earnings
+                    while your practice grows and you pay off your buy-in. The
+                    sky is the limit at this point of the journey. You also get
+                    a stock option grant to give you skin in the game and a say
+                    at the table.
                   </p>
                 </div>
 
                 <div className="bg-secondary-400 rounded-5xl p-6 lg:p-8 z-10 md:mt-40">
                   <h3 className="heading-four font-body mb-6">
-                    You Level Up to Principal
+                    Building Wealth
                   </h3>
                   <p className="text-lg">
-                    You Level-Up to Principal over time, as your book of
-                    business grows, your compensation/payouts will start
-                    becoming more substantial and completely tied to your book
-                    of business. Which will bring you to the financial trigger
-                    to qualify as a Principal of the firm.
+                    As a Principal, you'll build a book of business that you own
+                    and can sell internally or externally. You'll build passive
+                    and near-passive revenue streams. And you'll also be
+                    eligible for annual stock option grants that represent an
+                    asset separate from your book.
                   </p>
                 </div>
               </div>
@@ -452,7 +476,7 @@ const Page = ({ data }) => {
                 </h3>
                 <p className="text-lg mb-0">
                   You begin taking on inbound inquiries, managing clients
-                  end-to-end with a financial target of $150,000 in annual
+                  end-to-end with a financial target of $200,000 in annual
                   recurring revenue. Once they have signed, we support you in
                   client communication, quoting/engagement, and workflow
                   management.
@@ -472,8 +496,8 @@ const Page = ({ data }) => {
                   Graduate to Principal
                 </h3>
                 <p className="text-lg mb-0">
-                  Once you start servicing clients, you are building your
-                  book-up business to qualify you for Principal. This includes
+                  Once you start servicing clients, you are building your book
+                  of business to qualify you for Principal. This includes
                   financial, reputational, and awareness benchmarks.
                 </p>
                 <div className="border-l border-dashed border-gray-300 h-36 w-px mt-6 mx-auto"></div>
