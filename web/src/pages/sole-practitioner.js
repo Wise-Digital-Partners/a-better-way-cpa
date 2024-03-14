@@ -108,16 +108,18 @@ const Page = ({ data }) => {
         <div className="container">
           <div className="grid md:grid-cols-2 gap-y-6 md:gap-x-10 lg:gap-x-10 items-center">
             <div className="order-2 md:order-1">
-              <h1>Sole Practitioners and Micro Firms</h1>
+              <h1>Your Firm + Dark Horse = Better Together</h1>
               <p className="text-lg">
-                Overworked and underpaid sole CPA practitioners are increasingly
-                deciding to merge their practice into Dark Horse CPAs. As a Dark
-                Horse Principal, they gain the resources needed to scale their
-                book of business, increase their fees, work more efficiently and
-                join a collaborative team that helps them handle any tax or
-                accounting issues with clients that may arise during client
-                service. The Dark Horse model removes the ceiling on their
-                earnings and helps them live a more balanced life.
+                How much time do you spend directly serving clients and
+                developing your team? How much time do you spend building the
+                wheel? We understand that small firms and solo practitioners
+                have limited time, energy, and resources to build a firm and
+                deliver on client service simultaneously. We know this because
+                we've lived it. We built Dark Horse to provide firm runners with
+                turn-key infrastructure and an elite community of CPAs who learn
+                and grow their practices together. Rediscover your love for
+                accounting and build a better life by merging your firm into
+                Dark Horse.
               </p>
               <ButtonSolid
                 href="https://meetings.hubspot.com/justin-kurn"
@@ -138,22 +140,29 @@ const Page = ({ data }) => {
           <header className="max-w-[624px] mx-auto text-center mb-10 md:mb-12">
             <h2>Pain Points</h2>
             <p className="text-lg">
-              If you are like many people working in Public Accounting, the
-              following Pain Points may have crossed your mind...
+              Firm runners face many formidable challenges in building their
+              business, handling compliance work, and creating space for
+              high-value advisory services.
             </p>
           </header>
           <div className="grid md:grid-cols-3 gap-y-8 md:gap-x-6 lg:gap-x-10 items-center">
             <Fade right cascade mirror distance="100px" duration="1000">
               <div>
                 <div className="relative z-20 block mb-6 md:mb-8 bg-secondary-50/30 rounded-xl p-4 lg:p-6 text-secondary-50 lg:text-lg mb-6 after:hidden md:after:block after:absolute after:w-0 after:h-0 after:top-1/2 after:-translate-y-1/2 after:-right-4 after:border-transparent after:border-[16px] after:border-l-secondary-50/30 after:border-r-0">
-                  How can I command a premium price for my services?
+                  Commanding premium prices to be able to deliver premium
+                  services.
                 </div>
                 <div className="relative z-20 block mb-6 md:mb-8 bg-secondary-50/30 rounded-xl p-4 lg:p-6 text-secondary-50 lg:text-lg mb-6 after:hidden md:after:block after:absolute after:w-0 after:h-0 after:top-1/2 after:-translate-y-1/2 after:-right-4 after:border-transparent after:border-[16px] after:border-l-secondary-50/30 after:border-r-0">
-                  Who do I go to if I need to spot check my work?
+                  Creating & maintaining a tech stack that supports defined
+                  workflows and processes.
                 </div>
                 <div className="relative z-20 block mb-6 md:mb-8 bg-secondary-50/30 rounded-xl p-4 lg:p-6 text-secondary-50 lg:text-lg after:hidden md:after:block after:absolute after:w-0 after:h-0 after:top-1/2 after:-translate-y-1/2 after:-right-4 after:border-transparent after:border-[16px] after:border-l-secondary-50/30 after:border-r-0">
-                  What technology is best suited to service my clients and to
-                  work efficiently?
+                  Procuring subject matter experts for client situations you've
+                  not encountered.
+                </div>
+                <div className="relative z-20 block mb-6 md:mb-8 bg-secondary-50/30 rounded-xl p-4 lg:p-6 text-secondary-50 lg:text-lg after:hidden md:after:block after:absolute after:w-0 after:h-0 after:top-1/2 after:-translate-y-1/2 after:-right-4 after:border-transparent after:border-[16px] after:border-l-secondary-50/30 after:border-r-0">
+                  Creating repeatable processes to consistently deliver value in
+                  advisory services.
                 </div>
               </div>
             </Fade>
@@ -165,13 +174,19 @@ const Page = ({ data }) => {
             <Fade right cascade distance="100px" duration="1000">
               <div>
                 <div className="relative z-20 block mb-6 md:mb-8 bg-secondary-50/30 rounded-xl p-4 lg:p-6 text-secondary-50 lg:text-lg mb-6 after:hidden md:after:block after:absolute after:w-0 after:h-0 after:top-1/2 after:-translate-y-1/2 after:-left-4 after:border-transparent after:border-[16px] after:border-r-secondary-50/30 after:border-l-0">
-                  How do I scale my operation over time?
+                  Recruiting & retaining high-level talent and creating growth
+                  paths.
                 </div>
                 <div className="relative z-20 block mb-6 md:mb-8 bg-secondary-50/30 rounded-xl p-4 lg:p-6 text-secondary-50 lg:text-lg mb-6 after:hidden md:after:block after:absolute after:w-0 after:h-0 after:top-1/2 after:-translate-y-1/2 after:-left-4 after:border-transparent after:border-[16px] after:border-r-secondary-50/30 after:border-l-0">
-                  How can I formally collaborate with like-minded peers?
+                  Staying on top of changes in the regulatory landscape and
+                  applying corresponding tax strategies.{" "}
                 </div>
                 <div className="relative z-20 block mb-6 md:mb-8 bg-secondary-50/30 rounded-xl p-4 lg:p-6 text-secondary-50 lg:text-lg after:hidden md:after:block after:absolute after:w-0 after:h-0 after:top-1/2 after:-translate-y-1/2 after:-left-4 after:border-transparent after:border-[16px] after:border-r-secondary-50/30 after:border-l-0">
-                  How to I stay relevant with my branding and online presence?
+                  Documenting processes to scale quality and consistency.
+                </div>
+                <div className="relative z-20 block mb-6 md:mb-8 bg-secondary-50/30 rounded-xl p-4 lg:p-6 text-secondary-50 lg:text-lg after:hidden md:after:block after:absolute after:w-0 after:h-0 after:top-1/2 after:-translate-y-1/2 after:-left-4 after:border-transparent after:border-[16px] after:border-r-secondary-50/30 after:border-l-0">
+                  Handling all of the compliance, HR, and administrative tasks
+                  for the firm itself.
                 </div>
               </div>
             </Fade>
@@ -186,17 +201,26 @@ const Page = ({ data }) => {
         <div className="container px-10">
           <div className="bg-secondary-400 py-12 px-4 md:px-16 max-w-[883px] mx-auto">
             <h2 className="text-center md:text-left mb-10">
-              Our Dark Horse platform.
+              Dark Horse is a platform.
             </h2>
             <p className="font-display text-xl md:text-2xl mb-0">
-              The Dark Horse Platform includes all the technology,
-              collaboration, and operational systems needed to operate a
-              successful practice. When we built the company, we thought about
-              everything a sole practitioner would need to succeed and brought
-              those things together. We also understand the need to "go at it
-              together" rather than alone, which is the single greatest piece of
-              the puzzle that Dark Horse can bring you.
+              It's a platform for you to succeed. It brings together everything
+              you need to operate a profitable, sustainable, and future-ready
+              practice. Whether it's the technology we develop, deploy, and
+              maintain, the branding and marketing that attracts the right
+              clients and talent, the administration we remove from your plate,
+              the expertise we bring together, or any of the other ways we
+              support accountants, there's a host of reasons for firms to join
+              Dark Horse. We invite you to find your reasons by booking a
+              discovery call. Merging your firm into Dark Horse doesn't happen
+              overnight so there's no better time to start the convo than now.
             </p>
+            <ButtonSolid
+              href="https://meetings.hubspot.com/justin-kurn"
+              outboundLink
+              text="Book a Discovery Call"
+              className="w-full md:w-auto mt-10"
+            />
           </div>
         </div>
       </BgImage>

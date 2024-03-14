@@ -45,12 +45,6 @@ const FAQs = ({ className, uniqueFaqs }) => {
             "How do I know that this is a financially beneficial move for me?",
           answer: (
             <>
-              <p className="text-secondary-800">
-                As an <b>Accelerator</b>, we want to make sure you are
-                financially stable during the time you are building your book of
-                business, so we offer different compensation plans depending on
-                your financial needs.
-              </p>
               <p className="text-secondary-800 mb-0">
                 As an incoming <b>Principal</b>, we take the last 12 months of
                 your P&L and compare them to what the same financials would look
@@ -66,25 +60,23 @@ const FAQs = ({ className, uniqueFaqs }) => {
             "What happens if I am using software that is not part of Dark Horse's tech stack?",
           answer: (
             <>
-              <p className="text-secondary-800">There are two options here:</p>
               <p className="text-secondary-800">
-                <b>Option 1:</b> We can transfer your clients into the software
-                we use at Dark Horse if you like them and think they will create
-                more efficiency for you when servicing or managing your team.
+                There are a number of apps we consider to be part of our core
+                tech stack. For those apps, we'll assist you in migrating your
+                data but will require that you incorporate it within your
+                practice. This helps us ensure we can serve everyone
+                effectively, that staff can be trained in universal ways and get
+                assistance from other teams, that we have visibility and
+                transferability should something happen to you, and that all of
+                the improvements we are continually making benefit your
+                practice.
               </p>
               <p className="text-secondary-800 mb-0">
-                <b>Option 2:</b> You can stay on the software you use (even if
-                Dark Horse as a company is not using it). However, the cost of
-                that software would be billed to your P&L as an expense you use
-                to operate your business. For a deeper understanding of how that works,
-                <a
-                  href="https://meetings.hubspot.com/justin-kurn"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  book a meeting
-                </a>{" "}
-                with us, and we will be happy to elaborate.
+                If it's not part of our core tech stack and helps your practice,
+                you're more than free to use it at Dark Horse so long as it
+                doesn't create security concerns. It will, however, be an
+                expense charged to your P&L if it's not part of the core stack
+                that we provide to all Principals.
               </p>
             </>
           ),
@@ -119,7 +111,7 @@ const FAQs = ({ className, uniqueFaqs }) => {
     <section className={`pb-20 md:pb-30 ${className}`}>
       <div className="container">
         <header className="mb-10 md:mb-14">
-          <h2>Tough questions answered.</h2>
+          <h2>Tough questions, answered.</h2>
         </header>
 
         <Accordion allowZeroExpanded={true}>
