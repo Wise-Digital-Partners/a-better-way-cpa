@@ -24,15 +24,17 @@ const Page = ({ data }) => {
         <div className="container">
           <div className="grid md:grid-cols-2 gap-y-8 md:gap-x-10 lg:gap-x-10 items-center">
             <div className="order-2 md:order-1">
-              <h1>About Dark Horse</h1>
+              <h1>A Horse of a Different Color</h1>
               <p className="text-lg">
-                Dark Horse exists to provide the means for professional growth,
-                the ability to scale a book of business, the resources and
-                support to be freed up to invest in client relationships, the
-                autonomy to design a lifestyle that works for themselves and
-                their clients, and a community of like-minded CPAs to journey
-                with together. Most importantly, we exist to improve the lives
-                and the livelihoods of CPAs.
+                Dark Horse is an anti-CPA firm. We exist to serve accountants so
+                that they can best serve clients. Other firms exist to serve
+                clients and shove accountants into their predefined box of
+                client service. Take the power back. We're here to disrupt the
+                traditional power structures the incumbents use to control
+                accountants in their effort to extract the maximum value from
+                them possible, only to discard them when they burn out. We're
+                here to disrupt public accounting for the positive, creating
+                better careers and lives in the process.
               </p>
               <ButtonSolid
                 href="https://meetings.hubspot.com/justin-kurn"
@@ -62,13 +64,13 @@ const Page = ({ data }) => {
         <div className="container px-10">
           <div className="bg-secondary-400 py-12 px-4 md:px-16 max-w-[883px] mx-auto">
             <h2 className="text-center md:text-left mb-10">
-              The Dark Horse Mission
+              Dark Horse’s Golden Rule
             </h2>
             <p className="font-display text-xl md:text-2xl mb-10">
-              Every decision you make and action you take must be for the
-              benefit of you, your clients, your peers, or the firm as a whole.
-              No decision made or action taken should be done so at the expense
-              of any of these stakeholders.
+              Every decision made and action taken must benefit you, your
+              clients, your peers, or the firm as a whole (collectively, the
+              stakeholders) without being at the expense of any of these
+              stakeholders.
             </p>
             {/* <ButtonGhost
               href="#"
@@ -95,7 +97,13 @@ const Page = ({ data }) => {
               <div>
                 <h3 className="mb-3.5">Chase Birky</h3>
                 <div className="text-sm text-gray-300 font-bold mb-4">
-                  Co-Founder + CEO
+                  Co-Founder + CEO +{" "}
+                  <a
+                    className="text-primary-500 no-underline"
+                    href="https://darkhorse.cpa/podcast/"
+                  >
+                    Podcaster
+                  </a>
                 </div>
                 <p className="mb-0 text-secondary-50 text-lg">
                   Chase aimed to build a firm that specialized in serving small
