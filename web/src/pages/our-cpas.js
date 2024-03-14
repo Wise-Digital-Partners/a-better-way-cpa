@@ -978,6 +978,7 @@ const TeamMemberGroup = ({ title, items }) => {
     </>
   );
 };
+
 const TeamMemberCard = ({ item, setIsModalOpen, setSelectedMemberId }) => {
   const handleClick = () => {
     setIsModalOpen(true);
@@ -987,7 +988,7 @@ const TeamMemberCard = ({ item, setIsModalOpen, setSelectedMemberId }) => {
   return (
     <div className="cursor-pointer" onClick={handleClick}>
       <div className="group font-normal no-underline">
-        <div className="mb-3.5 overflow-hidden rounded-4xl">
+        <div className="mb-3.5 overflow-hidden rounded-4xl aspect-square">
           <img
             src={item.headshotUrl}
             className="z-0 w-full scale-100 transform rounded-4xl blur-none filter transition-all duration-500 ease-linear md:group-hover:scale-105"
